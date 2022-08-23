@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form addfieldpath="/administrator/components/com_minitekwall/models/fields">
+
+	<fields name="scroller_params">
+
+		<fieldset name="scroller_layout">
+
+			<field
+				name="scr_layout"
+				type="componentlayout"
+				extension="com_minitekwall"
+				view="scroller"
+				useglobal="false"
+				label="COM_MINITEKWALL_FIELD_TEMPLATE_OVERRIDE_LABEL"
+				description="COM_MINITEKWALL_FIELD_TEMPLATE_OVERRIDE_DESC"
+			/>
+
+			<field
+				name="scr_suffix"
+				type="text"
+				class="inputbox"
+				size="40"
+				label="COM_MINITEKWALL_FIELD_CLASS_SUFFIX_LABEL"
+				description="COM_MINITEKWALL_FIELD_CLASS_SUFFIX_DESC"
+			/>
+
+			<field
+				name="scr_page_title"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_SHOW_PAGE_TITLE_LABEL"
+				description="COM_MINITEKWALL_FIELD_SHOW_PAGE_TITLE_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field type="spacer" hr="true" />
+
+			<field
+				name="scr_type"
+				type="scrollerlist"
+				label="COM_MINITEKWALL_FIELD_SCROLLER_TYPES_LABEL"
+				description="COM_MINITEKWALL_FIELD_SCROLLER_TYPES_DESC"
+				size="1"
+				default="image_scroller"
+			/>
+
+			<field type="spacer" hr="true" />
+
+			<field
+				name="scr_cont_bg"
+				type="color"
+				default=""
+				label="COM_MINITEKWALL_FIELD_CONTAINER_BG_COLOR_LABEL"
+				description="COM_MINITEKWALL_FIELD_CONTAINER_BG_COLOR_DESC"
+			/>
+
+			<field
+				name="scr_cont_image"
+				type="media"
+				directory=""
+				label="COM_MINITEKWALL_FIELD_CONTAINER_IMAGE_LABEL"
+				description="COM_MINITEKWALL_FIELD_CONTAINER_IMAGE_DESC"
+			/>
+
+			<field
+				name="scr_cont_padding"
+				type="text"
+				default="20"
+				label="COM_MINITEKWALL_FIELD_CONTAINER_PADDING_LABEL"
+				description="COM_MINITEKWALL_FIELD_CONTAINER_PADDING_DESC"
+			/>
+
+			<field
+				name="scr_gutter"
+				type="text"
+				class="inputbox"
+				size="40"
+				label="COM_MINITEKWALL_FIELD_GUTTER_LABEL"
+				description="COM_MINITEKWALL_FIELD_GUTTER_DESC"
+				default="5"
+			/>
+
+			<field
+				name="scr_border_radius"
+				type="text"
+				default="0"
+				label="COM_MINITEKWALL_FIELD_ITEMS_BORDER_RADIUS_LABEL"
+				description="COM_MINITEKWALL_FIELD_ITEMS_BORDER_RADIUS_DESC"
+			/>
+
+			<field
+				name="scr_border"
+				type="text"
+				default="0"
+				label="COM_MINITEKWALL_FIELD_ITEMS_BORDER_LABEL"
+				description="COM_MINITEKWALL_FIELD_ITEMS_BORDER_DESC"
+			/>
+
+			<field
+				name="scr_border_color"
+				type="color"
+				default="#eeeeee"
+				label="COM_MINITEKWALL_FIELD_ITEMS_BORDER_COLOR_LABEL"
+				description="COM_MINITEKWALL_FIELD_ITEMS_BORDER_COLOR_DESC"
+			/>
+
+			<field
+				name="scr_highlight_width"
+				type="text"
+				default="40"
+				label="COM_MINITEKWALL_FIELD_HIGHLIGHT_WIDTH_LABEL"
+				description="COM_MINITEKWALL_FIELD_HIGHLIGHT_WIDTH_DESC"
+			/>
+
+			<field
+				name="scr_full_width_limit"
+				type="text"
+				default="719"
+				label="COM_MINITEKWALL_FIELD_FULL_WIDTH_LIMIT_LABEL"
+				description="COM_MINITEKWALL_FIELD_FULL_WIDTH_LIMIT_DESC"
+			/>
+
+			<field
+				name="scr_cell_align"
+				type="list"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_CELL_ALIGN_LABEL"
+				description="COM_MINITEKWALL_FIELD_CELL_ALIGN_DESC"
+				labelclass="control-label"
+				default="center"
+			>
+				<option value="left">COM_MINITEKWALL_FIELD_OPTION_LEFT</option>
+				<option value="center">COM_MINITEKWALL_FIELD_OPTION_CENTER</option>
+				<option value="right">COM_MINITEKWALL_FIELD_OPTION_RIGHT</option>
+			</field>
+
+			<field
+				name="scr_rtl"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_RTL_LABEL"
+				description="COM_MINITEKWALL_FIELD_RTL_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_free_scroll"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_FREE_SCROLL_LABEL"
+				description="COM_MINITEKWALL_FIELD_FREE_SCROLL_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_contain_type"
+				type="hidden"
+				readonly="true"
+				label="COM_MINITEKWALL_FIELD_SCROLLER_CONTAIN_TYPE_LABEL"
+				description="COM_MINITEKWALL_FIELD_SCROLLER_CONTAIN_TYPE_DESC"
+				labelclass="control-label"
+				default="not_contained"
+			/>
+
+		</fieldset>
+
+		<fieldset name="scroller_image_settings">
+
+			<field
+				name="scr_images"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_SHOW_IMAGES_LABEL"
+				description="COM_MINITEKWALL_FIELD_SHOW_IMAGES_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_image_link"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_IMAGE_LINK_LABEL"
+				description="COM_MINITEKWALL_FIELD_IMAGE_LINK_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_crop_images"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_CROP_IMAGES_LABEL"
+				description="COM_MINITEKWALL_FIELD_CROP_IMAGES_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_image_width"
+				type="text"
+				default="400"
+				label="COM_MINITEKWALL_FIELD_CROP_WIDTH_LABEL"
+				description="COM_MINITEKWALL_FIELD_CROP_WIDTH_DESC"
+			/>
+
+			<field
+				name="scr_image_height"
+				type="text"
+				default="300"
+				label="COM_MINITEKWALL_FIELD_CROP_HEIGHT_LABEL"
+				description="COM_MINITEKWALL_FIELD_CROP_HEIGHT_DESC"
+			/>
+
+			<field
+				name="scr_fallback_image"
+				type="text"
+				class="inputbox"
+				label="COM_MINITEKWALL_FIELD_FALLBACK_IMAGE_LABEL"
+				description="COM_MINITEKWALL_FIELD_FALLBACK_IMAGE_DESC"
+				labelclass="control-label"
+				default=""
+			/>
+
+		</fieldset>
+
+		<fieldset name="scroller_detailbox">
+
+			<field
+				name="scr_db"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_DESC"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_bg"
+				type="color"
+				default="#de921a"
+        		label="COM_MINITEKWALL_FIELD_DETAIL_BOX_BG_LABEL"
+        		description="COM_MINITEKWALL_FIELD_DETAIL_BOX_BG_DESC"
+			/>
+
+			<field
+				name="scr_db_bg_opacity"
+				type="text"
+				default="0.75"
+        		label="COM_MINITEKWALL_FIELD_DETAIL_BOX_BG_OPACITY_LABEL"
+        		description="COM_MINITEKWALL_FIELD_DETAIL_BOX_BG_OPACITY_DESC"
+			/>
+
+			<field
+				name="scr_db_color"
+				type="radio"
+				default="light-text"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_TEXT_COLOR_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_TEXT_COLOR_DESC">
+					<option value="dark-text">COM_MINITEKWALL_FIELD_DARK</option>
+					<option value="light-text">COM_MINITEKWALL_FIELD_LIGHT</option>
+			</field>
+
+			<field type="spacer" hr="true" />
+
+			<field
+				name="scr_db_title"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_TITLE_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_TITLE_DESC"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_title_link"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_TITLE_LINK_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_TITLE_LINK_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_title_limit"
+				type="text"
+				default="15"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_TITLE_LIMIT_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_TITLE_LIMIT_DESC"
+				class="inputbox"
+				size="5"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_db_introtext"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_INTROTEXT_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_INTROTEXT_DESC"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_introtext_limit"
+				type="text"
+				default="15"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_INTROTEXT_LIMIT_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_INTROTEXT_LIMIT_DESC"
+				class="inputbox"
+				size="5"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_db_strip_tags"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_INTROTEXT_STRIP_TAGS_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_INTROTEXT_STRIP_TAGS_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_date"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_DATE_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_DATE_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_date_format"
+				type="text"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_DATE_FORMAT_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_DATE_FORMAT_DESC"
+				class="inputbox"
+				size="5"
+				default="F d, Y"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_db_category"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_CATEGORY_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_CATEGORY_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_location"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_LOCATION_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_LOCATION_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_content_type"
+				type="radio"
+				default="0"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_TYPE_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_TYPE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_author"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_AUTHOR_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_AUTHOR_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_price"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_PRICE_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_PRICE_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_hits"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_HITS_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_HITS_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_count"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_COUNT_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_COUNT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_db_readmore"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="COM_MINITEKWALL_FIELD_DETAIL_BOX_READMORE_LABEL"
+				description="COM_MINITEKWALL_FIELD_DETAIL_BOX_READMORE_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset name="scroller_hoverbox">
+
+			<field
+				name="scr_hb"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_bg"
+				type="color"
+				default="#de921a"
+        		label="COM_MINITEKWALL_FIELD_HOVER_BOX_BG_LABEL"
+        		description="COM_MINITEKWALL_FIELD_HOVER_BOX_BG_DESC"
+			/>
+
+			<field
+				name="scr_hb_bg_opacity"
+				type="text"
+				default="0.75"
+        		label="COM_MINITEKWALL_FIELD_HOVER_BOX_BG_OPACITY_LABEL"
+        		description="COM_MINITEKWALL_FIELD_HOVER_BOX_BG_OPACITY_DESC"
+			/>
+
+			<field
+				name="scr_hb_text_color"
+				type="radio"
+				default="2"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_TEXT_COLOR_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_TEXT_COLOR_DESC">
+					<option value="1">COM_MINITEKWALL_FIELD_DARK</option>
+					<option value="2">COM_MINITEKWALL_FIELD_LIGHT</option>
+			</field>
+
+			<field type="spacer" hr="true" />
+
+			<field
+				name="scr_hb_effect"
+				type="list"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_EFFECT_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_EFFECT_DESC"
+				size="1"
+				default="1"
+			>
+				<option value="no">COM_MINITEKWALL_SIMPLE_NO_EFFECTS</option>
+				<option value="1">COM_MINITEKWALL_SIMPLE_FADE</option>
+				<option value="2">COM_MINITEKWALL_FLIP_Y</option>
+				<option value="3">COM_MINITEKWALL_FLIP_X</option>
+				<option value="5">COM_MINITEKWALL_SLIDE_IN_LEFT</option>
+				<option value="4">COM_MINITEKWALL_SLIDE_IN_RIGHT</option>
+				<option value="6">COM_MINITEKWALL_SLIDE_IN_TOP</option>
+				<option value="7">COM_MINITEKWALL_SLIDE_IN_BOTTOM</option>
+				<option value="8">COM_MINITEKWALL_ZOOM_IN</option>
+			</field>
+
+			<field
+				name="scr_hb_effect_speed"
+				type="text"
+				default="0.4"
+        		label="COM_MINITEKWALL_FIELD_HOVER_BOX_EFFECT_SPEED_LABEL"
+        		description="COM_MINITEKWALL_FIELD_HOVER_BOX_EFFECT_SPEED_DESC"
+			/>
+
+			<field
+				name="scr_hb_effect_easing"
+				type="list"
+				default="smooth"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_EFFECT_EASING_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_EFFECT_EASING_DESC"
+			>
+				<option value="cubic-bezier(0.47, 0, 0.745, 0.715)">easeInSine</option>
+				<option value="cubic-bezier(0.39, 0.575, 0.565, 1)">easeOutSine</option>
+				<option value="cubic-bezier(0.445, 0.05, 0.55, 0.95)">easeInOutSine</option>
+				<option value="cubic-bezier(0.55, 0.085, 0.68, 0.53)">easeInQuad</option>
+				<option value="cubic-bezier(0.25, 0.46, 0.45, 0.94)">easeOutQuad</option>
+				<option value="cubic-bezier(0.455, 0.03, 0.515, 0.955)">easeInOutQuad</option>
+				<option value="cubic-bezier(0.55, 0.055, 0.675, 0.19)">easeInCubic</option>
+				<option value="cubic-bezier(0.215, 0.61, 0.355, 1)">easeOutCubic</option>
+				<option value="cubic-bezier(0.645, 0.045, 0.355, 1)">easeInOutCubic</option>
+				<option value="cubic-bezier(0.895, 0.03, 0.685, 0.22)">easeInQuart</option>
+				<option value="cubic-bezier(0.165, 0.84, 0.44, 1)">easeOutQuart</option>
+				<option value="cubic-bezier(0.77, 0, 0.175, 1)">easeInOutQuart</option>
+				<option value="cubic-bezier(0.755, 0.05, 0.855, 0.06)">easeInQuint</option>
+				<option value="cubic-bezier(0.23, 1, 0.32, 1)">easeOutQuint</option>
+				<option value="cubic-bezier(0.86, 0, 0.07, 1)">easeInOutQuint</option>
+				<option value="cubic-bezier(0.95, 0.05, 0.795, 0.035)">easeInExpo</option>
+				<option value="cubic-bezier(0.19, 1, 0.22, 1)">easeOutExpo</option>
+				<option value="cubic-bezier(1, 0, 0, 1)">easeInOutExpo</option>
+				<option value="cubic-bezier(0.6, 0.04, 0.98, 0.335)">easeInCirc</option>
+				<option value="cubic-bezier(0.075, 0.82, 0.165, 1)">easeOutCirc</option>
+				<option value="cubic-bezier(0.785, 0.135, 0.15, 0.86)">easeInOutCirc</option>
+				<option value="cubic-bezier(0.6, -0.28, 0.735, 0.045)">easeInBack</option>
+				<option value="cubic-bezier(0.175, 0.885, 0.32, 1.275)">easeOutBack</option>
+				<option value="cubic-bezier(0.68, -0.55, 0.265, 1.55)">easeInOutBack</option>
+			</field>
+
+			<field type="spacer" hr="true" />
+
+			<field
+				name="scr_hb_title"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_TITLE_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_TITLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_title_limit"
+				type="text"
+				default="15"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_TITLE_LIMIT_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_TITLE_LIMIT_DESC"
+				class="inputbox"
+				size="5"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_hb_introtext"
+				type="radio"
+				default="0"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_INTROTEXT_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_INTROTEXT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_introtext_limit"
+				type="text"
+				default="15"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_INTROTEXT_LIMIT_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_INTROTEXT_LIMIT_DESC"
+				class="inputbox"
+				size="5"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_hb_strip_tags"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_INTROTEXT_STRIP_TAGS_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_INTROTEXT_STRIP_TAGS_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_date"
+				type="radio"
+				default="0"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_DATE_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_DATE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_date_format"
+				type="text"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_DATE_FORMAT_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_DATE_FORMAT_DESC"
+				class="inputbox"
+				size="5"
+				default="F d, Y"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_hb_category"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_CATEGORY_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_CATEGORY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_location"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_LOCATION_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_LOCATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_type"
+				type="radio"
+				default="0"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_TYPE_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_TYPE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_author"
+				type="radio"
+				default="0"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_AUTHOR_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_AUTHOR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_price"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_PRICE_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_PRICE_DESC"
+			>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+
+				name="scr_hb_hits"
+				type="radio"
+				default="0"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_HITS_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_HITS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_link"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_LINK_BUTTON_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_LINK_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_hb_lightbox"
+				type="radio"
+				default="1"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_HOVER_BOX_LIGHTBOX_BUTTON_LABEL"
+				description="COM_MINITEKWALL_FIELD_HOVER_BOX_LIGHTBOX_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset name="scroller_navigation">
+
+			<field
+				name="scr_global_limit"
+				type="text"
+				label="COM_MINITEKWALL_FIELD_TOTAL_ITEMS_LABEL"
+				description="COM_MINITEKWALL_FIELD_TOTAL_ITEMS_DESC"
+				class="inputbox"
+				default="8"
+				labelclass="control-label"
+			/>
+
+			<field
+				name="scr_arrows"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_NAVIGATION_ARROWS_LABEL"
+				description="COM_MINITEKWALL_FIELD_NAVIGATION_ARROWS_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_arrows_color"
+				type="color"
+				default="#333333"
+        		label="COM_MINITEKWALL_FIELD_NAVIGATION_ARROWS_COLOR_LABEL"
+        		description="COM_MINITEKWALL_FIELD_NAVIGATION_ARROWS_COLOR_DESC"
+			/>
+
+			<field
+				name="scr_arrows_list"
+				type="arrowslist"
+				label="COM_MINITEKWALL_FIELD_PAGINATION_ARROWS_LABEL"
+				description="COM_MINITEKWALL_FIELD_PAGINATION_ARROWS_DESC"
+				size="1"
+				default="chevron"
+			/>
+
+			<field
+				name="scr_bullets"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_NAVIGATION_BULLETS_LABEL"
+				description="COM_MINITEKWALL_FIELD_NAVIGATION_BULLETS_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_bullets_color"
+				type="color"
+				default="#333333"
+        		label="COM_MINITEKWALL_FIELD_NAVIGATION_BULLETS_COLOR_LABEL"
+        		description="COM_MINITEKWALL_FIELD_NAVIGATION_BULLETS_COLOR_DESC"
+			/>
+
+			<field
+				name="scr_drag"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_DRAG_AND_SCROLL_LABEL"
+				description="COM_MINITEKWALL_FIELD_DRAG_AND_SCROLL_DESC"
+				labelclass="control-label"
+				default="1"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_rewind"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_REWIND_LABEL"
+				description="COM_MINITEKWALL_FIELD_REWIND_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset name="scroller_effects">
+
+			<field
+				name="scr_autoplay"
+				type="radio"
+				class="btn-group btn-group-yesno"
+				label="COM_MINITEKWALL_FIELD_AUTOPLAY_LABEL"
+				description="COM_MINITEKWALL_FIELD_AUTOPLAY_DESC"
+				labelclass="control-label"
+				default="0"
+			>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field
+				name="scr_autoplay_speed"
+				type="text"
+				label="COM_MINITEKWALL_FIELD_AUTOPLAY_SPEED_LABEL"
+				description="COM_MINITEKWALL_FIELD_AUTOPLAY_SPEED_DESC"
+				class="inputbox"
+				default="500"
+				labelclass="control-label"
+			/>
+
+		</fieldset>
+
+		<fieldset name="scroller_responsive_settings">
+
+			<field
+				name="@scr_resdesc"
+				type="fielddesc"
+				class="warning"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_DESCRIPTION_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_DESCRIPTION_DESC"
+			/>
+
+			<field type="separator" text="COM_MINITEKWALL_FIELD_LG_SETTINGS" />
+
+			<field
+				name="scr_responsive_lg"
+				type="text"
+				default="1139"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_LG_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_LG_DESC"
+			/>
+
+			<field type="separator" text="COM_MINITEKWALL_FIELD_MD_SETTINGS" />
+
+			<field
+				name="scr_responsive_md_num"
+				type="integer"
+				default="3"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_MD_NUM_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_MD_NUM_DESC"
+				first="1"
+				last="10"
+				step="1"
+			/>
+
+			<field
+				name="scr_responsive_md"
+				type="text"
+				default="939"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_MD_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_MD_DESC"
+			/>
+
+			<field type="separator" text="COM_MINITEKWALL_FIELD_SM_SETTINGS" />
+
+			<field
+				name="scr_responsive_sm_num"
+				type="integer"
+				default="2"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_SM_NUM_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_SM_NUM_DESC"
+				first="1"
+				last="10"
+				step="1"
+			/>
+
+			<field
+				name="scr_responsive_sm"
+				type="text"
+				default="719"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_SM_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_SM_DESC"
+			/>
+
+			<field type="separator" text="COM_MINITEKWALL_FIELD_XS_SETTINGS" />
+
+			<field
+				name="scr_responsive_xs_num"
+				type="integer"
+				default="2"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_XS_NUM_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_XS_NUM_DESC"
+				first="1"
+				last="10"
+				step="1"
+			/>
+
+			<field
+				name="scr_responsive_xs"
+				type="text"
+				default="479"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_XS_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_XS_DESC"
+			/>
+
+			<field type="separator" text="COM_MINITEKWALL_FIELD_XXS_SETTINGS" />
+
+			<field
+				name="scr_responsive_xxs_num"
+				type="integer"
+				default="1"
+				label="COM_MINITEKWALL_FIELD_RESPONSIVE_XXS_NUM_LABEL"
+				description="COM_MINITEKWALL_FIELD_RESPONSIVE_XXS_NUM_DESC"
+				first="1"
+				last="10"
+				step="1"
+			/>
+
+		</fieldset>
+
+	</fields>
+
+</form>

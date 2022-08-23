@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="component" method="upgrade">
+    <name>COM_ADVANCEDMODULES</name>
+    <description>COM_ADVANCEDMODULES_DESC</description>
+    <version>9.2.0</version>
+    <creationDate>July 2022</creationDate>
+    <author>Regular Labs (Peter van Westen)</author>
+    <authorEmail>info@regularlabs.com</authorEmail>
+    <authorUrl>https://regularlabs.com</authorUrl>
+    <copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+    <scriptfile>script.install.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Regular Labs - Advanced Module Manager">
+            https://download.regularlabs.com/updates.xml?e=advancedmodulemanager&amp;type=.xml
+        </server>
+    </updateservers>
+
+    <administration>
+        <files>
+            <file>advancedmodules.php</file>
+            <file>assignments.xml</file>
+            <file>config.xml</file>
+            <file>controller.php</file>
+            <file>script.install.helper.php</file>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>layouts</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+
+    <files folder="site">
+        <file>advancedmodules.php</file>
+        <file>controller.php</file>
+        <file>empty.xml</file>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>layouts</folder>
+        <folder>models</folder>
+        <folder>tables</folder>
+        <folder>views</folder>
+    </files>
+
+    <media folder="media" destination="advancedmodules">
+        <folder>js</folder>
+    </media>
+</extension>

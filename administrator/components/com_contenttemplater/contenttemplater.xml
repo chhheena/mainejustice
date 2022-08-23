@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="component" method="upgrade">
+	<name>COM_CONTENTTEMPLATER</name>
+	<description>COM_CONTENTTEMPLATER_DESC</description>
+	<version>10.2.0</version>
+	<creationDate>April 2022</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://regularlabs.com</authorUrl>
+	<copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - Content Templater">
+			https://download.regularlabs.com/updates.xml?e=contenttemplater&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<administration>
+		<menu img="../media/contenttemplater/images/contenttemplater.png">COM_CONTENTTEMPLATER</menu>
+
+		<files>
+			<file>contenttemplater.php</file>
+			<file>access.xml</file>
+			<file>config.xml</file>
+			<file>controller.php</file>
+			<file>item_params.xml</file>
+			<file>script.install.helper.php</file>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>layouts</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+
+	<media folder="media" destination="contenttemplater">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</media>
+</extension>

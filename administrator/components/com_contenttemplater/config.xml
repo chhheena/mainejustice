@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/libraries/regularlabs/fields">
+	<fieldset name="options" label="JOPTIONS">
+		<field name="@load_language" type="rl_loadlanguage" extension="com_contenttemplater" />
+		<field name="@block__button__a" type="rl_block" start="1" label="RL_SETTINGS_EDITOR_BUTTON" />
+		<field name="enable_frontend" type="radio" class="btn-group" default="1"
+			   label="RL_ENABLE_IN_FRONTEND"
+			   description="RL_ENABLE_IN_FRONTEND_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">RL_ONLY</option>
+		</field>
+		<field name="@note__display_toolbar_buttons" type="rl_onlypro"
+			   label="RL_DISPLAY_TOOLBAR_BUTTONS"
+			   description="RL_DISPLAY_TOOLBAR_BUTTONS_DESC" />
+		<field name="button_text" type="text" default="Content Template" size="40"
+			   label="RL_BUTTON_TEXT"
+			   description="RL_BUTTON_TEXT_DESC" />
+		<field name="button_icon" type="radio" class="btn-group" default="1"
+			   label="RL_SHOW_ICON"
+			   description="RL_SHOW_ICON_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="show_confirm" type="radio" class="btn-group" default="0"
+			   label="CT_ASK_BEFORE_INSERTING_TEMPLATE"
+			   description="CT_ASK_BEFORE_INSERTING_TEMPLATE_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="orderby" type="list" default=""
+			   label="CT_ORDERBY"
+			   description="CT_ORDERBY_DESC">
+			<option value="">JFIELD_ORDERING_LABEL</option>
+			<option value="name">JGLOBAL_TITLE</option>
+		</field>
+		<field name="display_categories" type="list" default="titled"
+			   label="CT_DISPLAY_CATEGORIES"
+			   description="CT_DISPLAY_CATEGORIES_DESC">
+			<option value="none">JNO</option>
+			<option value="grouped">CT_DISPLAY_CATEGORIES_GROUPED</option>
+			<option value="titled">CT_DISPLAY_CATEGORIES_TITLED</option>
+			<option value="" disabled="disabled">CT_DISPLAY_CATEGORIES_SEPARATE</option>
+			<option value="" disabled="disabled">RL_ONLY_AVAILABLE_IN_PRO_LIST_OPTION</option>
+		</field>
+		<field name="open_in_modal" type="radio" class="btn-group" default="2"
+			   label="CT_OPEN_IN_MODAL"
+			   description="CT_OPEN_IN_MODAL_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">JGLOBAL_AUTO</option>
+		</field>
+		<field name="@showon__button_select_1a" type="rl_showon" value="open_in_modal:2" />
+		<field name="switch_to_modal" type="number" default="5" size="4"
+			   label="CT_SWITCH_TO_MODAL"
+			   description="CT_SWITCH_TO_MODAL_DESC" />
+		<field name="@showon__button_select_1b" type="rl_showon" />
+		<field name="@note__display_toolbar_buttons" type="rl_onlypro"
+			   label="RL_DISPLAY_TOOLBAR_BUTTONS"
+			   description="RL_DISPLAY_TOOLBAR_BUTTONS_DESC" />
+		<field name="@block__button__b" type="rl_block" end="1" />
+
+		<field name="@block__load__a" type="rl_block" start="1" label="CT_AUTO_LOAD" />
+		<field name="@note__url_delay" type="rl_onlypro"
+			   label="CT_LOAD_DELAY"
+			   description="CT_LOAD_DELAY_DESC" />
+		<field name="@block__load__b" type="rl_block" end="1" />
+
+		<field name="@block__other__a" type="rl_block" start="1" label="RL_OTHER_SETTINGS" />
+		<field name="show_update_notification" type="radio" class="btn-group" default="1"
+			   label="RL_SHOW_UPDATE_NOTIFICATION"
+			   description="RL_SHOW_UPDATE_NOTIFICATION_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@show_copyright" type="radio" class="btn-group" default="1"
+			   label="RL_SHOW_COPYRIGHT"
+			   description="RL_SHOW_COPYRIGHT_DESC">
+			<option value="0" disabled="disabled">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@note__show_copyright" type="rl_onlypro"
+			   label="---"
+			   description="" />
+		<field name="@block__other__b" type="rl_block" end="1" />
+	</fieldset>
+
+	<fieldset name="RL_ACTIONLOG">
+		<field name="enable_actionlog" type="radio" class="btn-group" default="1"
+			   label="RL_ENABLE_ACTIONLOG"
+			   description="RL_ENABLE_ACTIONLOG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="actionlog_events" type="checkboxes" multiple="true" default="create,update,delete,change_state" checked="create,update,delete,change_state"
+			   label="RL_ACTIONLOG_EVENTS"
+			   description="RL_ACTIONLOG_EVENTS_DESC"
+			   showon="enable_actionlog:1">
+			<option value="create">RL_ACTION_CREATE</option>
+			<option value="update">RL_ACTION_UPDATE</option>
+			<option value="delete">RL_ACTION_DELETE</option>
+			<option value="change_state">RL_ACTION_CHANGE_STATE</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="permissions"
+			  label="JCONFIG_PERMISSIONS_LABEL"
+			  description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" validate="rules"
+			   component="com_contenttemplater" section="component" />
+	</fieldset>
+</config>

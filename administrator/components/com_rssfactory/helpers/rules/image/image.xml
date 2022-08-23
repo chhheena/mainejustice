@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fields name="params">
+        <fieldset name="params">
+            <field name="selector" type="text"/>
+            <field name="index" type="text" filter="integer"/>
+            <field name="filter" type="text"/>
+
+            <fields name="src">
+                <fieldset name="params">
+                    <field name="prepend" type="text"/>
+                </fieldset>
+            </fields>
+
+            <fields name="resize">
+                <fieldset name="params">
+                    <field name="height" filter="integer" type="text" default="0"/>
+                    <field name="width" filter="integer" type="text" default="0"/>
+                </fieldset>
+            </fields>
+        </fieldset>
+    </fields>
+</form>

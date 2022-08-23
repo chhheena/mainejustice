@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.9.0" method="upgrade">
+    <name>JCH Optimize Pro Package</name>
+    <dlid prefix="dlid=" suffix=""/>
+    <author>Samuel Marshall</author>
+    <creationDate>2022-07-06</creationDate>
+    <packagename>jchoptimize</packagename>
+    <version>7.2.4</version>
+    <url>https://www.jch-optimize.net</url>
+    <packager>JCH Optimize</packager>
+    <description>JCH Optimize Pro installation package version 7.2.4</description>
+    <variant>PRO</variant>
+    <files>
+        <file type="component" client="administrator" id="com_jchoptimize">com_jchoptimize-pro.zip</file>
+        <file type="plugin" id="jchoptimize" group="system">plg_system_jchoptimize.zip</file>
+        <file type="plugin" id="jchoptimizepagecache" group="system">plg_system_jchoptimizepagecache.zip</file>
+        <file type="plugin" id="jchoptimizeuserstate" group="user">plg_user_jchoptimizeuserstate.zip</file>
+        <file type="module" id="mod_jchmodeswitcher" client="administrator">mod_jchmodeswitcher.zip</file>
+    </files>
+    <scriptfile>script.jchoptimize.php</scriptfile>
+    <updateservers>
+        <server type="extension" priority="1" name="JCH Optimize Pro Updates">https://updates.jch-optimize.net/joomla-pro.xml</server>
+    </updateservers>
+</extension>

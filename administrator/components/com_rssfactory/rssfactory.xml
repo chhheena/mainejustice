@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.5" method="upgrade">
+  <name>com_rssfactory</name>
+  <description>Rss Factory component from thePHPfactory.com</description>
+  <version>4.3.6</version>
+  <scriptfile>script.php</scriptfile>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sqls/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sqls/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <schemas>
+      <schemapath type="mysql">sqls/updates/mysql</schemapath>
+    </schemas>
+  </update>
+  <languages folder="languages/frontend/">
+    <language tag="en-GB">en-GB.com_rssfactory.ini</language>
+  </languages>
+  <files folder="frontend">
+    <folder>controllers</folder>
+    <folder>helpers</folder>
+    <folder>layouts</folder>
+    <folder>models</folder>
+    <folder>parsers</folder>
+    <folder>vendor</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>rssfactory.php</filename>
+  </files>
+  <media destination="com_rssfactory" folder="media">
+    <folder>icos</folder>
+    <folder>assets</folder>
+  </media>
+  <administration>
+    <menu>COM_RSSFACTORY_COMPONENT_MENU_TITLE</menu>
+    <submenu>
+      <menu link="option=com_rssfactory&amp;view=feeds">COM_RSSFACTORY_MENU_FEEDS</menu>
+      <menu link="option=com_rssfactory&amp;view=comments">COM_RSSFACTORY_MENU_COMMENTS</menu>
+      <menu link="option=com_rssfactory&amp;view=ads">COM_RSSFACTORY_MENU_ADS</menu>
+      <menu link="option=com_rssfactory&amp;view=submittedfeeds">COM_RSSFACTORY_MENU_SUBMITTED_FEEDS</menu>
+      <menu link="option=com_categories&amp;extension=com_rssfactory" view="categories">
+                COM_RSSFACTORY_MENU_CATEGORIES
+            </menu>
+      <menu link="option=com_rssfactory&amp;view=configuration">COM_RSSFACTORY_MENU_CONFIGURATION</menu>
+      <menu link="option=com_rssfactory&amp;view=backup">COM_RSSFACTORY_MENU_BACKUP</menu>
+      <menu link="option=com_rssfactory&amp;view=about">COM_RSSFACTORY_MENU_ABOUT</menu>
+    </submenu>
+    <languages folder="languages/backend/">
+      <language tag="en-GB">en-GB.com_rssfactory.ini</language>
+      <language tag="en-GB">en-GB.com_rssfactory.sys.ini</language>
+    </languages>
+    <files folder="backend">
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>models</folder>
+      <folder>sqls</folder>
+      <folder>tables</folder>
+      <folder>tmp</folder>
+      <folder>views</folder>
+      <filename>access.xml</filename>
+      <filename>configuration.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>rssfactory.php</filename>
+    </files>
+  </administration>
+  <author>thePHPfactory</author>
+  <copyright>SKEPSIS Consult SRL</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>contact@thephpfactory.com</authorEmail>
+  <authorUrl>http://www.thephpfactory.com</authorUrl>
+  <url>http://www.thephpfactory.com</url>
+  <creationDate>July 2009</creationDate>
+  <updateservers>
+    <server type="collection" name="The PHP Factory Extensions Update">http://thephpfactory.com/versions/update-c.xml</server>
+  </updateservers>
+</extension>

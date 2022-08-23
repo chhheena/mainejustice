@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/libraries/regularlabs/fields">
+	<fieldset name="options" label="JOPTIONS">
+		<field name="ignore_tables" type="text" default=""
+			   label="DBR_IGNORE_TABLES"
+			   description="DBR_IGNORE_TABLES_DESC" />
+		<field name="@note__default_table" type="rl_onlypro"
+			   label="DBR_DEFAULT_TABLE"
+			   description="DBR_DEFAULT_TABLE_DESC" />
+		<field name="@note__default_columns" type="rl_onlypro"
+			   label="DBR_DEFAULT_COLUMNS"
+			   description="DBR_DEFAULT_COLUMNS_DESC" />
+		<field name="maxrows" type="list" default="50"
+			   label="DBR_MAXIMUM_ROW_COUNT"
+			   description="DBR_MAXIMUM_ROW_COUNT_DESC">
+			<option value="50">50</option>
+			<option value="">* 100</option>
+			<option value="">* 200</option>
+			<option value="">* 500</option>
+			<option value="">* 1000</option>
+		</field>
+		<field name="@note__maxrows" type="rl_onlypro" label=""
+			   showon="maxrows:" />
+		<field name="show_alert" type="radio" class="btn-group" default="1"
+			   label="DBR_SHOW_WARNING"
+			   description="DBR_SHOW_WARNING_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="show_update_notification" type="radio" class="btn-group" default="1"
+			   label="RL_SHOW_UPDATE_NOTIFICATION"
+			   description="RL_SHOW_UPDATE_NOTIFICATION_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@show_copyright" type="radio" class="btn-group" default="1"
+			   label="RL_SHOW_COPYRIGHT"
+			   description="RL_SHOW_COPYRIGHT_DESC">
+			<option value="0" disabled="disabled">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@note__show_copyright" type="rl_onlypro"
+			   label="---"
+			   description="" />
+	</fieldset>
+
+	<fieldset name="RL_ACTIONLOG">
+		<field name="enable_actionlog" type="radio" class="btn-group" default="1"
+			   label="RL_ENABLE_ACTIONLOG"
+			   description="RL_ENABLE_ACTIONLOG_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="permissions"
+			  label="JCONFIG_PERMISSIONS_LABEL"
+			  description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" validate="rules"
+			   component="com_dbreplacer" section="component" />
+	</fieldset>
+</config>

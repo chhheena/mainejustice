@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fields name="params">
+        <fields name="start">
+            <fieldset name="params">
+                <field name="position" type="text" filter="integer" default=""/>
+                <field name="case_sensitive" type="FactoryBoolean" default="0"/>
+            </fieldset>
+        </fields>
+
+        <fields name="end">
+            <fieldset name="params">
+                <field name="position" type="text" filter="integer" default=""/>
+                <field name="case_sensitive" type="FactoryBoolean" default="0"/>
+            </fieldset>
+        </fields>
+
+        <field name="strip_html" type="FactoryBoolean" default="0"/>
+        <field name="allowed_tags" type="text" default=""/>
+    </fields>
+</form>

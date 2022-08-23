@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fields name="params">
+        <fieldset name="params">
+            <field name="selector" type="text" default=""/>
+            <field name="index" type="text" filter="integer" default="0"/>
+            <field name="strip_html" type="FactoryBoolean" default="0"/>
+            <field name="allowed_tags" type="text" default=""/>
+        </fieldset>
+    </fields>
+</form>

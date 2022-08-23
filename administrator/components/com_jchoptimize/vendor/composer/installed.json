@@ -1,0 +1,256 @@
+{
+    "packages": [
+        {
+            "name": "cbschuld/browser.php",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cbschuld/Browser.php.git",
+                "reference": "9d07d6410977d494d7b8ecc2f3c877645c5477d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cbschuld/Browser.php/zipball/9d07d6410977d494d7b8ecc2f3c877645c5477d9",
+                "reference": "9d07d6410977d494d7b8ecc2f3c877645c5477d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8"
+            },
+            "time": "2020-04-14T18:46:44+00:00",
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/Browser.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Schuld",
+                    "email": "chris@chrisschuld.com",
+                    "homepage": "https://chrisschuld.com"
+                }
+            ],
+            "description": "A PHP Class to detect a user's Browser.  This encapsulation provides a breakdown of the browser and the version of the browser using the browser's user-agent string.  This is not a guaranteed solution but provides an overall accurate way to detect what browser a user is using.",
+            "homepage": "https://chrisschuld.com/projects/browser-php-detecting-a-users-browser-from-php/",
+            "keywords": [
+                "browser",
+                "detection",
+                "user agent"
+            ],
+            "support": {
+                "issues": "https://github.com/cbschuld/Browser.php/issues",
+                "source": "https://github.com/cbschuld/Browser.php/tree/v1.9.6"
+            },
+            "install-path": "../cbschuld/browser.php"
+        },
+        {
+            "name": "codealfa/minify",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codealfa/minify.git",
+                "reference": "e02e67f8da64f0df684e1e72ab03e61e0cc97784"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codealfa/minify/zipball/e02e67f8da64f0df684e1e72ab03e61e0cc97784",
+                "reference": "e02e67f8da64f0df684e1e72ab03e61e0cc97784",
+                "shasum": ""
+            },
+            "require": {
+                "codealfa/regextokenizer": "dev-master",
+                "php": ">=7.0"
+            },
+            "time": "2021-10-02T17:01:53+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "CodeAlfa\\Minify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Marshall",
+                    "email": "sdmarshall73@gmail.com"
+                }
+            ],
+            "description": "An extremely fast PHP based minification library for Javascript, CSS, Html and Json scripts using Regex Parsing",
+            "support": {
+                "issues": "https://github.com/codealfa/minify/issues",
+                "source": "https://github.com/codealfa/minify/tree/master"
+            },
+            "install-path": "../codealfa/minify"
+        },
+        {
+            "name": "codealfa/regextokenizer",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codealfa/regextokenizer.git",
+                "reference": "1d0354cd58dea8bc3243ae306f9f191ba4eb1e96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codealfa/regextokenizer/zipball/1d0354cd58dea8bc3243ae306f9f191ba4eb1e96",
+                "reference": "1d0354cd58dea8bc3243ae306f9f191ba4eb1e96",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "psr/log": "~1.0.0"
+            },
+            "time": "2022-02-16T01:09:49+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "CodeAlfa\\RegexTokenizer\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Marshall",
+                    "email": "sdmarshall73@gmail.com"
+                }
+            ],
+            "description": "description",
+            "support": {
+                "source": "https://github.com/codealfa/regextokenizer/tree/master",
+                "issues": "https://github.com/codealfa/regextokenizer/issues"
+            },
+            "install-path": "../codealfa/regextokenizer"
+        },
+        {
+            "name": "jchoptimize/core",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:jchoptimize/core.git",
+                "reference": "62739e8abce53f5fc266fe9faf62075befb0aa83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jchoptimize/core/zipball/62739e8abce53f5fc266fe9faf62075befb0aa83",
+                "reference": "62739e8abce53f5fc266fe9faf62075befb0aa83",
+                "shasum": ""
+            },
+            "require": {
+                "cbschuld/browser.php": "1.9.x-dev",
+                "php": ">=7"
+            },
+            "time": "2022-02-20T02:35:36+00:00",
+            "default-branch": true,
+            "type": "jchoptimize-core",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "JchOptimize\\Core\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "JchOptimize\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Marshall",
+                    "email": "samuel@jch-optimize.net"
+                }
+            ],
+            "description": "JCH Optimize Pro framework",
+            "support": {
+                "source": "https://github.com/jchoptimize/core/tree/master",
+                "issues": "https://github.com/jchoptimize/core/issues"
+            },
+            "install-path": "../jchoptimize/core"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "time": "2016-10-10T12:19:37+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/master"
+            },
+            "install-path": "../psr/log"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.1" method="upgrade">
+    <name>Package YouTubeR</name>
+    <packagename>youtuber</packagename>
+    <author>Oleg Micriucov (ZyX)</author>
+    <creationDate>June 2016</creationDate>
+    <authorEmail>info@allforjoomla.com</authorEmail>
+    <authorUrl>https://allforjoomla.com</authorUrl>
+    <copyright>Copyright (c) 2020 Oleg Micriucov</copyright>
+    <license>https://allforjoomla.com/license</license>
+    <version>3.0.6</version>
+    <packager></packager>
+    <packagerurl>https://allforjoomla.com/premium/item/joomla-youtube-plugin</packagerurl>
+    <description><![CDATA[YouTubeR Joomla]]></description>
+    <files folder="packages">
+        <file type="plugin" group="editors-xtd" id="youtuber_btn">plg_youtuber_btn.zip</file>
+        <file type="plugin" group="system" id="youtuber">plg_youtuber.zip</file>
+    </files>
+    <scriptfile>script.youtuber.php</scriptfile>
+    <updateservers>
+        <server type="extension" priority="1" name="YouTubeR">http://update.allforjoomla.com/premium/youtuber-package.xml</server>
+    </updateservers>
+</extension>

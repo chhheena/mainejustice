@@ -1,0 +1,33 @@
+<?php
+
+/**
+-------------------------------------------------------------------------
+rssfactory - Rss Factory 4.3.6
+-------------------------------------------------------------------------
+ * @author thePHPfactory
+ * @copyright Copyright (C) 2011 SKEPSIS Consult SRL. All Rights Reserved.
+ * @license - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * Websites: http://www.thePHPfactory.com
+ * Technical Support: Forum - http://www.thePHPfactory.com/forum/
+-------------------------------------------------------------------------
+*/
+
+defined('_JEXEC') or die;
+
+class RssFactoryTableAd extends JTable
+{
+    public function __construct(&$db)
+    {
+        parent::__construct('#__rssfactory_ads', 'id', $db);
+    }
+
+    public function bind($array, $ignore = '')
+    {
+        if (isset($array['categories_assigned']) && is_array($array['categories_assigned'])) {
+            $registry = new JRegistry($array['categories_assigned']);
+            $array['categories_assigned'] = $registry->toString();
+        }
+
+        return parent::bind($array, $ignore);
+    }
+}

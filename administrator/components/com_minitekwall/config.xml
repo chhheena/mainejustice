@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset
+		name="basic_settings"
+		label="COM_MINITEKWALL_CONFIG_BASIC_SETTINGS_LABEL"
+		description="COM_MINITEKWALL_CONFIG_BASIC_SETTINGS_DESC"
+	>
+
+		<field
+			name="load_jquery"
+			type="radio"
+			class="btn-group"
+			label="COM_MINITEKWALL_CONFIG_LOAD_JQUERY_LABEL"
+			description="COM_MINITEKWALL_CONFIG_LOAD_JQUERY_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="load_lightbox"
+			type="radio"
+			class="btn-group"
+			label="COM_MINITEKWALL_CONFIG_LOAD_LIGHTBOX_LABEL"
+			description="COM_MINITEKWALL_CONFIG_LOAD_LIGHTBOX_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="load_fontawesome"
+			type="radio"
+			class="btn-group"
+			label="COM_MINITEKWALL_CONFIG_LOAD_FONT_AWESOME_LABEL"
+			description="COM_MINITEKWALL_CONFIG_LOAD_FONT_AWESOME_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="load_phpthumb"
+			type="radio"
+			class="btn-group"
+			label="COM_MINITEKWALL_CONFIG_LOAD_PHP_THUMB_LIBRARY_LABEL"
+			description="COM_MINITEKWALL_CONFIG_LOAD_PHP_THUMB_LIBRARY_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="crop_quality"
+			type="number"
+			default="70"
+			label="COM_MINITEKWALL_CONFIG_CROP_QUALITY_LABEL"
+			description="COM_MINITEKWALL_CONFIG_CROP_QUALITY_DESC"
+			min="1"
+			max="100"
+			step="1"
+		/>
+
+		<field
+			name="version_check"
+			type="radio"
+			class="btn-group"
+			label="COM_MINITEKWALL_CONFIG_ENABLE_VERSION_CHECKING_LABEL"
+			description="COM_MINITEKWALL_CONFIG_ENABLE_VERSION_CHECKING_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="enable_group_by"
+			type="radio"
+			class="btn-group"
+			label="COM_MINITEKWALL_CONFIG_ENABLE_GROUP_BY_LABEL"
+			description="COM_MINITEKWALL_CONFIG_ENABLE_GROUP_BY_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset
+  	name="permissions"
+  	label="JCONFIG_PERMISSIONS_LABEL"
+  	description="JCONFIG_PERMISSIONS_DESC"
+	>
+
+		<field
+  		name="rules"
+  		type="rules"
+  		label="JCONFIG_PERMISSIONS_LABEL"
+  		class="inputbox"
+  		validate="rules"
+  		filter="rules"
+  		component="com_minitekwall"
+  		section="component"
+   	/>
+
+	</fieldset>
+
+</config>

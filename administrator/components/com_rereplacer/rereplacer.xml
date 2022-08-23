@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="component" method="upgrade">
+    <name>COM_REREPLACER</name>
+    <description>COM_REREPLACER_DESC</description>
+    <version>12.4.0</version>
+    <creationDate>July 2022</creationDate>
+    <author>Regular Labs (Peter van Westen)</author>
+    <authorEmail>info@regularlabs.com</authorEmail>
+    <authorUrl>https://regularlabs.com</authorUrl>
+    <copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+    <scriptfile>script.install.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Regular Labs - ReReplacer">
+            https://download.regularlabs.com/updates.xml?e=rereplacer&amp;type=.xml
+        </server>
+    </updateservers>
+
+    <administration>
+        <menu img="../media/rereplacer/images/rereplacer.png">COM_REREPLACER</menu>
+
+        <files>
+            <file>rereplacer.php</file>
+            <file>access.xml</file>
+            <file>config.xml</file>
+            <file>controller.php</file>
+            <file>example.xml</file>
+            <file>item_params.xml</file>
+            <file>script.install.helper.php</file>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+    </administration>
+
+    <media folder="media" destination="rereplacer">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>less</folder>
+    </media>
+</extension>

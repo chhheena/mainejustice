@@ -1,0 +1,94 @@
+@php
+
+/**
+ * JCH Optimize - Performs several front-end optimizations for fast downloads
+ *
+ * @package   jchoptimize/joomla-platform
+ * @author    Samuel Marshall <samuel@jch-optimize.net>
+ * @copyright Copyright (c) 2020 Samuel Marshall / JCH Optimize
+ * @license   GNU/GPLv3, or later. See LICENSE file
+ *
+ * If LICENSE file missing, see <http://www.gnu.org/licenses/>.
+ */
+
+defined( '_JEXEC' ) or die( 'Restricted Access' );
+
+use function _JchOptimizeVendor\e;
+
+use JchOptimize\Core\Admin\Icons;
+use JchOptimize\Platform\Utility;
+use Joomla\CMS\Router\Route as JRoute;
+use Joomla\CMS\Language\Text;
+
+$page = JRoute::_( 'index.php?option=com_jchoptimize&view=OptimizeImage&task=optimizeimage', false, JRoute::TLS_IGNORE, true );
+
+$aAutoOptimize = [
+	[
+		'link'    => '',
+		'icon'    => 'auto_optimize.png',
+		'name'    => Utility::translate( 'Optimize Images' ),
+		'script'  => 'onclick="jchIOptimizeApi.optimizeImages(\'' . $page . '\', \'auto\'); return false;"',
+		'id'      => 'auto-optimize-images',
+		'class'   => '',
+		'proonly' => true
+	]
+];
+
+$aManualOptimize = [
+	[
+		'link'    => '',
+		'icon'    => 'manual_optimize.png',
+		'name'    => Utility::translate( 'Optimize Images' ),
+		'script'  => 'onclick="jchIOptimizeApi.optimizeImages(\'' . $page . '\', \'manual\'); return false;"',
+		'id'      => 'manual-optimize-images',
+		'class'   => '',
+		'proonly' => true
+	]
+];
+/** @var Icons $icons */
+@endphp
+
+@include('navigation')
+<div class="grid mt-3">
+    <div class="g-col-12 g-col-lg-6">
+        <div id="api2-utilities-block" class="admin-panel-block">
+            <h4>{{ Text::_('COM_JCHOPTIMIZE_API2_UTILITY_SETTING') }}</h4>
+            <p class="alert alert-info">{{ Text::_('COM_JCHOPTIMIZE_API2_UTILITY_SETTING_DESC') }}</p>
+            <div class="icons-container">
+                {!! $icons->printIconsHTML($icons->compileUtilityIcons($icons->getApi2utilityArray())) !!}
+            </div>
+        </div>
+    </div>
+    <div class="g-col-12 g-col-lg-6">
+        <div id="auto-optimize-block" class="admin-panel-block">
+            <h4>{{ Text::_('COM_JCHOPTIMIZE_AUTO_OPTIMIZE_IMAGE') }}</h4>
+            <p class="alert alert-info">{{ Text::_('COM_JCHOPTIMIZE_AUTO_OPTIMIZE_IMAGE_DESC') }}</p>
+            <div class="icons-container">
+                {!! $icons->printIconsHTML($aAutoOptimize) !!}
+            </div>
+        </div>
+    </div>
+    <div class="g-col-12">
+        <div id="manual-optimize-block" class="admin-panel-block">
+            <div id="api2-optimize-images-container"></div>
+            <div id="optimize-images-container" class="">
+                <h4>{{ Text::_('COM_JCHOPTIMIZE_MANUAL_OPTIMIZE_IMAGE') }}</h4>
+                <p class="alert alert-info">{{ Text::_('COM_JCHOPTIMIZE_MANUAL_OPTIMIZE_IMAGE_DESC') }}</p>
+                <div class="grid">
+                    <div class="g-col-12 g-col-lg-3 g-col-xl-4">
+                        <div id="file-tree-container" class=""></div>
+                    </div>
+                    <div class="g-col-12 g-col-lg-6 g-col-xl-6">
+                        <div id="files-container" class=""></div>
+                    </div>
+                    <div class="g-col-12 g-col-lg-3 g-col-xl-2">
+                        <div class="icons-container">
+                            <div class="">{!! $icons->printIconsHTML($aManualOptimize) !!}</div>
+                        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="component" method="upgrade">
+	<name>COM_DBREPLACER</name>
+	<description>COM_DBREPLACER_DESC</description>
+	<version>7.4.1</version>
+	<creationDate>June 2022</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://regularlabs.com</authorUrl>
+	<copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - DB Replacer">
+			https://download.regularlabs.com/updates.xml?e=dbreplacer&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<administration>
+		<menu img="../media/dbreplacer/images/dbreplacer.png">COM_DBREPLACER</menu>
+
+		<files>
+			<file>dbreplacer.php</file>
+			<file>ajax.php</file>
+			<file>access.xml</file>
+			<file>config.xml</file>
+			<file>controller.php</file>
+			<file>script.install.helper.php</file>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+
+	<media folder="media" destination="dbreplacer">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</media>
+</extension>

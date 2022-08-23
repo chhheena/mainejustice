@@ -1,0 +1,59 @@
+body.com_community .content {
+    padding: 0 1rem;
+}
+
+header.header {
+    display:block;
+}
+
+.subhead {
+    display: none;
+}
+
+#js-cpanel {
+    display: flex;
+    --gutter-x: 2rem;
+    --gutter-y: 0;
+    margin-top: calc(var(--gutter-y) * -1);
+    margin-right: calc(var(--gutter-x) / -2);
+    margin-left: calc(var(--gutter-x) / -2);
+}
+
+#js-cpanel .navbar {
+    display: block;
+    padding: 0;
+}
+
+#js-cpanel .nav {
+    display: block;
+}
+
+#js-cpanel .btn-primary,
+#js-cpanel .btn-primary[disabled],
+#js-cpanel .btn-danger,
+#js-cpanel .btn-danger[disabled]
+{
+    color: #333;
+}
+
+#js-cpanel .table thead tr th {
+    background-color: inherit;
+    box-shadow: unset;
+}
+
+#js-cpanel #sidebar .submenu .menu-text {
+    font-size: 13px;
+}
+
+#js-cpanel .modal {
+    height: auto;
+}
+
+#js-cpanel input[type="text"],
+#js-cpanel input[type="password"] {
+    height: auto;
+}
+
+#js-cpanel .btn-toolbar#toolbar .btn:hover {
+    color: #555;
+}

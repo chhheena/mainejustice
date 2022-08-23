@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/libraries/regularlabs/fields">
+    <fieldset name="header">
+        <field name="name" type="text" default=""
+               class="input-xxlarge input-large-text"
+               required="true"
+               label="JGLOBAL_TITLE"
+               description="RR_NAME_DESC" />
+    </fieldset>
+    <fieldset name="details">
+        <field name="published" type="list" default="1" size="1"
+               class="chzn-color-state"
+               label="JSTATUS"
+               description="RL_PUBLISHED_DESC"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="description" type="rl_textareaplus" class="input-full" height="160" default=""
+               label="JGLOBAL_DESCRIPTION"
+               description="RR_DESCRIPTION_DESC" />
+        <field name="category" type="rl_simplecategories" default="" table="rereplacer"
+               label="JCATEGORY"
+               description="JGLOBAL_CHOOSE_CATEGORY_DESC" />
+    </fieldset>
+
+    <fieldset name="search">
+        <field name="@showon__search__a" type="rl_showon"
+               value="use_xml:0" />
+        <field name="@block__search__a" type="rl_block" start="1" label="RR_SEARCH" />
+        <field name="@note__search_list" type="rl_note"
+               class="alert alert-warning"
+               description="RR_SEARCH_LIST_DESC"
+               showon="regex:0[AND]treat_as_list:1" />
+        <field name="@note__search_regex" type="rl_note"
+               class="alert alert-warning"
+               description="RR_SEARCH_REGULAR_EXPRESSIONS_DESC"
+               showon="regex:1" />
+        <field name="@note__search_regex_2" type="rl_note"
+               class="alert alert-info"
+               description="RR_HELP_ON_REGULAR_EXPRESSIONS,&lt;a href=&quot;index.php?rl_qp=1&amp;folder=media.rereplacer.images&amp;file=popup.php&quot; target=&quot;_blank&quot;&gt;,&lt;/a&gt;"
+               showon="regex:1" />
+        <field name="search" type="rl_codeeditor" height="120" default="" label="" />
+        <field name="@block__search__b" type="rl_block" end="1" />
+        <field name="@showon__search__b" type="rl_showon" />
+    </fieldset>
+
+    <fieldset name="replace">
+        <field name="@showon__replace__a" type="rl_showon"
+               value="use_xml:0" />
+        <field name="@block__replace__a" type="rl_block" start="1" label="RR_REPLACE" />
+        <field name="@note__replace_list" type="rl_note"
+               class="alert alert-warning"
+               description="RR_REPLACE_LIST_DESC"
+               showon="regex:0[AND]treat_as_list:1" />
+        <field name="@note__replace_regex" type="rl_note"
+               class="alert alert-warning"
+               description="RR_REPLACE_REGULAR_EXPRESSIONS_DESC"
+               showon="regex:1" />
+        <field name="replace" type="rl_codeeditor" height="120" default="" label="" />
+        <field name="@block__replace__b" type="rl_block" end="1" />
+        <field name="@showon__replace__b" type="rl_showon" />
+    </fieldset>
+
+    <fieldset name="xml">
+    </fieldset>
+
+    <fieldset name="options">
+        <field name="@note__use_xml" type="rl_onlypro"
+               label="RR_USE_XML_FILE"
+               description="RR_USE_XML_FILE_DESC" />
+        <field name="use_xml" type="hidden" default="0" />
+        <field name="regex" type="radio" class="btn-group" default="0"
+               label="RR_REGULAR_EXPRESSIONS"
+               description="RR_REGULAR_EXPRESSIONS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="treat_as_list" type="radio" class="btn-group" default="0"
+               label="RR_TREAT_AS_LIST"
+               description="RR_TREAT_AS_LIST_DESC"
+               showon="regex:0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="word_search" type="radio" class="btn-group" default="0"
+               label="RR_WORD_SEARCH"
+               description="RR_WORD_SEARCH_DESC"
+               showon="regex:0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="s_modifier" type="radio" class="btn-group" default="1"
+               label="RR_USE_S_MODIFIER"
+               description="RR_USE_S_MODIFIER_DESC"
+               showon="regex:1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="casesensitive" type="radio" class="btn-group" default="0"
+               label="RR_CASE_SENSITIVE"
+               description="RR_CASE_SENSITIVE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="max_replacements" type="number" default="0" size="5" min="0" max="10" step="1" class="input-mini text-right"
+               label="RR_MAX_REPLACEMENTS"
+               description="RR_MAX_REPLACEMENTS_DESC" />
+
+        <field name="max_replacements" type="list" size="1" class="input-medium text-center" default=""
+               label="RR_MAX_REPLACEMENTS"
+               description="RR_MAX_REPLACEMENTS_DESC">
+            <option value="" class="text-center">RR_REPLACE_ALL</option>
+            <option value="1" class="text-center">1</option>
+            <option value="2" class="text-center">2</option>
+            <option value="3" class="text-center">3</option>
+            <option value="4" class="text-center">4</option>
+            <option value="5" class="text-center">5</option>
+            <option value="6" class="text-center">6</option>
+            <option value="7" class="text-center">7</option>
+            <option value="8" class="text-center">8</option>
+            <option value="9" class="text-center">9</option>
+            <option value="10" class="text-center">10</option>
+        </field>
+        <field name="thorough" type="radio" class="btn-group" default="0"
+               label="RR_THOROUGH"
+               description="RR_THOROUGH_DESC"
+               showon="max_replacements:">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="strip_p_tags" type="radio" class="btn-group" default="0"
+               label="RR_STRIP_SURROUNDING_P_TAGS"
+               description="RR_STRIP_SURROUNDING_P_TAGS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="@note__treat_as_php" type="rl_onlypro"
+               label="RR_REPLACE_WITH_PHP"
+               description="RR_REPLACE_WITH_PHP_DESC" />
+    </fieldset>
+
+    <fieldset name="areas">
+        <field name="area" type="rl_list" default="body"
+               label="RR_ENABLE_IN_AREA"
+               description="RR_ENABLE_IN_AREA_TEMPLATE,RR_ENABLE_IN_AREA_DESC,RR_AREA_CONTENT,RR_AREA_CONTENT_DESC,RR_AREA_COMPONENT,RR_AREA_COMPONENT_DESC,RR_AREA_HEAD,RR_AREA_HEAD_DESC,RR_AREA_BODY,RR_AREA_BODY_DESC,RR_AREA_EVERYWHERE,RR_AREA_EVERYWHERE_DESC">
+            <option value="articles">RR_AREA_CONTENT</option>
+            <option value="component">RR_AREA_COMPONENT</option>
+            <option value="head">RR_AREA_HEAD</option>
+            <option value="body">RR_AREA_BODY</option>
+            <option value="everywhere">RR_AREA_EVERYWHERE</option>
+        </field>
+        <field name="@showon__areas_articles__a" type="rl_showon"
+               value="area:articles" />
+        <field name="@note__areas_articles" type="note" class="alert alert-info" description="RR_AREA_CONTENT_NOTE" />
+        <field name="enable_in_category" type="radio" class="btn-group" default="1" label="RR_ENABLE_IN_CATEGORY"
+               description="RR_ENABLE_IN_CATEGORY_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="enable_in_title" type="radio" class="btn-group" default="1"
+               label="RR_ENABLE_IN_TITLE"
+               description="RR_ENABLE_IN_TITLE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="enable_in_author" type="radio" class="btn-group" default="1"
+               label="RR_ENABLE_IN_AUTHOR"
+               description="RR_ENABLE_IN_AUTHOR_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="@showon__areas_articles__b" type="rl_showon" />
+        <field name="enable_in_feeds" type="radio" class="btn-group" default="1"
+               label="RR_ENABLE_IN_FEEDS"
+               description="RR_ENABLE_IN_FEEDS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+            <option value="2">RL_ONLY</option>
+        </field>
+        <field name="enable_in_admin" type="radio" class="btn-group" default="0"
+               label="RR_ENABLE_IN_ADMIN"
+               description="RR_ENABLE_IN_ADMIN_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+            <option value="2">RL_ONLY</option>
+        </field>
+        <field name="@note__areas_enable_in_admin" type="note" class="alert alert-notice" description="RR_ENABLE_IN_ADMIN_ARE_YOU_SURE"
+               showon="enable_in_admin:1,2" />
+
+        <field name="enable_in_edit_forms" type="radio" class="btn-group" default="0"
+               label="RR_ENABLE_IN_EDIT_FORMS"
+               description="RR_ENABLE_IN_EDIT_FORMS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="@note__enable_in_edit_forms" type="note" class="alert alert-danger" description="RR_ENABLE_IN_EDIT_FORMS_ARE_YOU_SURE"
+               showon="enable_in_edit_forms:1" />
+
+        <field name="@note__between_start" type="rl_onlypro"
+               label="RR_ONLY_BETWEEN_START"
+               description="%s&lt;br&gt;&lt;br&gt;%s,RR_ONLY_BETWEEN_DESC,RR_ONLY_BETWEEN_EXAMPLE" />
+        <field name="@note__between_end" type="rl_onlypro"
+               label="RR_ONLY_BETWEEN_END"
+               description="%s&lt;br&gt;&lt;br&gt;%s,RR_ONLY_BETWEEN_DESC,RR_ONLY_BETWEEN_EXAMPLE" />
+        
+        <field name="@note__enable_tags" type="rl_onlypro"
+               label="RR_ENABLE_IN_TAGS"
+               description="RR_ENABLE_IN_TAGS_DESC" />
+        <field name="@note__limit_tagselect" type="rl_onlypro"
+               label="RR_LIMIT_TO_TAG_SELECTION"
+               description="RR_LIMIT_TO_TAG_SELECTION_DESC" />
+    </fieldset>
+
+    <fieldset name="assignments">
+        <field name="@note__assignments" type="rl_onlypro" />
+    </fieldset>
+</config>

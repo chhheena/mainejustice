@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/libraries/regularlabs/fields">
+	<fieldset name="header">
+		<field name="name" type="text" default=""
+			   class="input-xxlarge input-large-text"
+			   required="true"
+			   size="40"
+			   label="CT_NAME"
+			   description="CT_NAME_DESC" />
+	</fieldset>
+
+	<fieldset name="details">
+		<field name="published" type="list" default="1" size="1"
+			   class="chzn-color-state"
+			   label="JSTATUS"
+			   description="RL_PUBLISHED_DESC"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="description" type="rl_textareaplus" class="input-full" height="160" default=""
+			   label="JGLOBAL_DESCRIPTION"
+			   description="CT_DESCRIPTION_DESC" />
+		<field name="category" type="rl_simplecategories" default="" table="contenttemplater"
+			   label="JCATEGORY"
+			   description="JGLOBAL_CHOOSE_CATEGORY_DESC" />
+		<field name="override_content" type="radio" class="btn-group btn-group-yesno" default="0"
+			   label="CT_OVERRIDE_CONTENT"
+			   description="CT_OVERRIDE_CONTENT_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="@note__override_content_1" type="note" class="alert alert-info"
+			   description="CT_OVERRIDE_CONTENT_DISABLED_DESC"
+			   showon="override_content:0" />
+		<field name="@note__override_content_2" type="note" class="alert alert-warning"
+			   description="CT_OVERRIDE_CONTENT_ENABLED_DESC"
+			   showon="override_content:1" />
+
+		<field name="override_settings" type="radio" class="btn-group btn-group-yesno" default="0"
+			   label="CT_OVERRIDE_SETTINGS"
+			   description="CT_OVERRIDE_SETTINGS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@note__override_1" type="note" class="alert alert-info"
+			   description="CT_OVERRIDE_DISABLED_DESC"
+			   showon="override_settings:0" />
+		<field name="@note__override_2" type="note" class="alert alert-warning"
+			   description="CT_OVERRIDE_ENABLED_DESC"
+			   showon="override_settings:1" />
+	</fieldset>
+
+	<fieldset name="template">
+		<field name="@note__content-settings" type="note" class="alert alert-info" description="CT_CONTENT_SETTINGS_DESC" />
+	</fieldset>
+
+	<fieldset name="template-name">
+		<field name="jform_title" type="text" default=""
+			   class="input-xxlarge input-large-text"
+			   size="40"
+			   label="JGLOBAL_TITLE"
+			   description="JFIELD_TITLE_DESC" />
+		<field name="jform_alias" type="text" default=""
+			   size="40"
+			   label="JFIELD_ALIAS_LABEL"
+			   description="JFIELD_ALIAS_DESC" />
+	</fieldset>
+
+	<fieldset name="template-content">
+		<field name="content" type="rl_editor" />
+	</fieldset>
+
+	<fieldset name="template-details">
+		<field name="jform_state" type="rl_list" default="-1" form_default="1"
+			   class="chzn-color-state"
+			   label="JSTATUS"
+			   description="JFIELD_PUBLISHED_DESC">
+			<option value="-1">RL_IGNORE</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="@note__published" type="rl_onlypro"
+			   label="JPUBLISHED"
+			   description="JFIELD_PUBLISHED_DESC"
+
+			   showon="has_k2:1" />
+
+		<field name="jform_catid" type="rl_content" group="categories" default="-1" multiple="false" show_ignore="1" simple="true"
+			   label="JCATEGORY"
+			   description="JFIELD_CATEGORY_DESC" />
+		<field name="@note__categories_k2" type="rl_onlypro"
+			   label="RL_K2_CATEGORIES"
+			   description=""
+			   showon="has_k2:1" />
+		
+		<field name="@note__categories_zoo" type="rl_onlypro"
+			   label="RL_ZOO_CATEGORIES"
+			   description=""
+			   showon="has_zoo:1" />
+
+		<field name="jform_featured" type="rl_list" default="-1" form_default="0"
+			   class="chzn-color-state"
+			   label="JFEATURED"
+			   description="COM_CONTENT_FIELD_FEATURED_DESC">
+			<option value="-1">RL_IGNORE</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="jform_access" type="accesslevel" default="-1" form_default="1"
+			   label="JFIELD_ACCESS_LABEL"
+			   description="JFIELD_ACCESS_DESC">
+			<option value="-1">RL_IGNORE</option>
+		</field>
+
+		<field name="jform_language" type="contentlanguage" default="-1" form_default=""
+			   label="JFIELD_LANGUAGE_LABEL"
+			   description="COM_CONTENT_FIELD_LANGUAGE_DESC">
+			<option value="-1">RL_IGNORE</option>
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="jform_tags" type="tag" multiple="true" default=""
+			   label="JTAG"
+			   description="JTAG_DESC" />
+
+		<field name="jform_note" type="text" size="40" maxlength="255"
+			   label="COM_CONTENT_FIELD_NOTE_LABEL"
+			   description="COM_CONTENT_FIELD_NOTE_DESC" />
+
+		<field name="jform_version_note" type="text" maxlength="255" size="45"
+			   label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			   description="JGLOBAL_FIELD_VERSION_NOTE_DESC" />
+	</fieldset>
+
+	<fieldset name="template-publishing-left">
+		<field name="@note__publishing" type="rl_onlypro" />
+	</fieldset>
+
+	<fieldset name="template-images">
+		<field name="@note__images" type="rl_onlypro" />
+	</fieldset>
+
+	<fieldset name="template-urls">
+		<field name="@note__urls" type="rl_onlypro" />
+	</fieldset>
+
+	<fieldset name="template-basic">
+		<field name="@note__basic" type="rl_onlypro" />
+	</fieldset>
+
+	<fieldset name="template-editorconfig">
+		<field name="@note__editorconfig" type="rl_onlypro" />
+	</fieldset>
+
+	<fieldset name="template-fields">
+		<field name="@note__fields" type="note" class="alert alert-info" description="CT_CUSTOM_FIELDS_DESC" />
+		<field name="@note__fields" type="rl_onlypro" />
+	</fieldset>
+
+	<fieldset name="editorbutton">
+		<field name="@note__button" type="note" class="alert alert-info" description="CT_EDITOR_BUTTON_LIST_DESC" />
+		<field name="button_enabled" type="radio" class="btn-group btn-group-yesno" default="1"
+			   label="CT_SHOW_IN_EDITOR_BUTTON_LIST"
+			   description="CT_SHOW_IN_EDITOR_BUTTON_LIST_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@showon__button__a" type="rl_showon"
+			   value="button_enabled:1" />
+		<field name="button_enable_in_frontend" type="radio" class="btn-group btn-group-yesno" default="1"
+			   label="RL_ENABLE_IN_FRONTEND"
+			   description="CT_ENABLE_BUTTON_IN_FRONTEND_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">RL_ONLY</option>
+		</field>
+		<field name="show_confirm" type="radio" class="btn-group btn-group-yesno" default="-1"
+			   label="CT_ASK_BEFORE_INSERTING_TEMPLATE"
+			   description="CT_ASK_BEFORE_INSERTING_TEMPLATE_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="-1">JDEFAULT</option>
+		</field>
+		<field name="button_separate" type="radio" class="btn-group btn-group-yesno" default="0"
+			   label="CT_AS_SEPARATE_EDITOR_BUTTON"
+			   description="CT_AS_SEPARATE_EDITOR_BUTTON_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@showon__button_enabled__a" type="rl_showon"
+			   value="button_separate:1" />
+		<field name="button_name" type="text" class="input-full" default=""
+			   label="CT_EDITOR_BUTTON_NAME"
+			   description="CT_EDITOR_BUTTON_NAME_DESC" />
+		<field name="button_class" type="text" default=""
+			   label="CT_EDITOR_BUTTON_CLASS"
+			   description="RL_CSS_CLASS_DESC" />
+		<field name="@showon__button_enabled__b" type="rl_showon" />
+		<field name="button_image" type="rl_icons" default="0" show_none="1"
+			   label="CT_EDITOR_ITEM_IMAGE"
+			   description="CT_EDITOR_ITEM_IMAGE_DESC" />
+		<field name="@showon__button__b" type="rl_showon" />
+	</fieldset>
+
+	<fieldset name="autoload-default">
+		<field name="@note__block_load" type="note" class="alert alert-info" description="CT_LOAD_BY_DEFAULT_DESC" />
+		<field name="@note__load_enabled" type="rl_onlypro"
+			   label="CT_ENABLE_LOAD_BY_DEFAULT"
+			   description="CT_ENABLE_LOAD_BY_DEFAULT_DESC" />
+	</fieldset>
+
+	<fieldset name="autoload-url">
+		<field name="@note__block_url" type="note" class="alert alert-info" description="CT_LOAD_BY_URL_DESC" />
+		<field name="@note__url_enabled" type="rl_onlypro"
+			   label="CT_ENABLE_LOAD_BY_URL"
+			   description="CT_ENABLE_LOAD_BY_URL_DESC" />
+	</fieldset>
+
+	<fieldset name="assignments">
+		<field name="@note__assignments" type="rl_onlypro" />
+	</fieldset>
+</config>

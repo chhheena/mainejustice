@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>com_oscontent</name>
+    <author>Joomlashack</author>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <authorUrl>https://www.joomlashack.com/</authorUrl>
+    <copyright>Copyright 2011-2022 Joomlashack.com</copyright>
+    <license>GNU GPL; see LICENSE file</license>
+    <description>COM_OSCONTENT_COMPONENT_DESCRIPTION</description>
+    <version>2.0.1</version>
+    <creationDate>April 25 2022</creationDate>
+    <variant>FREE</variant>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <administration>
+        <menu img="components/com_oscontent/media/images/oscontent.png">COM_OSCONTENT</menu>
+        <submenu>
+            <menu view="content">COM_OSCONTENT_ADMINMENU_CREATE</menu>
+            <menu view="categories">COM_OSCONTENT_ADMINMENU_CATEGORIES</menu>
+            <menu view="delete">COM_OSCONTENT_ADMINMENU_DELETE</menu>
+        </submenu>
+
+        <files folder="admin">
+            <folder>controllers</folder>
+            <folder>form</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>library</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>include.php</filename>
+            <filename>oscontent.php</filename>
+        </files>
+    </administration>
+
+    <media destination="com_oscontent" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+    </media>
+
+    <updateservers>
+        <server type="extension" priority="1" name="OSContent Free"><![CDATA[https://deploy.ostraining.com/client/update/free/stable/com_oscontent]]></server>
+    </updateservers>
+
+    <alledia>
+        <element>oscontent</element>
+        <namespace>OSContent</namespace>
+        <license>free</license>
+        <targetplatform>3.*</targetplatform>
+
+        <minify>
+            <script>media/js/admin.js</script>
+            <script>media/js/delete.js</script>
+        </minify>
+
+        <relatedExtensions>
+            <extension type="library"
+                       element="allediaframework"
+                       downgrade="false">ShackFramework</extension>
+
+            <extension type="plugin"
+                       group="system"
+                       element="osmylicensesmanager"
+                       publish="true"
+                       downgrade="false"
+                       ordering="last">ShackExtensionSupport</extension>
+        </relatedExtensions>
+        <include>ShackDefaultFiles</include>
+
+        <obsolete>
+            <preflight>
+                <folder>media/com_oscontent</folder>
+            </preflight>
+        </obsolete>
+    </alledia>
+</extension>

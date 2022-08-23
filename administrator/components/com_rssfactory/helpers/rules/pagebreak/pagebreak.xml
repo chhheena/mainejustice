@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fields name="params">
+        <fieldset name="params">
+            <field name="title" type="text" default=""/>
+            <field name="alias" type="text" default=""/>
+        </fieldset>
+    </fields>
+</form>

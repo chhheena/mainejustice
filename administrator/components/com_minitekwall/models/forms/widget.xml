@@ -1,0 +1,2688 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form addfieldpath="/administrator/components/com_minitekwall/models/fields">
+
+	<fieldset name="basic">
+
+		<field
+			name="name"
+			type="text"
+			class="inputbox input-xxlarge input-large-text"
+			size="40"
+			label="COM_MINITEKWALL_FIELD_WIDGET_NAME_LABEL"
+			description="COM_MINITEKWALL_FIELD_WIDGET_NAME_DESC"
+		/>
+
+		<field
+			name="description"
+			type="textarea"
+			class="inputbox"
+			label="COM_MINITEKWALL_FIELD_WIDGET_DESCRIPTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_WIDGET_DESCRIPTION_DESC"
+			rows="10"
+			cols="40"
+			filter="raw"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			filter="intval"
+			size="1"
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field
+			name="id"
+			type="hidden"
+			default="0"
+		/>
+
+		<field name="asset_id" type="hidden" filter="unset" />
+
+	</fieldset>
+
+	<fields name="joomla_source">
+
+		<field
+			name="joomla_mode"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_MODE_LABEL"
+			description="COM_MINITEKWALL_FIELD_MODE_DESC"
+			default="1"
+		>
+			<option value="ja">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES</option>
+			<option value="jc">COM_MINITEKWALL_FIELD_JOOMLA_CATEGORIES</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_SEPARATOR" />
+
+		<field
+			name="ja_mode"
+			type="hidden"
+			default="normal"
+		/>
+
+		<field
+			name="ja_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JOOMLA_ARTICLES"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_category_filtering_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_CATEGORY_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORY_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="ja_catid"
+			type="category"
+			extension="com_content"
+			multiple="true"
+			size="5"
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORIES_DESC"
+			default=""
+		>
+			<option value="">JOPTION_ALL_CATEGORIES</option>
+		</field>
+
+		<field
+			name="ja_show_child_category_articles"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_INCLUDE_CHIDLREN_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_INCLUDE_CHIDLREN_CATEGORIES_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="ja_levels"
+			type="number"
+			min="0"
+			step="1"
+			default="10"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_CATEGORY_DEPTH_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_CATEGORY_DEPTH_DESC"
+		/>
+
+		<field
+			name="ja_filter_levels"
+			type="number"
+			min="0"
+			step="1"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_FILTER_LEVELS_LABEL"
+			description="COM_MINITEKWALL_FIELD_FILTER_LEVELS_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_tag_filtering_type"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_TAG_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_TAG_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="ja_tag_id"
+			type="tag"
+			label="COM_MINITEKWALL_FIELD_FIELD_TAG_LABEL"
+			description="COM_MINITEKWALL_FIELD_FIELD_TAG_DESC"
+			custom="deny"
+			multiple="true"
+		/>
+
+		<field
+			name="ja_tag_include_children"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_TAG_INCLUDE_CHILDREN_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_TAG_INCLUDE_CHILDREN_DESC"
+			default="1"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="ja_tag_match"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_TAG_MATCH_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_TAG_MATCH_DESC"
+			default="1"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_TAG_MATCH_ALL</option>
+			<option value="1">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_TAG_MATCH_ANY</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_author_filtering_type"
+			type="radio"
+			label="COM_MINITEKWALL_FIELD_AUTHOR_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_AUTHOR_FILTERING_TYPE_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			filter="integer"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="ja_created_by"
+			type="author"
+			multiple="true"
+			filter="int_array"
+			class="multipleAuthors"
+			default=""
+			label="COM_MINITEKWALL_FIELD_AUTHORS_LABEL"
+			description="COM_MINITEKWALL_FIELD_AUTHORS_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_date_filtering"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="off"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_FILTERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_FILTERING_DESC"
+		>
+			<option value="off">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_FILTERING_OFF</option>
+			<option value="range">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_FILTERING_DATE_RANGE</option>
+			<option value="relative">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_FILTERING_RELATIVE_DAY</option>
+		</field>
+
+		<field
+			name="ja_date_field"
+			type="radio"
+			default="created"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_RANGE_FIELD_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_DATE_RANGE_FIELD_DESC"
+		>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="modified">COM_MINITEKWALL_FIELD_OPTION_MODIFIED_DATE</option>
+			<option value="publish_up">COM_MINITEKWALL_FIELD_OPTION_START_PUBLISHING_DATE</option>
+		</field>
+
+		<field
+			name="ja_start_date_range"
+			type="calendar"
+			format="%Y-%m-%d %H:%M:%S"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_START_DATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_START_DATE_DESC"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="ja_end_date_range"
+			type="calendar"
+			format="%Y-%m-%d %H:%M:%S"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_END_DATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_END_DATE_DESC"
+			size="22"
+			filter="user_utc"
+		/>
+
+		<field
+			name="ja_relative_date"
+			type="text"
+			default="30"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_RELATIVE_DATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_RELATIVE_DATE_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_show_front"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="show"
+			label="COM_MINITEKWALL_FIELD_SHOW_FEATURED_LABEL"
+			description="COM_MINITEKWALL_FIELD_SHOW_FEATURED_DESC"
+		>
+			<option value="hide">JHIDE</option>
+			<option value="show">JSHOW</option>
+			<option value="only">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="ja_excluded_articles"
+			type="textarea"
+			cols="10"
+			rows="3"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_EXCLUDED_ARTICLES_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_EXCLUDED_ARTICLES_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_article_ordering"
+			type="list"
+			default="a.title"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_ARTICLE_ORDERING_DESC"
+		>
+			<option value="a.ordering">COM_MINITEKWALL_FIELD_OPTION_ORDERING</option>
+			<option value="fp.ordering">COM_MINITEKWALL_FIELD_OPTION_ORDERING_FEATURED</option>
+			<option value="a.hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="a.title">JGLOBAL_TITLE</option>
+			<option value="a.id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="a.alias">JFIELD_ALIAS_LABEL</option>
+			<option value="a.created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="modified">COM_MINITEKWALL_FIELD_OPTION_MODIFIED_DATE</option>
+			<option value="publish_up">COM_MINITEKWALL_FIELD_OPTION_START_PUBLISHING_DATE</option>
+			<option value="a.publish_down">COM_MINITEKWALL_FIELD_OPTION_FINISH_PUBLISHING_DATE</option>
+			<option value="RAND()">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="ja_article_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ja_image_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="introtext"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_IMAGE_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_IMAGE_TYPE_DESC"
+		>
+			<option value="introtext">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_INTROTEXT_IMAGE</option>
+			<option value="fulltext">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_FULLTEXT_IMAGE</option>
+			<option value="inline">COM_MINITEKWALL_FIELD_JOOMLA_ARTICLES_INLINE_IMAGE</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOOMLA_CATEGORIES_SEPARATOR" />
+
+		<field
+			name="jc_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JOOMLA_CATEGORIES"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jc_include_categories"
+			type="category"
+			extension="com_content"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_CATEGORIES_INCLUDE_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_CATEGORIES_INCLUDE_CATEGORIES_DESC"
+			class="inputbox"
+			size="5"
+			default="2"
+		/>
+
+		<field
+			name="jc_include_categories_children"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOOMLA_CATEGORIES_INCLUDE_CHILDREN_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOOMLA_CATEGORIES_INCLUDE_CHILDREN_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jc_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="alpha"
+		>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="alpha">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="date">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+		</field>
+
+		<field
+			name="jc_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+	</fields>
+
+	<fields name="k2_source">
+
+		<field
+			name="k2_mode"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_K2_MODE_LABEL"
+			description="COM_MINITEKWALL_FIELD_MODE_DESC"
+			default="1"
+		>
+			<option value="k2i">COM_MINITEKWALL_FIELD_K2_ITEMS</option>
+			<option value="k2c">COM_MINITEKWALL_FIELD_K2_CATEGORIES</option>
+			<option value="k2a">COM_MINITEKWALL_FIELD_K2_AUTHORS</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_K2_ITEMS_SEPARATOR" />
+
+		<field
+			name="k2i_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="K2_ITEMS"
+		/>
+
+		<field
+			name="k2i_category_filtering_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_CATEGORY_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORY_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="k2i_category_id"
+			type="k2categories"
+			default=""
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORIES_DESC"
+		/>
+
+		<field
+			name="k2i_get_children"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_INCLUDE_CHIDLREN_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_INCLUDE_CHIDLREN_CATEGORIES_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="k2i_filter_levels"
+			type="number"
+			min="0"
+			step="1"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_FILTER_LEVELS_LABEL"
+			description="COM_MINITEKWALL_FIELD_FILTER_LEVELS_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="k2i_tag_filtering_type"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_TAG_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_TAG_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="k2i_tag_id"
+			type="k2tags"
+			extension="k2tags"
+			default=""
+			size="15"
+			label="COM_MINITEKWALL_FIELD_FIELD_TAG_LABEL"
+			description="COM_MINITEKWALL_FIELD_FIELD_TAG_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="k2i_exclude_items"
+			type="text"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EXCLUDE_ITEMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EXCLUDE_ITEMS_DESC"
+		/>
+
+		<field
+			name="k2i_featured_items"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_SHOW_FEATURED_LABEL"
+			description="COM_MINITEKWALL_FIELD_SHOW_FEATURED_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="k2i_popularity_range"
+			type="list"
+			default=""
+			label="COM_MINITEKWALL_FIELD_TIME_RANGE_LABEL"
+			description="COM_MINITEKWALL_FIELD_TIME_RANGE_DESC"
+		>
+			<option value="">COM_MINITEKWALL_FIELD_OPTION_ALL_TIME</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_1_DAY</option>
+			<option value="3">COM_MINITEKWALL_FIELD_OPTION_3_DAYS</option>
+			<option value="7">COM_MINITEKWALL_FIELD_OPTION_1_WEEK</option>
+			<option value="15">COM_MINITEKWALL_FIELD_OPTION_2_WEEKS</option>
+			<option value="30">COM_MINITEKWALL_FIELD_OPTION_1_MONTH</option>
+			<option value="180">COM_MINITEKWALL_FIELD_OPTION_6_MONTHS</option>
+		</field>
+
+		<field
+			name="k2i_videos_only"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_K2_ITEMS_VIDEOS_ONLY_LABEL"
+			description="COM_MINITEKWALL_FIELD_K2_ITEMS_VIDEOS_ONLY_DESC"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="k2i_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default=""
+		>
+			<option value="date">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="publishUp">COM_MINITEKWALL_FIELD_OPTION_START_PUBLISHING_DATE</option>
+			<option value="alpha">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="order">COM_MINITEKWALL_FIELD_OPTION_ORDERING</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="best">COM_MINITEKWALL_FIELD_OPTION_RATING</option>
+			<option value="comments">COM_MINITEKWALL_FIELD_OPTION_MOST_COMMENTED</option>
+			<option value="modified">COM_MINITEKWALL_FIELD_OPTION_MODIFIED_DATE</option>
+			<option value="rand">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="k2i_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field
+			name="k2i_image_size"
+			type="list"
+			default="L"
+			label="COM_MINITEKWALL_FIELD_K2_ITEMS_IMAGE_SIZE_LABEL"
+			description="COM_MINITEKWALL_FIELD_K2_ITEMS_IMAGE_SIZE_DESC"
+		>
+			<option value="XS">COM_MINITEKWALL_FIELD_OPTION_XS</option>
+			<option value="S">COM_MINITEKWALL_FIELD_OPTION_S</option>
+			<option value="M">COM_MINITEKWALL_FIELD_OPTION_M</option>
+			<option value="L">COM_MINITEKWALL_FIELD_OPTION_L</option>
+			<option value="XL">COM_MINITEKWALL_FIELD_OPTION_XL</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_K2_CATEGORIES_SEPARATOR" />
+
+		<field
+			name="k2c_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="K2_CATEGORIES"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="k2c_category_id"
+			type="k2categories"
+			label="COM_MINITEKWALL_FIELD_K2_CATEGORIES_SELECT_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_K2_CATEGORIES_SELECT_CATEGORIES_DESC"
+			default="0"
+		/>
+
+		<field
+			name="k2c_include_children"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_K2_CATEGORIES_INCLUDE_CHILDREN_LABEL"
+			description="COM_MINITEKWALL_FIELD_K2_CATEGORIES_INCLUDE_CHILDREN_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="k2c_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="alpha"
+		>
+			<option value="alpha">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="order">COM_MINITEKWALL_FIELD_OPTION_ORDERING</option>
+			<option value="rand">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="k2c_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_K2_AUTHORS_SEPARATOR" />
+
+		<field
+			name="k2a_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="K2_AUTHORS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="k2a_category_id"
+			type="k2categories"
+			label="COM_MINITEKWALL_FIELD_K2_AUTHORS_FILTER_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_K2_AUTHORS_FILTER_CATEGORIES_DESC"
+			default="0"
+		/>
+
+		<field
+			name="k2a_include_children"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_K2_AUTHORS_FILTER_CATEGORIES_CHILDREN_LABEL"
+			description="COM_MINITEKWALL_FIELD_K2_AUTHORS_FILTER_CATEGORIES_CHILDREN_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="k2a_exclude_authors"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_K2_AUTHORS_EXCLUDE_K2_AUTHORS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EXCLUDE_ITEMS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="k2a_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="userID"
+		>
+			<option value="userName">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="userID">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+		</field>
+
+		<field
+			name="k2a_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+	</fields>
+
+	<fields name="virtuemart_source" addfieldpath="/administrator/components/com_virtuemart/fields">
+
+		<field
+			name="vmp_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="VM_PRODUCTS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="vmp_category_filtering_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_CATEGORY_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORY_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="vmp_catfilter"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_CATEGORY_FILTER_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORY_FILTER_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_ALL</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_SELECT</option>
+		</field>
+
+		<field
+			name="vmp_category_id"
+			type="vmcategories"
+			default=""
+			multiple="true"
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_CATEGORIES_DESC"
+		/>
+
+		<field
+			name="vmp_catchildren"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_VIRTUEMART_CATEGORIES_INCLUDE_CHIDLREN_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_VIRTUEMART_CATEGORIES_INCLUDE_CHIDLREN_CATEGORIES_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="vmp_manufacturer_filtering_type"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_VIRTUEMART_MANUFACTURER_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_VIRTUEMART_MANUFACTURER_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="vmp_manufacturerfilter"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_VIRTUEMART_MANUFACTURER_FILTER_LABEL"
+			description="COM_MINITEKWALL_FIELD_VIRTUEMART_MANUFACTURER_FILTER_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_ALL</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_SELECT</option>
+		</field>
+
+		<field
+			name="vmp_manufacturers"
+			type="vmmanufacturer"
+			default=""
+			multiple="true"
+			label="COM_MINITEKWALL_FIELD_VIRTUEMART_MANUFACTURERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_VIRTUEMART_MANUFACTURERS_DESC"
+			addfieldpath="/administrator/components/com_minitekwall/models/fields"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="vmp_exclude_items"
+			type="text"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EXCLUDE_ITEMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EXCLUDE_ITEMS_DESC"
+		/>
+
+		<field
+			name="vmp_featured_items"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_SHOW_FEATURED_LABEL"
+			description="COM_MINITEKWALL_FIELD_SHOW_FEATURED_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="vmp_with_discount"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_PRODUCTS_WITH_DISCOUNT_LABEL"
+			description="COM_MINITEKWALL_FIELD_PRODUCTS_WITH_DISCOUNT_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_WITH_DISCOUNT</option>
+		</field>
+
+		<field
+			name="vmp_out_of_stock"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_PRODUCTS_OUT_OF_STOCK_LABEL"
+			description="COM_MINITEKWALL_FIELD_PRODUCTS_OUT_OF_STOCK_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="vmp_children_products"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_SHOW_CHILDREN_PRODUCTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_SHOW_CHILDREN_PRODUCTS_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="vmp_time_range"
+			type="list"
+			default=""
+			label="COM_MINITEKWALL_FIELD_TIME_RANGE_LABEL"
+			description="COM_MINITEKWALL_FIELD_TIME_RANGE_DESC"
+		>
+			<option value="">COM_MINITEKWALL_FIELD_OPTION_ALL_TIME</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_1_DAY</option>
+			<option value="3">COM_MINITEKWALL_FIELD_OPTION_3_DAYS</option>
+			<option value="7">COM_MINITEKWALL_FIELD_OPTION_1_WEEK</option>
+			<option value="14">COM_MINITEKWALL_FIELD_OPTION_2_WEEKS</option>
+			<option value="30">COM_MINITEKWALL_FIELD_OPTION_1_MONTH</option>
+			<option value="90">COM_MINITEKWALL_FIELD_OPTION_3_MONTHS</option>
+			<option value="180">COM_MINITEKWALL_FIELD_OPTION_6_MONTHS</option>
+			<option value="365">COM_MINITEKWALL_FIELD_OPTION_1_YEAR</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="vmp_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="created_on"
+		>
+			<option value="created_on">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="modified_on">COM_MINITEKWALL_FIELD_OPTION_MODIFIED_DATE</option>
+			<option value="product_name">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="product_sales">COM_MINITEKWALL_FIELD_OPTION_SALES</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="vmp_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="vmp_itemid"
+			type="menuitem"
+			default="99999"
+			label="COM_MINITEKWALL_FIELD_VIRTUEMART_ITEMID_LABEL"
+			description="COM_MINITEKWALL_FIELD_VIRTUEMART_ITEMID_DESC"
+		/>
+
+		<field
+			name="vmp_price_type"
+			type="list"
+			default="prices['salesPrice']"
+			label="COM_MINITEKWALL_FIELD_PRICE_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_PRICE_TYPE_DESC"
+		>
+			<option value="prices['salesPrice']">Sales price</option>
+			<option value="prices['discountedPriceWithoutTax']">Sales price without Tax</option>
+			<option value="prices['basePrice']">Base price</option>
+			<option value="prices['basePriceWithTax']">Base price with Tax</option>
+		</field>
+
+	</fields>
+
+	<fields name="jomsocial_source">
+
+		<field
+			name="jomsocial_mode"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_MODE_LABEL"
+			description="COM_MINITEKWALL_FIELD_MODE_DESC"
+			default="jsu"
+		>
+			<option value="jsu">COM_MINITEKWALL_FIELD_JOMSOCIAL_USERS</option>
+			<option value="jsg">COM_MINITEKWALL_FIELD_JOMSOCIAL_GROUPS</option>
+			<option value="jse">COM_MINITEKWALL_FIELD_JOMSOCIAL_EVENTS</option>
+			<option value="jsp">COM_MINITEKWALL_FIELD_JOMSOCIAL_PHOTOS</option>
+			<option value="jsa">COM_MINITEKWALL_FIELD_JOMSOCIAL_ALBUMS</option>
+			<option value="jsv">COM_MINITEKWALL_FIELD_JOMSOCIAL_VIDEOS</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOMSOCIAL_USERS_SEPARATOR" />
+
+		<field
+			name="jsu_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JS_USERS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jsu_specific_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="jsu_exclude_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="jsu_exclude_users_no_photo"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_USERS_NO_PHOTO_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_USERS_NO_PHOTO_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="jsu_featured_users"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_USERS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="jsu_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="jsu_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="userid"
+		>
+			<option value="userid">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="name">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="registerDate">COM_MINITEKWALL_FIELD_OPTION_REGISTER_DATE</option>
+			<option value="points">COM_MINITEKWALL_FIELD_OPTION_POINTS</option>
+			<option value="friendcount">COM_MINITEKWALL_FIELD_OPTION_FRIEND_COUNT</option>
+			<option value="view">COM_MINITEKWALL_FIELD_OPTION_VIEWS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="jsu_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOMSOCIAL_GROUPS_SEPARATOR" />
+
+		<field
+			name="jsg_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JS_GROUPS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jsg_groupscategories"
+			type="groupscategories"
+			default=""
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_GROUPS_CATEGORIES_DESC"
+			multiple="true"
+		/>
+
+		<field
+			name="jsg_specific_groups"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_GROUPS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_GROUPS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="jsg_exclude_groups"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_GROUPS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_GROUPS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="jsg_exclude_groups_no_photo"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_GROUP_NO_PHOTO_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_GROUP_NO_PHOTO_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="jsg_featured_groups"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_GROUPS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_GROUPS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="jsg_hide_private"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_GROUPS_HIDE_PRIVATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_GROUPS_HIDE_PRIVATE_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="jsg_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="id"
+		>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="name">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="membercount">COM_MINITEKWALL_FIELD_OPTION_MEMBER_COUNT</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="jsg_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOMSOCIAL_EVENTS_SEPARATOR" />
+
+		<field
+			name="jse_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JS_EVENTS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jse_eventscategories"
+			type="eventscategories"
+			default=""
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EVENTS_CATEGORIES_DESC"
+			multiple="true"
+		/>
+
+		<field
+			name="jse_specific_events"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_EVENTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_EVENTS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="jse_exclude_events"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_EVENTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_EVENTS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="jse_exclude_events_no_photo"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_EVENT_NO_PHOTO_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_EVENT_NO_PHOTO_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="jse_featured_events"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_EVENTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_EVENTS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="jse_events_hide_private"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EVENTS_HIDE_PRIVATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EVENTS_HIDE_PRIVATE_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="jse_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="id"
+		>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="title">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="startdate">COM_MINITEKWALL_FIELD_OPTION_START_DATE</option>
+			<option value="enddate">COM_MINITEKWALL_FIELD_OPTION_END_DATE</option>
+			<option value="confirmedcount">COM_MINITEKWALL_FIELD_OPTION_CONFIRMED_COUNT</option>
+			<option value="ticket">COM_MINITEKWALL_FIELD_OPTION_TICKETS</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="jse_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOMSOCIAL_PHOTOS_SEPARATOR" />
+
+		<field
+			name="jsp_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JS_PHOTOS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jsp_photosalbums"
+			type="photosalbums"
+			default=""
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_PHOTOS_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_PHOTOS_ALBUMS_DESC"
+			multiple="true"
+		/>
+
+		<field
+			name="jsp_specific_photos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_PHOTOS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="jsp_exclude_photos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_PHOTOS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="jsp_featured_photos"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_PHOTOS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="jsp_exclude_covers"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SHOW_COVERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SHOW_COVERS_DESC"
+			default="1"
+		>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+		</field>
+
+		<field
+			name="jsp_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="jsp_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="id"
+		>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="caption">COM_MINITEKWALL_FIELD_OPTION_CAPTION</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="jsp_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOMSOCIAL_ALBUMS_SEPARATOR" />
+
+		<field
+			name="jsa_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JS_ALBUMS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jsa_specific_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_USERS_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_USERS_ALBUMS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="jsa_specific_albums"
+			type="photosalbums"
+			default=""
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_ALBUMS_DESC"
+			multiple="true"
+		/>
+
+		<field
+			name="jsa_exclude_albums"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_ALBUMS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="jsa_featured_albums"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_ALBUMS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="jsa_exclude_covers"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SHOW_COVERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SHOW_COVERS_DESC"
+			default="1"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="jsa_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="jsa_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="id"
+		>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="name">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="jsa_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_JOMSOCIAL_VIDEOS_SEPARATOR" />
+
+		<field
+			name="jsv_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="JS_VIDEOS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="jsv_videoscategories"
+			type="videoscategories"
+			default=""
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_VIDEOS_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_VIDEOS_CATEGORIES_DESC"
+			multiple="true"
+		/>
+
+		<field
+			name="jsv_specific_videos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_SPECIFIC_VIDEOS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="jsv_exclude_videos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_EXCLUDE_VIDEOS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="jsv_featured_videos"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_JOMSOCIAL_FEATURED_VIDEOS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="jsv_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="jsv_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="id"
+		>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="title">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="jsv_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+	</fields>
+
+	<fields name="easyblog_source" addfieldpath="/administrator/components/com_easyblog/elements">
+
+		<field
+			name="eb_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="EASYBLOG_ARTICLES"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="eb_category_filtering_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_CATEGORY_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_CATEGORY_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="eb_catids"
+			type="multicategories"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_CATEGORIES_DESC"
+		/>
+
+		<field
+			name="eb_getChildren"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_INCLUDE_CHILDREN_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_INCLUDE_CHILDREN_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="eb_bloggerlisttype"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_AUTHOR_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_AUTHOR_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="eb_bloggerlist"
+			type="modal_multibloggers"
+			default=""
+			label="COM_MINITEKWALL_FIELD_AUTHORS_LABEL"
+			description="COM_MINITEKWALL_FIELD_AUTHORS_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="eb_tag_filtering_type"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TAG_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TAG_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="eb_tagids"
+			type="text"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TAGS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TAGS_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="eb_team_filtering_type"
+			type="radio"
+			default="1"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TEAM_FILTERING_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TEAM_FILTERING_TYPE_DESC"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUSIVE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUSIVE</option>
+		</field>
+
+		<field
+			name="eb_teamids"
+			type="text"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TEAMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_TEAMS_DESC"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="eb_exclude_items"
+			type="text"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_EXCLUDE_ARTICLES_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_EXCLUDE_ARTICLES_DESC"
+		/>
+
+		<field
+			name="eb_usefeatured"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_ONLY_FEATURED_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_ONLY_FEATURED_DESC"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="eb_showFrontpage"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_FRONTPAGE_ARTICLES_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_FRONTPAGE_ARTICLES_DESC"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_ONLY_FRONTPAGE</option>
+		</field>
+
+		<field
+			name="eb_sortby"
+			type="list"
+			default="latest"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+		>
+			<option value="latest">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="published">COM_MINITEKWALL_FIELD_OPTION_START_PUBLISHING_DATE</option>
+			<option value="modified">COM_MINITEKWALL_FIELD_OPTION_MODIFIED_DATE</option>
+			<option value="popular">COM_MINITEKWALL_FIELD_OPTION_VIEWS</option>
+			<option value="alphabet">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="eb_sortDirection"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="eb_image_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			label="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_IMAGE_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_IMAGE_TYPE_DESC"
+		>
+			<option value="1">COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_ARTICLE_IMAGE</option>
+			<option value="2">COM_MINITEKWALL_FIELD_EASYBLOG_ARTICLES_INLINE_IMAGE</option>
+		</field>
+
+	</fields>
+
+	<fields name="easysocial_source">
+
+		<field
+			name="easysocial_mode"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_MODE_LABEL"
+			description="COM_MINITEKWALL_FIELD_MODE_DESC"
+			default="esu"
+		>
+			<option value="esu">COM_MINITEKWALL_FIELD_EASYSOCIAL_USERS</option>
+			<option value="esg">COM_MINITEKWALL_FIELD_EASYSOCIAL_GROUPS</option>
+			<option value="ese">COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS</option>
+			<option value="esp">COM_MINITEKWALL_FIELD_EASYSOCIAL_PHOTOS</option>
+			<option value="esa">COM_MINITEKWALL_FIELD_EASYSOCIAL_ALBUMS</option>
+			<option value="esv">COM_MINITEKWALL_FIELD_EASYSOCIAL_VIDEOS</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_EASYSOCIAL_USERS_SEPARATOR" />
+
+		<field
+			name="esu_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="ES_USERS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="esu_filter"
+			type="list"
+			default="recent"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_USERS_FILTER_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_USERS_FILTER_DESC"
+		>
+			<option value="recent">COM_MINITEKWALL_FIELD_OPTION_ONLINE_AND_OFFLINE</option>
+			<option value="online">COM_MINITEKWALL_FIELD_OPTION_ONLINE_USERS</option>
+			<option value="onlinefriends">COM_MINITEKWALL_FIELD_OPTION_ONLINE_FRIENDS</option>
+		</field>
+
+		<field
+			name="esu_profileId"
+			type="sql"
+			multiple="true"
+			query="SELECT id AS value, title AS esu_profileId FROM #__social_profiles WHERE state = 1"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_USERS_PROFILE_TYPE_FILTER_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_USERS_PROFILE_TYPE_FILTER_DESC"
+			default=""
+		/>
+
+		<field
+			name="esu_specific_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esu_exclude_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esu_exclude_users_no_photo"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_NO_PHOTO_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_NO_PHOTO_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="esu_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="registerDate"
+		>
+			<option value="registerDate">COM_MINITEKWALL_FIELD_OPTION_REGISTER_DATE</option>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="name">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="esu_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_EASYSOCIAL_GROUPS_SEPARATOR" />
+
+		<field
+			name="esg_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="ES_GROUPS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="esg_category"
+			type="sql"
+			multiple="true"
+			query="SELECT id AS value, title AS esg_category FROM #__social_clusters_categories WHERE type = 'group' AND state = 1"
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_GROUPS_CATEGORIES_DESC"
+		/>
+
+		<field
+			name="esg_specific_groups"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_GROUPS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_GROUPS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esg_exclude_groups"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_GROUPS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_GROUPS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esg_exclude_groups_no_photo"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_GROUP_NO_PHOTO_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_GROUP_NO_PHOTO_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="esg_featured_groups"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_GROUPS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_GROUPS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="esg_hide_private"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_GROUPS_HIDE_PRIVATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_GROUPS_HIDE_PRIVATE_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="esg_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="latest"
+		>
+			<option value="latest">COM_MINITEKWALL_FIELD_OPTION_LATEST</option>
+			<option value="title">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="popular">COM_MINITEKWALL_FIELD_OPTION_POPULAR</option>
+			<option value="members">COM_MINITEKWALL_FIELD_OPTION_MEMBERS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="esg_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_SEPARATOR" />
+
+		<field
+			name="ese_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="ES_EVENTS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="ese_category"
+			type="sql"
+			multiple="true"
+			query="SELECT id AS value, title AS ese_category FROM #__social_clusters_categories WHERE type = 'event' AND state = 1"
+			label="COM_MINITEKWALL_FIELD_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_CATEGORIES_DESC"
+		/>
+
+		<field
+			name="ese_groupId"
+			type="sql"
+			multiple="true"
+			default=""
+			query="SELECT id AS value, title AS ese_groupId FROM #__social_clusters WHERE cluster_type = 'group' AND state = 1"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_GROUP_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_GROUP_DESC"
+		/>
+
+		<field
+			name="ese_specific_events"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_EVENTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_EVENTS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="ese_exclude_events"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_EVENTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_EVENTS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="ese_time_filter"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_TIME_FILTER_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_TIME_FILTER_DESC"
+			default="all"
+		>
+			<option value="all">COM_MINITEKWALL_FIELD_OPTION_ALL_EVENTS</option>
+			<option value="past">COM_MINITEKWALL_FIELD_OPTION_PAST_EVENTS</option>
+			<option value="ongoing">COM_MINITEKWALL_FIELD_OPTION_ONGOING_EVENTS</option>
+			<option value="upcoming">COM_MINITEKWALL_FIELD_OPTION_UPCOMING_EVENTS</option>
+		</field>
+
+		<field
+			name="ese_image_type"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_IMAGE_TYPE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_IMAGE_TYPE_DESC"
+			default="avatar"
+		>
+			<option value="avatar">COM_MINITEKWALL_FIELD_OPTION_AVATAR</option>
+			<option value="cover">COM_MINITEKWALL_FIELD_OPTION_COVER</option>
+		</field>
+
+		<field
+			name="ese_exclude_events_no_photo"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_EVENT_NO_PHOTO_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_EVENT_NO_PHOTO_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="ese_featured_events"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_EVENTS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_EVENTS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="ese_events_hide_private"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_HIDE_PRIVATE_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EVENTS_HIDE_PRIVATE_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="ese_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="start"
+		>
+			<option value="start">COM_MINITEKWALL_FIELD_OPTION_START_DATE</option>
+			<option value="end">COM_MINITEKWALL_FIELD_OPTION_END_DATE</option>
+			<option value="name">COM_MINITEKWALL_FIELD_OPTION_NAME</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="ese_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_EASYSOCIAL_PHOTOS_SEPARATOR" />
+
+		<field
+			name="esp_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="ES_PHOTOS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="esp_specific_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esp_exclude_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esp_specific_albums"
+			type="text"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_PHOTOS_SPECIFIC_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_PHOTOS_SPECIFIC_ALBUMS_DESC"
+		/>
+
+		<field
+			name="esp_exclude_albums"
+			type="text"
+			default=""
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_PHOTOS_EXCLUDE_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_PHOTOS_EXCLUDE_ALBUMS_DESC"
+		/>
+
+		<field
+			name="esp_specific_photos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_PHOTOS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esp_exclude_photos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_PHOTOS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esp_featured_photos"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_PHOTOS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="esp_include_avatars"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_AVATAR_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_AVATAR_PHOTOS_DESC"
+			default="1"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="esp_include_covers"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_COVER_PHOTOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_COVER_PHOTOS_DESC"
+			default="1"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="esp_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="esp_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="title"
+		>
+			<option value="title">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="esp_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_EASYSOCIAL_ALBUMS_SEPARATOR" />
+
+		<field
+			name="esa_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="ES_ALBUMS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="esa_specific_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_ALBUMS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esa_exclude_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esa_specific_albums"
+			type="text"
+			default="0"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_ALBUMS_DESC"
+		/>
+
+		<field
+			name="esa_exclude_albums"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_ALBUMS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esa_include_avatars"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_AVATAR_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_AVATAR_ALBUMS_DESC"
+			default="0"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="esa_include_covers"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_COVER_ALBUMS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SHOW_COVER_ALBUMS_DESC"
+			default="0"
+		>
+			<option value="0">COM_MINITEKWALL_FIELD_OPTION_EXCLUDE</option>
+			<option value="1">COM_MINITEKWALL_FIELD_OPTION_INCLUDE</option>
+		</field>
+
+		<field
+			name="esa_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="esa_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="title"
+		>
+			<option value="title">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="hits">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="esa_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field type="separator" text="COM_MINITEKWALL_FIELD_EASYSOCIAL_VIDEOS_SEPARATOR" />
+
+		<field
+			name="esv_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="ES_VIDEOS"
+		/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="esv_category"
+			type="sql"
+			multiple="true"
+			query="SELECT id AS value, title AS esv_category FROM #__social_videos_categories WHERE state = 1"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_VIDEOS_CATEGORIES_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_VIDEOS_CATEGORIES_DESC"
+		/>
+
+		<field
+			name="esv_specific_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_USERS_VIDEOS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esv_exclude_users"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_USERS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esv_specific_videos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_SPECIFIC_VIDEOS_DESC"
+			class="inputbox"
+			size="5"
+			default="0"
+		/>
+
+		<field
+			name="esv_exclude_videos"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_EXCLUDE_VIDEOS_DESC"
+			class="inputbox"
+			size="5"
+			default=""
+		/>
+
+		<field
+			name="esv_featured_videos"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_VIDEOS_LABEL"
+			description="COM_MINITEKWALL_FIELD_EASYSOCIAL_FEATURED_VIDEOS_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">COM_MINITEKWALL_FIELD_OPTION_SHOW_ONLY_FEATURED</option>
+		</field>
+
+		<field
+			name="esv_respect_permissions"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_LABEL"
+			description="COM_MINITEKWALL_FIELD_RESPECT_PERMISSIONS_DESC"
+			default="1"
+		>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="esv_ordering"
+			type="list"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+			default="title"
+		>
+			<option value="title">COM_MINITEKWALL_FIELD_OPTION_TITLE</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="popular">COM_MINITEKWALL_FIELD_OPTION_HITS</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="esv_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+			default="DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+	</fields>
+
+	<fields name="folder_source">
+
+		<field
+			name="fold_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="IMAGES"
+		/>
+
+		<field
+			name="image_folder"
+			type="folderlist"
+			directory="images"
+			exclude="mnwallimages|msliderimages|regridart"
+			hide_none="true"
+			hide_default="true"
+			recursive="true"
+			default=""
+			label="COM_MINITEKWALL_FIELD_FOLDER_SELECT_FOLDER_LABEL"
+			description="COM_MINITEKWALL_FIELD_FOLDER_SELECT_FOLDER_DESC"
+		/>
+
+		<field
+			name="fold_ordering"
+			type="list"
+			default="created"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_FOLDER_ORDERING_DESC"
+		>
+			<option value="title">JGLOBAL_TITLE</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="random">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="fold_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+	</fields>
+
+	<fields name="rss_source">
+
+		<field
+			name="rss_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="Items"
+		/>
+
+		<field
+			name="rss_file_or_url"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_RSS_FILE_OR_URL_LABEL"
+			description="COM_MINITEKWALL_FIELD_RSS_FILE_OR_URL_DESC"
+			class="inputbox"
+			size="50"
+			default=""
+		/>
+
+	</fields>
+
+	<fields name="custom_source">
+
+		<field
+			name="custom_title"
+			type="text"
+			label="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_LABEL"
+			description="COM_MINITEKWALL_FIELD_CONTENT_TYPE_TITLE_DESC"
+			class="inputbox"
+			size="5"
+			default="CUSTOM_ITEMS"
+		/>
+
+		<field
+			name="custom_groupid"
+			type="groupid"
+			default=""
+			label="COM_MINITEKWALL_FIELD_CUSTOM_SELECT_GROUP_LABEL"
+			description="COM_MINITEKWALL_FIELD_CUSTOM_SELECT_GROUP_DESC"
+		/>
+
+		<field
+			name="custom_ordering"
+			type="list"
+			default="created"
+			label="COM_MINITEKWALL_FIELD_ORDERING_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DESC"
+		>
+			<option value="ordering">COM_MINITEKWALL_FIELD_OPTION_ORDERING</option>
+			<option value="title">JGLOBAL_TITLE</option>
+			<option value="id">COM_MINITEKWALL_FIELD_OPTION_ID</option>
+			<option value="created">COM_MINITEKWALL_FIELD_OPTION_CREATED_DATE</option>
+			<option value="modified">COM_MINITEKWALL_FIELD_OPTION_MODIFIED_DATE</option>
+			<option value="publish_up">COM_MINITEKWALL_FIELD_OPTION_START_PUBLISHING_DATE</option>
+			<option value="publish_down">COM_MINITEKWALL_FIELD_OPTION_FINISH_PUBLISHING_DATE</option>
+			<option value="RAND()">COM_MINITEKWALL_FIELD_OPTION_RANDOM</option>
+		</field>
+
+		<field
+			name="custom_ordering_direction"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			default="DESC"
+			label="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_LABEL"
+			description="COM_MINITEKWALL_FIELD_ORDERING_DIRECTION_DESC"
+		>
+			<option value="ASC">COM_MINITEKWALL_FIELD_OPTION_ASCENDING</option>
+			<option value="DESC">COM_MINITEKWALL_FIELD_OPTION_DESCENDING</option>
+		</field>
+
+	</fields>
+
+	<fieldset name="hidden">
+
+		<field
+			name="type_id"
+			type="hidden"
+			default=""
+		/>
+
+		<field
+			name="source_id"
+			type="hidden"
+			default=""
+		/>
+
+	</fieldset>
+
+</form>

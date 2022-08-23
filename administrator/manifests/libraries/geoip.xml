@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="library" method="upgrade">
+	<name>GeoIP</name>
+	<libraryname>geoip</libraryname>
+	<description></description>
+	<version>5.1.1</version>
+	<creationDate>June 2022</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://regularlabs.com</authorUrl>
+	<copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - GeoIP">
+			https://download.regularlabs.com/updates.xml?e=geoip&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<folder>vendor</folder>
+		<folder>src</folder>
+		<file>autoload.php</file>
+		<file>geoip.php</file>
+		<file>geoip.xml</file>
+		<file>GeoLite2-City.mmdb</file>
+		<file>GeoLite2-City.date.txt</file>
+
+		<file>script.install.helper.php</file>
+	</files>
+</extension>

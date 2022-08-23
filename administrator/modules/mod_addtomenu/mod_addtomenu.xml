@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="module" client="administrator" method="upgrade">
+	<name>MOD_ADDTOMENU</name>
+	<description>MOD_ADDTOMENU_DESC</description>
+	<version>6.7.0</version>
+	<creationDate>February 2022</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://regularlabs.com</authorUrl>
+	<copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - Add to Menu">
+			https://download.regularlabs.com/updates.xml?e=addtomenu&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<file module="mod_addtomenu">mod_addtomenu.php</file>
+		<file>popup.php</file>
+		<file>helper.php</file>
+		<file>script.install.helper.php</file>
+		<folder>components</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<media folder="media" destination="addtomenu">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+	</media>
+
+	<config>
+		<fields name="params" addfieldpath="/libraries/regularlabs/fields">
+			<fieldset name="description">
+				<field name="@load_language" type="rl_loadlanguage" extension="mod_addtomenu" admin="1" />
+				<field name="@license" type="rl_license" extension="ADDTOMENU" />
+				<field name="@version" type="rl_version" extension="ADDTOMENU" />
+				<field name="@header" type="rl_header"
+					   label="ADDTOMENU"
+					   description="ADDTOMENU_DESC"
+					   url="https://regularlabs.com/addtomenu" />
+			</fieldset>
+			<fieldset name="basic">
+				<field name="display_link" type="list" default="both"
+					   label="RL_DISPLAY_LINK"
+					   description="RL_DISPLAY_LINK_DESC">
+					<option value="icon">RL_ICON_ONLY</option>
+					<option value="text">RL_TEXT_ONLY</option>
+					<option value="both">RL_BOTH</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="display_toolbar_button" type="radio" class="btn-group btn-group-yesno" default="1"
+					   label="RL_DISPLAY_TOOLBAR_BUTTON"
+					   description="RL_DISPLAY_TOOLBAR_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="button_text" type="text" default="Add to Menu"
+					   label="RL_LINK_TEXT"
+					   description="RL_LINK_TEXT_DESC" />
+				<field name="display_tooltip" type="radio" class="btn-group btn-group-yesno" default="1"
+					   label="RL_DISPLAY_TOOLTIP"
+					   description="RL_DISPLAY_TOOLTIP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="adjust_modal_w" type="number" default="0" size="5" class="input-mini"
+					   label="ATM_ADJUST_MODAL_WIDTH"
+					   description="ATM_ADJUST_MODAL_DESC" />
+				<field name="adjust_modal_h" type="number" default="0" size="5" class="input-mini"
+					   label="ATM_ADJUST_MODAL_HEIGHT"
+					   description="ATM_ADJUST_MODAL_DESC" />
+
+				<field name="@block_fields_a" type="rl_block" start="1" label="ATM_SHOW_FIELDS" description="ATM_SHOW_FIELDS_DESC" />
+				<field name="@load_language_com_menus" type="rl_loadlanguage" extension="com_menus" admin="1" />
+				<field name="@notice_display_field_access" type="rl_onlypro"
+					   label="JFIELD_ACCESS_LABEL"
+					   description="ATM_DISPLAY_FIELD_DESC" />
+				<field name="@notice_display_field_language" type="rl_onlypro"
+					   label="JFIELD_LANGUAGE_LABEL"
+					   description="ATM_DISPLAY_FIELD_DESC" />
+				<field name="@notice_display_field_template_style" type="rl_onlypro"
+					   label="COM_MENUS_ITEM_FIELD_TEMPLATE_LABEL"
+					   description="ATM_DISPLAY_FIELD_DESC" />
+				<field name="@notice_display_field_menu_show" type="rl_onlypro"
+					   label="COM_MENUS_ITEM_FIELD_MENU_SHOW_LABEL"
+					   description="ATM_DISPLAY_FIELD_DESC" />
+				<field name="@block_fields_b" type="rl_block" end="1" />
+
+				<field name="@block_defaults_a" type="rl_block" start="1" label="ATM_DEFAULT_SETTINGS" />
+				<field name="default_state" type="radio" class="btn-group btn-group-yesno" default="1"
+					   label="JSTATUS">
+					<option value="1">JPUBLISHED</option>
+					<option value="0">JUNPUBLISHED</option>
+				</field>
+				<!--				<field name="default_menuitem" type="rl_menuitems"-->
+				<!--					   label="COM_MENUS_ITEM_FIELD_PARENT_LABEL"-->
+				<!--					   disable="separator,alias,heading,url">-->
+				<!--				</field>-->
+				<field name="@notice_default_access" type="rl_onlypro"
+					   label="JFIELD_ACCESS_LABEL" />
+				<field name="@notice_default_template_style" type="rl_onlypro"
+					   label="COM_MENUS_ITEM_FIELD_TEMPLATE_LABEL" />
+				<field name="@notice_default_menu_show" type="rl_onlypro"
+					   label="COM_MENUS_ITEM_FIELD_MENU_SHOW_LABEL" />
+				<field name="default_category_layout" type="list" default=""
+					   label="Category Layout">
+					<option value="">COM_CONTENT_CATEGORY_VIEW_DEFAULT_TITLE</option>
+					<option value="blog">COM_CONTENT_CATEGORY_VIEW_BLOG_TITLE</option>
+				</field>
+				<field name="@block_defaults_b" type="rl_block" end="1" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
