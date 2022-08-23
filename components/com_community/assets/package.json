@@ -1,0 +1,52 @@
+{
+  "name": "jomsocial",
+  "scripts": {
+    "build-chat": "browserify chat/chat.js | uglifyjs -c -m -o chat/chat.min.js",
+    "dev-chat": "watchify chat/chat.js -o chat/chat.min.js -v",
+    "build-lib": "browserify -e vendors/libs.js -g [ envify --NODE_ENV production ] | uglifyjs --comments -c -m -o vendors/libs.min.js"
+  },
+  "dependencies": {
+    "autosize": "^4.0.2",
+    "moment": "^2.19.4",
+    "store": "^2.0.12",
+    "vue": "^2.5.10",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "browserify-shim": "^3.8.14",
+    "envify": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-import-css": "^0.1.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-requirejs-optimize": "^1.3.0",
+    "gulp-uglify": "^3.0.1",
+    "pump": "^3.0.0",
+    "uglify-js": "^3.3.13",
+    "watchify": "^3.11.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "joms": "global:joms"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}

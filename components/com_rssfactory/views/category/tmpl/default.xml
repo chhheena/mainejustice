@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="com_rssfactory_category_view_default_title" option="com_rssfactory_category_view_default_option"/>
+
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request">
+
+            <field name="category_id" type="category" extension="com_rssfactory" show_root="true"
+                   description="JGLOBAL_CHOOSE_CATEGORY_DESC" label="JGLOBAL_CHOOSE_CATEGORY_LABEL"/>
+        </fieldset>
+    </fields>
+
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+        <fields name="category">
+            <fieldset name="category" label="JGLOBAL_CATEGORY_OPTIONS">
+
+                <field name="headlines_show" type="radio" class="btn-group" default="1"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_SHOW_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_SHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="headlines_limit" type="text" default="5"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_LIMIT_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_LIMIT_DESC"/>
+
+                <field name="description_show" type="radio" class="btn-group" default="1"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_DESCRIPTION_SHOW_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_DESCRIPTION_SHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+
+        <fields name="subcategory">
+            <fieldset name="subcategory" label="Subcategories">
+
+                <field name="headlines_show" type="radio" class="btn-group" default="1"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_SHOW_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_SHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="headlines_limit" type="text" default="5"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_LIMIT_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_HEADLINES_LIMIT_DESC"/>
+
+                <field name="description_show" type="radio" class="btn-group" default="1"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_DESCRIPTION_SHOW_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_DESCRIPTION_SHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="content_show" type="radio" class="btn-group" default="1"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_CONTENT_SHOW_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_CONTENT_SHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="empty_show" type="radio" class="btn-group" default="1"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_EMPTY_SHOW_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_EMPTY_SHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field name="columns_display" type="list" default="3"
+                       label="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_COLUMNS_DISPLAY_LABEL"
+                       description="COM_RSSFACTORY_VIEW_CATEGORIES_MENU_FORM_COLUMNS_DISPLAY_DESC">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </field>
+            </fieldset>
+        </fields>
+    </fields>
+
+</metadata>

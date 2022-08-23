@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="com_rssfactory_feeds_view_default_title" option="com_rssfactory_feeds_view_default_option"/>
+
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request">
+
+            <field name="category_id" type="category" extension="com_rssfactory" show_root="true"
+                   description="JGLOBAL_CHOOSE_CATEGORY_DESC" label="JGLOBAL_CHOOSE_CATEGORY_LABEL"/>
+        </fieldset>
+    </fields>
+
+    <!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+        <fieldset name="basic" addfieldpath="administrator/components/com_rssfactory/models/fields">
+
+            <fields name="filters">
+                <field name="sort_column" type="list" default="ordering"
+                       label="COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_COLUMN_LABEL"
+                       description="COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_COLUMN_DESC">
+                    <option value="ordering">COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_COLUMN_OPTION_ORDERING
+                    </option>
+                    <option value="title">COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_COLUMN_OPTION_TITLE</option>
+                </field>
+
+                <field name="sort_dir" type="list" default="ordering"
+                       label="COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_DIR_LABEL"
+                       description="COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_DIR_DESC">
+                    <option value="asc">COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_DIR_OPTION_ASC</option>
+                    <option value="desc">COM_RSSFACTORY_VIEW_FEEDS_MENU_FORM_FILTERS_SORT_DIR_OPTION_DESC</option>
+                </field>
+
+            </fields>
+
+            <fields name="display">
+                <field name="mode" type="RssFactoryExtendList" useGlobal="true" extend="liststyle"
+                       label="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_LABEL"
+                       description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_DESC" />
+                <field name="description" type="RssFactoryExtendList" useGlobal="true" extend="showfeeddescription"
+                       label="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_LABEL"
+                       description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_DESC" />
+            </fields>
+        </fieldset>
+    </fields>
+</metadata>

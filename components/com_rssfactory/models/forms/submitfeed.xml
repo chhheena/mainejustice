@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field name="title" type="text"/>
+        <field name="url" type="url" required="true" filter="url" validate="url"/>
+        <field name="comment" type="textarea" rows="5"/>
+        <field name="captcha" type="captcha" validate="captcha" namespace="contact"/>
+    </fieldset>
+
+    <field name="userid" type="hidden"/>
+</form>

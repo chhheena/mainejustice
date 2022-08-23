@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Pages">
+		<message>
+			<![CDATA[
+				Pages view
+			]]>
+		</message>
+		<options var="task">
+ 			<default name="All Pages" msg="Displays all pages from the site" />
+			<option value="mypages" name="My Pages" msg="Displays pages from specific users" />
+			<option value="search" name="Search Pages" msg="Search for a page from the site" />
+			<option value="create" name="Create Page" msg="Create a page layout" />
+ 		</options>
+	</view>
+	<state>
+		<name>Pages Layout</name>
+		<description>Pages listings</description>
+	</state>
+</metadata>

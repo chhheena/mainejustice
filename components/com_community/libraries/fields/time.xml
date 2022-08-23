@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+        <param name="defaultprivacy" type="list" default="10" label="COM_COMMUNITY_DEFAULT_PRIVACY_PROFILE_FIELD" description="COM_COMMUNITY_DEFAULT_PRIVACY_PROFILE_FIELD_TIPS">
+            <option value="10" name="COM_COMMUNITY_PRIVACY_PUBLIC">COM_COMMUNITY_PRIVACY_PUBLIC</option>
+            <option value="20" name="COM_COMMUNITY_PRIVACY_SITE_MEMBERS">COM_COMMUNITY_PRIVACY_SITE_MEMBERS</option>
+            <option value="30" name="COM_COMMUNITY_PRIVACY_FRIENDS">COM_COMMUNITY_PRIVACY_FRIENDS</option>
+            <option value="40" name="COM_COMMUNITY_PRIVACY_ME">COM_COMMUNITY_PRIVACY_ME</option>
+        </param>
+	</params>
+</config>

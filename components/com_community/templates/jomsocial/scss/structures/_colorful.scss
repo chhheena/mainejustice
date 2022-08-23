@@ -1,0 +1,44 @@
+.colorful-status__container {
+    background-size: cover;
+    background-position: center;
+    cursor: text;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+
+    @media only screen and (max-width:$small) {
+        font-size: 18px;
+        min-height: 200px;
+    }
+
+    .colorful-status__inner {
+        padding: 50px 30px;
+        line-height: 34px;
+        width: 100%;
+        word-wrap: break-word;
+
+        &:focus {
+            outline: 0px solid transparent;
+        }
+
+        @media only screen and (max-width:$small) {
+            font-size: 18px;
+            padding: 10px 10px;
+            line-height: inherit;
+        }
+
+        .joms-content-emo2 {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.colorful-status__addition {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,16 @@
+{
+    "core": {
+        "css": [
+            "vendors/magnific-popup/magnific-popup",
+            "release/css/override",
+            "app/dist/app"
+        ],
+        "js": [
+            "emoticons/twemoji.min",
+            "vendors/toolkit.min",
+            "source/js/utils/observer",
+            "release/js/loader",
+            "app/dist/app"
+        ]
+    }
+}

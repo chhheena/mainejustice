@@ -1,0 +1,69 @@
+.joms-ribbon__wrapper {
+    @include media('medium') {
+        width: 100px;
+        height: 100px;
+        position:absolute;
+        top:0;
+        
+        @if ($scss-direction==rtl) {
+            right: 0;
+        } @else {
+            left: 0;
+        }
+
+        overflow: hidden;
+
+        .joms-gallery__thumbnail & {
+            top: auto;
+            left: auto;
+        }
+    }
+}
+
+.joms-ribbon {
+    background: $scss-color-important;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: $font-size-smallest;
+    opacity: 0.9;
+    z-index: 11;
+    bottom: 0;
+
+    @if ($scss-direction==rtl) {
+        right: 0;
+    } @else {
+        left: 0;
+    }
+
+    @include media('medium') {
+        width: 100px;
+        opacity: 1;
+        top: 16px;
+        bottom: auto;
+        
+        @if ($scss-direction==rtl) {
+            right: -22px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        } @else {
+            left: -22px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+
+        font-size: $font-size-small;
+        line-height: 20px;
+    }
+}
+
+.joms-ribbon--full {
+    @include media('medium') {
+        font-size: $font-size-large;
+        width: 110px;
+        left: -24px;
+        top: 18px;
+        line-height: 24px;
+    }
+}

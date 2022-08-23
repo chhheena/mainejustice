@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+
+	<layout title="COM_MINITEKWALL_VIEW_MASONRY_TITLE_LABEL">
+		<message>
+			<![CDATA[COM_MINITEKWALL_VIEW_MASONRY_TITLE_DESC]]>
+		</message>
+	</layout>
+	
+	<state>
+	
+		<name>COM_MINITEKWALL_VIEW_MASONRY_TITLE_LABEL</name>
+		<description>COM_MINITEKWALL_VIEW_MASONRY_TITLE_DESC</description>
+		
+		<fields name="request">
+		
+			<fieldset name="request" addfieldpath="/administrator/components/com_minitekwall/models/fields">
+				
+				<field 
+					name="widget_id" 
+					type="masonryid" 
+					label="COM_MINITEKWALL_FIELD_MENU_ITEM_MASONRY_WIDGET_LABEL"
+					description="COM_MINITEKWALL_FIELD_MENU_ITEM_MASONRY_WIDGET_DESC" 
+					class="input-xlarge" 
+					size="30"
+					required="true" 
+					labelclass="control-label" 
+				/>
+				
+			</fieldset>
+			
+		</fields>
+		
+	</state>
+	
+</metadata>

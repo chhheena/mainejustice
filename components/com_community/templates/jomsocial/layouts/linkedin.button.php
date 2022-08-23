@@ -1,0 +1,1 @@
+<a href="<?php echo $authurl;?>" class="btn-sign-with-linkedin"><?php echo JText::_('COM_COMMUNITY_SIGN_IN_WITH_LINKEDIN') ?></a>

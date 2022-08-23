@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Followers">
+		<message>
+			<![CDATA[
+				Followers view
+			]]>
+		</message>
+		<options var="task">
+ 			<default name="Followers" msg="Displays followers from specific user" />
+			<option value="Following" name="Following" msg="Displays following from specific users" />
+ 		</options>
+	</view>
+	<state>
+		<name>Followers Layout</name>
+		<description>Followers listings</description>
+	</state>
+</metadata>

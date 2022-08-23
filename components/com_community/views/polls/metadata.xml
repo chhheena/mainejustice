@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Polls">
+		<message>
+			<![CDATA[
+				Polls view
+			]]>
+		</message>
+		<options var="task">
+ 			<default name="All Polls" msg="Displays all polls from the site" />
+			<option value="mypolls" name="My Polls" msg="Displays groups from specific users" />
+			<option value="search" name="Search Polls" msg="Search for a poll from the site" />
+			<option value="create" name="Create Polls" msg="Create a poll layout" />
+ 		</options>
+	</view>
+	<state>
+		<name>Polls Layout</name>
+		<description>Polls listings</description>
+	</state>
+</metadata>

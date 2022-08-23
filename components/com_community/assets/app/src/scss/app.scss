@@ -1,0 +1,22 @@
+.joms-stream__body {
+    [data-type="stream-content"] {
+        img.emoji {
+            width: 20px;
+            margin-right: 2px;
+        }
+    }
+
+    .colorful-status__container {
+        img.emoji {
+            width: 28px;
+            margin-right: 2px;
+        }
+    }
+}
+
+.joms-js--comment-content {
+    img.emoji {
+        width: 20px;
+        margin-right: 2px;
+    }
+}

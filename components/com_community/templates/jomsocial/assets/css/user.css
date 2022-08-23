@@ -1,0 +1,185 @@
+.joms-tab__bar > a {
+    display: table-cell;
+    text-align: center;
+    text-decoration: none;
+    padding: 8.65248px;
+    font-size: 12px;
+    color: #0000ff;
+    position: relative;
+}
+.joms-page__title {
+    color: #0000ff;
+    margin-bottom: 22.65248px;
+}
+.joms-checkbox span {
+    color: #00ffff;
+    margin-top: 5.34752px;
+    display: inline-block;
+    font-size: small;
+    margin-left: 22.65248px;
+}
+.joms-form__legend {
+    margin-bottom: 14px;
+    color: #00ffff;
+    font-weight: bold;
+    font-size: inherit;
+    border: 0;
+}
+.joms-help {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    margin-top: 5.34752px;
+    color: #00ffff;
+}
+.joms-form__group {
+    color: #0000ff;
+    position: relative;
+    margin-bottom: 14px;
+    display: block;
+}
+.joms-page {
+    background: #ffffff88;
+    padding: 14px;
+    position: relative;
+}
+.joms-stream, .joms-stream--notifications {
+    background: #ffffff88;
+    margin-bottom: 14px;
+    position: relative;
+}
+.jomsocial a:hover {
+    color: #0ff;
+}
+.joms-tab__bar > a.active:hover {
+    color: #0ff;
+}
+.joms-tab__bar > a.active {
+    font-weight: bold;
+    background: #fff;
+    color: #0000ff;
+}
+.joms-icon {
+    fill: #0000ff;
+}
+.star-ratings-css {
+    unicode-bidi: bidi-override;
+    color: #0000ff;
+    font-size: 18px;
+    height: 25px;
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    text-shadow: 0 1px 0 #00ffff;
+}
+.joms-select {
+    margin: 0;
+    background: none;
+    border: 1px solid transparent;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    width: 100%;
+    color: #0000ff;
+}
+.joms-subnav--desktop .joms-icon, .joms-toolbar--desktop .joms-icon, .joms-toolbar--mobile .joms-icon {
+    fill: #0000ff;
+    height: 14px;
+    margin: 0 2.04257px;
+}
+.joms-subnav--desktop > ul > li > a, .joms-toolbar--desktop > ul > li > a, .joms-toolbar--mobile > ul > li > a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #0000ff;
+    position: relative;
+}
+.joms-subnav--desktop > ul > li > a:hover, .joms-toolbar--desktop > ul > li > a:hover, .joms-toolbar--mobile > ul > li > a:hover {
+    color: #00ffff;
+    text-decoration: none;
+}
+.joms-dropdown > li > a, .joms-popover > li > a {
+    display: block;
+    color: #0000ff;
+}
+.joms-dropdown > li > a:hover, .joms-popover > li > a:hover {
+    text-decoration: none;
+    color: #00ffff;
+}
+.joms-dropdown > li, .joms-popover > li {
+    color: #0000ff;
+    padding: 5px 10px 5px 10px;
+    text-align: left;
+}
+.joms-popup__content {
+    padding: 10px 15px 0;
+    position: relative;
+    background-color: #fff;
+    color: #0000ff;
+}
+.joms-button--primary, .joms-button--add, .joms-button--login, .joms-button__approve, .joms-postbox-tab .joms-postbox-save, .joms-postbox-tab .joms-postbox-done, .joms-focus__button--add {
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 40%);
+    background-color: #00c;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#00c));
+    background-image: -webkit-linear-gradient(top, #00ffff, #00c);
+    background-image: -moz-linear-gradient(top, #00ffff, #00c);
+    background-image: -ms-linear-gradient(top, #00ffff, #00c);
+    background-image: -o-linear-gradient(top, #00ffff, #00c);
+    background-image: linear-gradient(top, #00ffff, #00c);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#00ffff', EndColorStr='#00c');
+    color: #fff !important;
+}
+.joms-button--primary:hover, .joms-button--add:hover, .joms-button--login:hover, .joms-button__approve:hover, .joms-postbox-tab .joms-postbox-save:hover, .joms-postbox-tab .joms-postbox-done:hover, .joms-focus__button--add:hover, .joms-button--primary:active, .joms-button--add:active, .joms-button--login:active, .joms-button__approve:active, .joms-postbox-tab .joms-postbox-save:active, .joms-postbox-tab .joms-postbox-done:active, .joms-focus__button--add:active, .joms-button--primary:focus, .joms-button--add:focus, .joms-button--login:focus, .joms-button__approve:focus, .joms-postbox-tab .joms-postbox-save:focus, .joms-postbox-tab .joms-postbox-done:focus, .joms-focus__button--add:focus {
+    color: #fff !important;
+    background-color: #00ffff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2929ff), to(#00ffff));
+    background-image: -webkit-linear-gradient(top, #2929ff, #00ffff);
+    background-image: -moz-linear-gradient(top, #2929ff, #0000f5);
+    background-image: -ms-linear-gradient(top, #2929ff, #0000f5);
+    background-image: -o-linear-gradient(top, #2929ff, #0000f5);
+    background-image: linear-gradient(top, #2929ff, #0000f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2929ff', EndColorStr='#0000f5');
+}
+.joms-button__next, .joms-button--secondary, .joms-button--signup, .joms-button--invite, .joms-focus__button--message {
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 40%);
+    background-color: #0cc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0ff), to(#0cc));
+    background-image: -webkit-linear-gradient(top, #0ff, #0cc);
+    background-image: -moz-linear-gradient(top, #0ff, #0cc);
+    background-image: -ms-linear-gradient(top, #0ff, #0cc);
+    background-image: -o-linear-gradient(top, #0ff, #0cc);
+    background-image: linear-gradient(top, #0ff, #0cc);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#0ff', EndColorStr='#0cc');
+    color: #0000ff !important;
+}
+.joms-button__next:hover, .joms-button--secondary:hover, .joms-button--signup:hover, .joms-button--invite:hover, .joms-focus__button--message:hover, .joms-button__next:active, .joms-button--secondary:active, .joms-button--signup:active, .joms-button--invite:active, .joms-focus__button--message:active, .joms-button__next:focus, .joms-button--secondary:focus, .joms-button--signup:focus, .joms-button--invite:focus, .joms-focus__button--message:focus {
+    color: #0000ff !important;
+    background-color: #00f5f5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#29ffff), to(#00f5f5));
+    background-image: -webkit-linear-gradient(top, #29ffff, #03ffff);
+    background-image: -moz-linear-gradient(top, #29ffff, #00f5f5);
+    background-image: -ms-linear-gradient(top, #29ffff, #00f5f5);
+    background-image: -o-linear-gradient(top, #29ffff, #00f5f5);
+    background-image: linear-gradient(top, #29ffff, #00f5f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#29ffff', EndColorStr='#00f5f5');
+}
+.jomsocial-wrapper .jomsocial {
+    background: #ecf0f100;
+    padding: 14px;
+    height: 100%;
+    min-height: 480px;
+    position: relative;
+}
+.joms-input:active, .joms-input[type="text"]:active, .joms-input[type="password"]:active, .joms-select--wrapper:active, .joms-textarea:active, .joms-input:focus, .joms-input[type="text"]:focus, .joms-input[type="password"]:focus, .joms-select--wrapper:focus, .joms-textarea:focus, .joms-input:focus:invalid:focus, .joms-input[type="text"]:focus:invalid:focus, .joms-input[type="password"]:focus:invalid:focus, .joms-select--wrapper:focus:invalid:focus, .joms-textarea:focus:invalid:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #0000ff;
+    color: #0000ff;
+}
+.joms-avatar img, .joms-avatar--stream img, .joms-avatar--comment img, .joms-avatar--focus img, .joms-avatar--poll img, .joms-avatar--video img {
+    display: inline-block;
+    line-height: 0;
+    padding: 3px;
+    background: #fff;
+}

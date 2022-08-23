@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="multiple" type="radio" default="0" label="COM_COMMUNITY_TITLE_MULTIPLE" description="COM_COMMUNITY_TITLE_MULTIPLE_DESC">
+			<option value="0" name='COM_COMMUNITY_NO_OPTION'>No</option>
+			<option value="1" name='COM_COMMUNITY_YES_OPTION'>Yes</option>
+		</param>
+        <param name="defaultprivacy" type="list" default="10" label="COM_COMMUNITY_DEFAULT_PRIVACY_PROFILE_FIELD" description="COM_COMMUNITY_DEFAULT_PRIVACY_PROFILE_FIELD_TIPS">
+            <option value="10" name="COM_COMMUNITY_PRIVACY_PUBLIC">COM_COMMUNITY_PRIVACY_PUBLIC</option>
+            <option value="20" name="COM_COMMUNITY_PRIVACY_SITE_MEMBERS">COM_COMMUNITY_PRIVACY_SITE_MEMBERS</option>
+            <option value="30" name="COM_COMMUNITY_PRIVACY_FRIENDS">COM_COMMUNITY_PRIVACY_FRIENDS</option>
+            <option value="40" name="COM_COMMUNITY_PRIVACY_ME">COM_COMMUNITY_PRIVACY_ME</option>
+        </param>
+		<param name="size" type="text" default="" label="COM_COMMUNITY_TITLE_SIZE" description="COM_COMMUNITY_TITLE_SIZE_DESC" />
+        <param name="style" type="text" default="" label="COM_COMMUNITY_TITLE_STYLE_ATTR" description="COM_COMMUNITY_TITLE_STYLE_ATTR_DESC" />
+	</params>
+</config>
