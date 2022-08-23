@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+
+div.navbar div.navbar-inner {
+    min-height: auto;
+}
+
+div.navbar div.btn-group,
+div.navbar a.btn {
+    margin: 0;
+}
+
+p.navbar-text {
+    line-height: normal;
+}
+
+.story-votes div.badge {
+    margin-right: 5px;
+}
+
+.story-votes .story-vote-up,
+.story-votes .story-vote-down {
+    color: #0088CC;
+}
+
+.story-votes .muted {
+    color: #999999;
+}

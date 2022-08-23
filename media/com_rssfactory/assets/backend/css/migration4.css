@@ -1,0 +1,7 @@
+div#filter-bar.btn-toolbar {
+    display: block;
+}
+
+div#filter-bar .btn-group {
+    display: flex;
+}

@@ -1,0 +1,23 @@
+.view-category .lead {
+  margin-bottom: 5px;
+}
+
+.view-category .headlines {
+  margin-top: 10px;
+}
+
+.view-category .headlines li {
+  margin-top: 5px;
+}
+
+.view-category .lead + .headlines {
+  margin-top: 5px;
+}
+
+.view-category .row-fluid + .row-fluid {
+  margin-top: 10px;
+}
+
+.view-category .feed-stories {
+  margin-top: 10px;
+}

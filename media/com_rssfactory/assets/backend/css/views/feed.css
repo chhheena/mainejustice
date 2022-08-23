@@ -1,0 +1,49 @@
+#jform_url { width: 90%; }
+.latest-stories { list-style-type: none; margin-top: 20px !important; margin-bottom: 20px !important; }
+.latest-stories input { margin: 0 !important; }
+.latest-stories a { margin-left: 8px; margin-top: 5px; }
+.rules-actions { background-color: #cccccc; padding: 10px; }
+
+.feed-i2c-rule {
+  margin: 10px 0;
+}
+
+.feed-i2c-rule-title {
+  font-weight: bold;
+  border-bottom: 1px solid #eeeeee;
+  margin: 20px 0 10px 0;
+  background-color: #eeeeee;
+  padding: 5px 10px;
+  border-bottom: 1px solid #666666;
+}
+
+.feed-i2c-rule label {
+  margin-top: 10px;
+}
+
+.feed-i2c-rule input {
+  margin: 0 !important;
+}
+
+.view-feed .nav-tabs .label {
+  vertical-align: top;
+}
+
+.view-feed .rules fieldset.fieldset-rule {
+  border: 1px solid #cccccc; margin: 20px; padding: 0 18px 18px 18px; background-color: #f6f6f6;
+}
+
+.view-feed .rules fieldset.fieldset-rule legend {
+  border: 0; padding: 0 5px; font-size: 14px; font-weight: bold; margin: 0; display: inline; width: auto;
+}
+
+.rule-debug {
+  padding: 20px; border: 1px solid #cccccc;
+  margin-bottom: 20px;
+}
+
+.rule-debug-title {
+  background-color: #cccccc;
+  display: inline-block;
+  padding: 5px 10px;
+}

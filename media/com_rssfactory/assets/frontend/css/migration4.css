@@ -1,0 +1,25 @@
+div#filter-bar.btn-toolbar {
+    display: block;
+}
+
+div#filter-bar .btn-group {
+    display: flex;
+}
+
+ul.stories {
+    margin: 0;
+    padding: 0;
+}
+
+.modal .modal-header {
+    padding: 15px 20px;
+}
+
+.modal-header .modal-title {
+    line-height: normal;
+}
+
+.tooltip .tooltip-inner {
+    text-align: left !important;
+    min-width: 300px !important;
+}

@@ -1,0 +1,18 @@
+.refresh_all{
+	font-size: 18px; font-weight: bold; color: #0B55C4;
+	padding-left: 15px;
+	margin-left: 10px;
+	display: inline;
+	vertical-align: bottom;
+}
+
+.icon-32-importcsv {background: url("../../../../../../components/com_rssfactory/images/icon-32-importcsv.png") no-repeat;}
+.icon-32-backup { background: url("../../../../../../components/com_rssfactory/images/icon-32-backup.png") no-repeat; }
+.icon-32-backup:hover { background: url("../../../../../../components/com_rssfactory/images/icon-32-backup_f2.png") no-repeat; }
+.icon-32-restoreRSS { background: url("../../../../../../components/com_rssfactory/images/icon-32-repository.png") no-repeat; }
+.icon-32-restoreRSS:hover { background: url("../../../../../../components/com_rssfactory/images/icon-32-repository_f2.png") no-repeat; }
+
+img.siteicon{
+    height:16px;
+    width:16px;
+}

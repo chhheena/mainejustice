@@ -1,0 +1,118 @@
+.bootstrap-growl {
+  box-shadow: 0 0 11px -1px #CCCCCC;
+}
+
+.feed-stories .lead {
+  margin-bottom: 10px;
+}
+
+.feed-stories hr{
+  margin: 0 0 10px 0;
+}
+
+.feed-stories .stories li {
+  margin-bottom: 10px;
+}
+
+.feed-stories .voting li.story {
+  list-style-type: none;
+}
+
+.feed-stories .voting {
+  margin-left: 0;
+}
+
+.feed-stories .voting li {
+  border-bottom: 1px solid #f6f6f6;
+  padding-bottom: 5px;
+}
+
+.feed-stories .lead + .stories {
+  margin-top: 5px;
+}
+
+.feed-stories .row-fluid + .row-fluid {
+  margin-top: 10px;
+}
+
+.feed-stories .feed-icon img {
+  vertical-align: baseline;
+  margin-right: 5px;
+}
+
+/* Voting */
+.feed-stories .story-votes {
+  display: table-cell;
+  padding-right: 5px;
+  width: 40px;
+  text-align: center;
+}
+.feed-stories .story-votes-counter {
+  width: 24px;
+  margin: 0 auto;
+}
+
+.feed-stories .story-vote-up {
+  margin-right: -3px;
+}
+.feed-stories .story-vote-down {
+  margin-left: -3px;
+}
+
+.feed-stories .story-comments {
+  margin-top: -3px;
+}
+
+.feed-stories .voting .story-link {
+  display: table-cell;
+}
+
+.feed .lead .btn-group {
+  margin-right: 7px;
+}
+
+.feed-stories .feed-title-bookmarked {
+  vertical-align: middle;
+}
+
+.feed-stories .story-link div.muted + div.muted {
+  margin-top: -3px;
+}
+
+.feed-stories .enclosures {
+  margin-top: 10px;
+}
+
+.feeds-stories .display-columns-2 .pagination a,
+.feeds-stories .display-columns-3 .pagination a,
+.feeds-stories .display-columns-4 .pagination a,
+.feeds-stories .display-columns-2 .pagination span,
+.feeds-stories .display-columns-3 .pagination span,
+.feeds-stories .display-columns-4 .pagination span {
+  line-height: 25px;
+  padding: 0 6px;
+}
+
+.feed {
+  margin-bottom: 20px;
+}
+
+.feed hr {
+  margin: 10px 0;
+}
+
+.feed .lead {
+  margin: 0;
+}
+
+ul.voting {
+  margin: 0;
+}
+
+.mod_rssfactory .lead {
+  font-size: 16px;
+}
+
+.rssfactory-ad {
+  padding: 10px 0;
+}

@@ -1,0 +1,12 @@
+.rssfactory-button {
+  padding-left: 20px;
+  background: no-repeat left center;
+  text-decoration: none;
+  padding-top: 1px;
+}
+.rssfactory-button:hover {
+  text-decoration: underline;
+}
+
+.button-monitor { background-image: url('../images/buttons/monitor.png'); }
+.button-plus-circle { background-image: url('../images/buttons/plus-circle.png'); }
