@@ -1,0 +1,243 @@
+a {
+  color: #0878f7;
+}
+a:hover {
+  color: #0660c6;
+}
+.sp-megamenu-parent >li.active>a,
+.sp-megamenu-parent >li:hover>a {
+  color: #0878f7;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:hover,
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item >a:focus {
+  color: #0878f7;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+  color: #0878f7;
+}
+#offcanvas-toggler >i {
+  color: #7f7f7f;
+}
+#offcanvas-toggler >i:hover {
+  color: #0878f7;
+}
+.btn-primary,
+.sppb-btn-primary {
+  border-color: #076ad9;
+  background-color: #0878f7;
+}
+.btn-primary:hover,
+.sppb-btn-primary:hover {
+  border-color: #0654ad;
+  background-color: #0660c6;
+}
+ul.social-icons >li a:hover {
+  color: #0878f7;
+}
+.sp-page-title {
+  background: #0878f7;
+}
+.layout-boxed .body-innerwrapper {
+  background: #f0f0f0;
+}
+.sp-module ul >li >a {
+  color: #7f7f7f;
+}
+.sp-module ul >li >a:hover {
+  color: #0878f7;
+}
+.sp-module .latestnews >div >a {
+  color: #7f7f7f;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #0878f7;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #0878f7;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  background: #0878f7;
+}
+.search .btn-toolbar button {
+  background: #0878f7;
+}
+.post-format {
+  background: #0878f7;
+}
+.voting-symbol span.star.active:before {
+  color: #0878f7;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #0660c6;
+}
+.entry-link,
+.entry-quote {
+  background: #0878f7;
+}
+blockquote {
+  border-color: #0878f7;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #0878f7;
+}
+body {
+  background-color: #f0f0f0;
+}
+.newskit-sidebar .sp-module-title:after,
+#sp-right .sp-module .sp-module-title:after,
+#sp-left .sp-module .sp-module-title:after,
+.sppb-social-share .sp-module-title:after,
+.sppb-addon-header .sp-module-title:after,
+.newskit-sidebar .sppb-addon-title:after,
+#sp-right .sp-module .sppb-addon-title:after,
+#sp-left .sp-module .sppb-addon-title:after,
+.sppb-social-share .sppb-addon-title:after,
+.sppb-addon-header .sppb-addon-title:after,
+.sp-module.primary-menu .sp-module-content ul li a:hover,
+.sp-module.primary-menu .sp-module-content ul li a:focus,
+.top-search-wrapper .icon-top-wrapper.active,
+#login .modal-content .modal-body input[type="submit"],
+#login .modal-content .modal-header h3:before,
+.sp-vertical-tabs .sp-tab-btns > li > a:after,
+div.sp-page-title h2:before,
+.com-users .reg-login-form-wrap .form-validate button[type="submit"],
+.layout-blog .blog .newskit-blog-content-wrap p.readmore a,
+.layout-blog .blog .items-leading .carousel .carousel-controls a:hover,
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus,
+.pagination > li.active a:hover,
+.pagination > li.active span:hover,
+.pagination > li.active a:focus,
+.pagination > li.active span:focus,
+.pagination > li.active a,
+.pagination > li.active span
+.blog-details-content .pager.pagenav li a,
+.customNavigation a:hover,
+.customNavigation a:focus,
+.layout-blog .blog .page-header h1:after,
+.sppb-section.newskit-hero-section .sppb-addon-articles-slider .customNavigation a,
+.sppb-addon-article .sppb-article-details .sppb-meta-category a,
+.sppb-post-share-social .share-button:hover,
+.sppb-addon-social-share .sppb-social-share .sppb-social-items-wrap ul li a:hover,
+.sppb-addon-social-share .sppb-social-share .sppb-social-items-wrap ul li a:focus,
+.mostread li .category-tag a,
+.mod-sppoll form > input.btn-success:hover,
+.mod-sppoll form > input.btn-success:focus,
+.mod-sppoll form > input,
+#login .modal-header .close,
+.sp-comingsoon .sp-module.contact-us-modal .sppb-addon-ajax-contact .sppb-addon-title:before,
+.sp-comingsoon .sp-module.acymailing-module-modal .sppb-addon-ajax-contact .sppb-addon-title:before,
+.item.item-page .entry-header .newskit-blog-category dd a,
+.left-sidebar-v2 .sppb-addon-button-group a.sppb-btn-block,
+.contact-feedback .sppb-addon-ajax-contact .sppb-btn.sppb-btn-success,
+.sp-comingsoon .sp-module.contact-us-modal .sppb-addon-ajax-contact form .sppb-btn,
+.sp-comingsoon .sp-module.acymailing-module-modal .sppb-addon-ajax-contact form .sppb-btn,
+.sp-comingsoon .sp-module.contact-us-modal .closeModal2,
+.sp-comingsoon .sp-module.acymailing-module-modal .closeModal2,
+.sp-comingsoon .sp-module.contact-us-modal .closeModal,
+.sp-comingsoon .sp-module.acymailing-module-modal .closeModal,
+.error-page .btn {
+  background: #0878f7;
+}
+div.sppb-addon-header a:hover,
+div.sppb-addon-header a:focus,
+.sp-module.primary-menu:hover .sp-module-title:before,
+.top-search-wrapper .icon-top-wrapper:hover i,
+.sp-newskit-login.sp-mod-login:hover .info-content,
+#login .modal-content .modal-body p a:hover,
+#login .modal-content .modal-body p a:focus,
+#login .modal-content .modal-body .create-account a:hover,
+#login .modal-content .modal-body .create-account a:focus,
+#login .modal-content .modal-body .forgot-password a:hover,
+#login .modal-content .modal-body .forgot-password a:focus,
+.sp-vertical-tabs .sp-tab-pane .sp-article-info .entry-title > a:hover,
+.sp-vertical-tabs .sp-tab-btns > li.active > a,
+.sp-vertical-tabs .sp-tab-btns > li:hover > a,
+.sp-my-account ul.nav > li.active,
+.sp-my-account ul.nav > li > a:hover,
+.sp-my-account ul.nav > li > a:focus,
+.layout-blog .blog .entry-header h2 a:hover,
+.layout-blog .blog .entry-header h2 a:focus,
+.layout-blog .blog .items-leading .carousel .carousel-inner .newskit-item-wrap .newskit-blog-content-wrap .entry-header h2 a:hover,
+.layout-blog .blog .items-leading .carousel .carousel-inner .newskit-item-wrap .newskit-blog-content-wrap .entry-header h2 a:focus,
+.article-info dt a:hover,
+.article-info dd a:hover,
+.article-info dt a:focus,
+.article-info dd a:focus,
+.pagination > li:last-child:not(.active) a:hover,
+.pagination > li:last-child:not(.active) a:focus,
+.pagination > li:first-child:not(.active) a:hover,
+.pagination > li:first-child:not(.active) a:focus,
+.sppb-section.newskit-top-post-slider .sppb-addon-articles-slider .sppb-addon-article.item .sppb-article-details .sppb-meta-category a,
+.sppb-section.newskit-top-post-slider .sppb-addon-articles-slider .sppb-addon-article.item .sppb-article-details .article-title a:hover,
+.sppb-section.newskit-top-post-slider .sppb-addon-articles-slider .sppb-addon-article.item .sppb-article-details .article-title a:focus,
+.sppb-section.newskit-hero-section .sppb-addon-articles-slider .sppb-addon-article .sppb-article-details .article-title a:hover,
+.sppb-section.newskit-hero-section .sppb-addon-articles-slider .sppb-addon-article .sppb-article-details .article-title a:focus,
+.sppb-addon-article .sppb-article-details .sppb-readmore:hover,
+.sppb-addon-article .sppb-article-details .sppb-readmore:focus,
+.sppb-addon-article .sppb-article-details .meta-content span:hover,
+.sppb-addon-article .sppb-article-details .meta-content span:focus,
+.sppb-addon-article .sppb-article-details .sppb-article-title a:hover,
+.sppb-addon-article .sppb-article-details .sppb-article-title a:focus,
+.sppb-post-share-social .share-button,
+.layout-essential .sppb-addon-article.intro-item .sppb-article-details .sppb-meta-category a:hover,
+.layout-essential .sppb-addon-article.intro-item .sppb-article-details .sppb-meta-category a:focus,
+.newskit-twitter .sp-tweet-item .mod-tweet-content-wrap a:hover,
+.newskit-twitter .sp-tweet-item .mod-tweet-content-wrap a:focus,
+.acymailing_fulldiv .acymailing_module_form .acymailing_form .acysubbuttons:before,
+.acymailing_fulldiv .acymailing_module_form .acymailing_introtext p.icon span,
+#sp-right .sp-module .mostread a:hover,
+#sp-left .sp-module .mostread a:hover,
+#sp-right .sp-module .mostread a:focus,
+#sp-left .sp-module .mostread a:focus,
+.mostread li .title:hover,
+.mostread li .title:focus,
+.sp-page-builder.newskit-v2 .layout-basic .sppb-addon-article.intro-item:hover .sppb-article-details .sppb-article-title a:hover,
+.sp-page-builder.newskit-v2 .layout-basic .sppb-addon-article.intro-item:hover .sppb-article-details .sppb-article-title a:focus,
+.latestnews .single-latest-post .latest-post-content-wrap .newskit-title:hover,
+.latestnews .single-latest-post .latest-post-content-wrap .newskit-title:focus,
+.sppb-addon-articles.layout-standard .sppb-addon-article .sppb-article-details .sppb-meta-category a:hover,
+.sppb-addon-articles.layout-standard .sppb-addon-article .sppb-article-details .sppb-meta-category a:focus,
+#sp-bottom2 .sp-module .sp-module-content .sppb-addon-text-block ul li a:hover span span,
+#sp-bottom2 .sp-module .sp-module-content .sppb-addon-text-block ul li a:focus span span,
+#sp-bottom2 .sp-module .sp-module-content .sppb-addon-text-block ul li a:hover span,
+#sp-bottom2 .sp-module .sp-module-content .sppb-addon-text-block ul li a:focus span,
+#sp-bottom2 .sp-module .sp-module-content .sppb-addon-text-block ul li a:hover,
+#sp-bottom2 .sp-module .sp-module-content .sppb-addon-text-block ul li a:focus,
+#sp-bottom .sp-module ul li a:hover,
+#sp-bottom .sp-module ul li a:focus,
+#sp-footer a:hover,
+.sp-comingsoon .days .number,
+.sp-comingsoon .hours .number,
+.sp-comingsoon .seconds .number,
+.sp-comingsoon .minutes .number {
+  color: #0878f7;
+}
+.sp-module.primary-menu .sp-module-content ul li a:hover,
+.sp-module.primary-menu .sp-module-content ul li a:focus,
+.sppb-section.newskit-hero-section .sppb-addon-articles-slider .articles-slider .owl-controls .owl-dots .owl-dot.active span {
+  border-color: #0878f7;
+}
+.sppb-addon-article.video-post .sppb-article-image-wrap a.sppb-img-wrapper:after,
+#carousel.flexslider ul.slides li:before {
+  background: rgba(8,120,247,0.9);
+}
+.sp-comingsoon .sp-module.contact-us-modal .closeModal2:hover,
+.sp-comingsoon .sp-module.acymailing-module-modal .closeModal2:hover,
+.sp-comingsoon .sp-module.contact-us-modal .closeModal:hover,
+.sp-comingsoon .sp-module.acymailing-module-modal .closeModal:hover,
+.sp-comingsoon .sp-module.contact-us-modal .closeModal2:focus,
+.sp-comingsoon .sp-module.acymailing-module-modal .closeModal2:focus,
+.sp-comingsoon .sp-module.contact-us-modal .closeModal:focus,
+.sp-comingsoon .sp-module.acymailing-module-modal .closeModal:focus {
+  background: #0765cf;
+}
+.error-page .btn:hover,
+.error-page .btn:focus {
+  background-color: #0660c6;
+}

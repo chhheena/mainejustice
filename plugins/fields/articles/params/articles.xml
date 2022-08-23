@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams" addfieldpath="/libraries/regularlabs/fields">
+		<fieldset name="fieldparams">
+			<field name="field_type"
+				   type="list"
+				   label="FLDA_FIELD_TYPE"
+				   description="FLDA_FIELD_TYPE_DESC"
+				   default="articles"
+			>
+				<option value="articles">FLDA_LINK_ARTICLES</option>
+				<option value="" disabled="true">FLDA_LINKED_ARTICLES</option>
+				<option value="" disabled="true">RL_ONLY_AVAILABLE_IN_PRO_LIST_OPTION</option>
+			</field>
+
+			<field name="multiple"
+				   type="list"
+				   label="RL_FIELD_PARAM_MULTIPLE"
+				   description="RL_FIELD_PARAM_MULTIPLE_DESC"
+				   default=""
+			>
+				<option value="">COM_FIELDS_FIELD_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+
+
+			<field name="@description_link_articles" type="note" description="FLDA_LINK_ARTICLES_DESC" />
+
+			<field name="@block__filters__a" type="rl_block" start="1" label="RL_FILTERS" />
+			<field name="@block__filters_categories__a" type="rl_block" start="1" label="RL_CATEGORIES" />
+			<field name="filter_categories" type="radio" class="btn-group btn-group-yesno" default="0"
+				   label="FLDA_FILTER_BY_CATEGORIES"
+				   description="FLDA_FILTER_BY_CATEGORIES_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				<option value="current">RL_CURRENT</option>
+			</field>
+			<field name="categories"
+				   type="rl_content" group="categories"
+				   label="RL_CATEGORIES"
+				   description="FLDA_CATEGORIES_DESC"
+				   multiple="1"
+				   simple="1"
+				   showon="filter_categories:1"
+			/>
+			<field name="categories_inc_children" type="radio" class="btn-group btn-group-yesno" default="0"
+				   label="RL_INCLUDE_CHILD_CATEGORIES"
+				   description="RL_INCLUDE_CHILD_ITEMS_DESC"
+				   showon="filter_categories:1,current">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+				<option value="2">RL_ONLY</option>
+			</field>
+			<field name="@block__filters_categories__b" type="rl_block" end="1" />
+			<field name="@block__filters_tags__a" type="rl_block" start="1" label="RL_TAGS" />
+			<field name="@note__filters_tags" type="rl_onlypro"
+				   label="FLDA_FILTER_BY_TAGS"
+				   description="FLDA_FILTER_BY_TAGS_DESC" />
+			<field name="@block__filters_tags__b" type="rl_block" end="1" />
+			<field name="@block__filters_language__a" type="rl_block" start="1" label="RL_LANGUAGE" />
+			<field name="@note__filters_language" type="rl_onlypro"
+				   label="FLDA_FILTER_BY_LANGUAGE"
+				   description="FLDA_FILTER_BY_LANGUAGE_DESC" />
+			<field name="@block__filters_languages__b" type="rl_block" end="1" />
+			<field name="@block__filters_users__a" type="rl_block" start="1" label="JAUTHOR" />
+			<field name="@note__filters_users" type="rl_onlypro"
+				   label="FLDA_FILTER_BY_AUTHORS"
+				   description="FLDA_FILTER_BY_AUTHORS_DESC" />
+			<field name="@block__filters_users__b" type="rl_block" end="1" />
+
+			<field name="@block__filters_custom_fields__a" type="rl_block" start="1" label="RL_CUSTOM_FIELDS" />
+			<field name="@note__filter_customfields" type="rl_onlypro"
+				   label="FLDA_FILTER_BY_CUSTOM_FIELDS"
+				   description="FLDA_FILTER_BY_CUSTOM_FIELDS_DESC" />
+			<field name="@block__filters_custom_fields__b" type="rl_block" end="1" />
+
+			<field name="@block__filters__b" type="rl_block" end="1" />
+
+			<field name="@block__articles_ordering__a" type="rl_block" start="1" label="RL_ORDERING" />
+
+			<field name="articles_ordering"
+				   type="list"
+				   label="RL_ORDERING_PRIMARY"
+				   description="JGLOBAL_FIELD_FIELD_ORDERING_DESC"
+				   default="title"
+			>
+				<option value="ordering">JFIELD_ORDERING_LABEL</option>
+				<option value="id">JGRID_HEADING_ID</option>
+				<option value="title">JGLOBAL_TITLE</option>
+				<option value="alias">JFIELD_ALIAS_LABEL</option>
+				<option value="hits">JGLOBAL_HITS</option>
+				<option value="created">JGLOBAL_CREATED_DATE</option>
+				<option value="modified">JGLOBAL_MODIFIED_DATE</option>
+				<option value="publish_up">JGLOBAL_PUBLISHED_DATE</option>
+				<option value="featured">JFEATURED</option>
+				<option value="category_lft">JGLOBAL_CATEGORY_ORDER_LABEL</option>
+				<option value="category_title">JGLOBAL_LIST_TITLE_LABEL</option>
+			</field>
+			<field name="articles_ordering_direction"
+				   type="radio"
+				   label="RL_ORDER_DIRECTION_PRIMARY"
+				   description="JGLOBAL_ORDER_DIRECTION_DESC"
+				   class="btn-group btn-group-yesno"
+				   default="ASC"
+			>
+				<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+				<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+			</field>
+			<field name="articles_ordering_2"
+				   type="list"
+				   label="RL_ORDERING_SECONDARY"
+				   description="JGLOBAL_FIELD_FIELD_ORDERING_DESC"
+				   default="created"
+			>
+				<option value="ordering">JFIELD_ORDERING_LABEL</option>
+				<option value="id">JGRID_HEADING_ID</option>
+				<option value="title">JGLOBAL_TITLE</option>
+				<option value="alias">JFIELD_ALIAS_LABEL</option>
+				<option value="hits">JGLOBAL_HITS</option>
+				<option value="created">JGLOBAL_CREATED_DATE</option>
+				<option value="modified">JGLOBAL_MODIFIED_DATE</option>
+				<option value="publish_up">JGLOBAL_PUBLISHED_DATE</option>
+				<option value="featured">JFEATURED</option>
+				<option value="category_lft">JGLOBAL_CATEGORY_ORDER_LABEL</option>
+				<option value="category_title">JGLOBAL_LIST_TITLE_LABEL</option>
+			</field>
+			<field name="articles_ordering_direction_2"
+				   type="radio"
+				   label="RL_ORDER_DIRECTION_SECONDARY"
+				   description="JGLOBAL_ORDER_DIRECTION_DESC"
+				   class="btn-group btn-group-yesno"
+				   default="DESC"
+			>
+				<option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+				<option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+			</field>
+
+			<field name="@block__articles_ordering__b" type="rl_block" end="1" />
+
+			<field name="@block__layout__a" type="rl_block" start="1" label="RL_LAYOUT" />
+			<field name="layout"
+				   type="list"
+				   label="RL_LAYOUT"
+				   description="RL_LAYOUT_DESC"
+				   default="title"
+			>
+				<option value="title">FLDA_LAYOUT_TITLE</option>
+				<option value="title_custom">FLDA_LAYOUT_TITLE_CUSTOM_FIELD</option>
+				<option value="" disabled="true">FLDA_LAYOUT_CUSTOM_HTML</option>
+				<option value="" disabled="true">RL_ONLY_AVAILABLE_IN_PRO_LIST_OPTION</option>
+			</field>
+			<field name="custom_field"
+				   type="customfield"
+				   label="RL_CUSTOM_FIELD"
+				   description="FLDA_CUSTOM_FIELD_DESC"
+				   default=""
+				   exclude="articles"
+				   showon="layout:title_custom"
+			/>
+			<field name="link_title"
+				   type="radio"
+				   class="btn-group btn-group-yesno"
+				   label="FLDA_LINK_TITLE"
+				   description="FLDA_LINK_TITLE_DESC"
+				   default="1"
+				   showon="layout:title,title_custom"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="custom_html" type="rl_textareaplus" texttype="html" filter="raw"
+				   label="FLDA_CUSTOM_HTML"
+				   description="FLDA_CUSTOM_HTML_DESC"
+				   default="&lt;a href=&quot;[url]&quot;&gt;[title]&lt;/a&gt; ([hits])"
+				   showon="layout:custom_html" />
+			<field name="use_separator"
+				   type="radio"
+				   class="btn-group btn-group-yesno"
+				   label="FLDA_USE_SEPARATOR"
+				   description="FLDA_USE_SEPARATOR_DESC"
+				   default="1"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="separator"
+				   type="text"
+				   class="input-mini"
+				   label="FLDA_SEPARATOR"
+				   description="FLDA_SEPARATOR_DESC"
+				   default=", "
+				   filter="raw"
+				   showon="use_separator:1" />
+			<field name="@block__layout__b" type="rl_block" end="1" />
+
+			<field name="@block__input_options__a" type="rl_block" start="1" label="FLDA_INPUT_OPTIONS" />
+			<field name="@description_field_option" type="note" description="FLDA_INPUT_OPTIONS_DESC" class="alert alert-info" />
+
+			<field name="show_unpublished" type="radio" class="btn-group btn-group-yesno" default="1"
+				   label="FLDA_FILTER_SHOW_UNPUBLISHED"
+				   description="FLDA_FILTER_SHOW_UNPUBLISHED_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="show_category" type="radio" class="btn-group btn-group-yesno" default="1"
+				   label="FLDA_FILTER_SHOW_CATEGORY"
+				   description="FLDA_FILTER_SHOW_CATEGORY_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="@note__articles_grouping" type="rl_onlypro"
+				   label="FLDA_ARTICLE_GROUPING"
+				   description="FLDA_ARTICLE_GROUPING_DESC" />
+			<!-- >>> [PRO] >>> -->
+			<field name="articles_grouping"
+				   type="list"
+				   label="FLDA_ARTICLE_GROUPING"
+				   description="FLDA_ARTICLE_GROUPING_DESC"
+				   default="title"
+			>
+				<option value="">JNONE</option>
+				<option value="category">RL_CATEGORY</option>
+			</field>
+			<field name="@block__input_options__b" type="rl_block" end="1" />
+		</fieldset>
+	</fields>
+</form>

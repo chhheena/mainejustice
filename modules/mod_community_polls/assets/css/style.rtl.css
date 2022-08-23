@@ -1,0 +1,11 @@
+.js-polls-module .joms-poll__progress,
+.js-polls-module .joms-poll__voted-users,
+.js-polls-module .joms-poll__option,
+.js-polls-module .joms-list__title_polls h4  {
+	margin-right: 25px;
+}
+
+.js-polls-module .joms-list__title_polls .icon-bar-chart,
+.js-polls-module .joms-poll__checkbox--custom {
+	float: right;
+}

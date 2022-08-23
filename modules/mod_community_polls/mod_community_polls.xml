@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+    <name>JS Polls</name>
+    <author>iJoomla</author>
+    <creationDate>November 2018</creationDate>
+    <copyright>Copyright (C) 2008 - 2018 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.8.1</version>
+    <description>Polls module for JomSocial</description>
+    <files>
+        <filename module="mod_community_polls">mod_community_polls.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>models</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_polls.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_community_polls/models/fields">
+                <field name="displaysetting" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_POLLS_DISPLAY_SETTINGS" description="MOD_COMMUNITY_POLLS_DISPLAY_SETTINGS_TIPS">
+                    <option value="0">MOD_COMMUNITY_POLLS_ALLPOLLS_OPTIONS</option>
+                    <option value="1">MOD_COMMUNITY_POLLS_MYPOLLS_OPTIONS</option>
+                    <option value="2">MOD_COMMUNITY_POLLS_GROUPPOLLS_OPTIONS</option>
+                    <option value="3">MOD_COMMUNITY_POLLS_EVENTPOLLS_OPTIONS</option>
+                </field>
+                <field name="filter_by" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_POLLS_FILTERBY_SETTINGS" description="MOD_COMMUNITY_POLLS_FILTERBY_SETTINGS_TIPS">
+                    <option value="0">MOD_COMMUNITY_POLLS_AVAILABLE_OPTIONS</option>
+                    <option value="1">MOD_COMMUNITY_POLLS_CATEGORY_OPTIONS</option>
+                </field>
+                <field name="jspollcategory" type="jspollcategory" label="MOD_COMMUNITY_POLLS_JSPOLLCATEGORY_SETTINGS_LABEL"
+                       description="MOD_COMMUNITY_POLLS_JSPOLLCATEGORY_SETTINGS_TIPS"
+                       showon="filter_by:1" />
+                <field name="pollId" type="text" label="MOD_COMMUNITY_POLLS_ID_SETTINGS" description="MOD_COMMUNITY_POLLS_ID_SETTINGS_TIPS" />
+                <field name="limit" type="text" default="5" label="MOD_COMMUNITY_POLLS_LIMIT_SETTINGS" description="MOD_COMMUNITY_POLLS_LIMIT_SETTINGS_TIPS" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description=""
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

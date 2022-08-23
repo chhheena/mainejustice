@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_JCHOPTIMIZEPAGECACHE</name>
+    <author>Samuel Marshall</author>
+    <creationDate>2022-07-06</creationDate>
+    <copyright>Copyright (C) 2022 JCH Optimize Inc. All rights reserved</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/copyleft/gpl.html</license>
+    <authorEmail>samuel@jch-optimize.net</authorEmail>
+    <authorUrl>https://www.jch-optimize.net</authorUrl>
+    <version>7.2.4</version>
+    <description>PLG_SYSTEM_JCHOPTIMIZEPAGECACHE_DESCRIPTION</description>
+    <files>
+        <filename plugin="jchoptimizepagecache">jchoptimizepagecache.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_jchoptimizepagecache.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_jchoptimizepagecache.sys.ini</language>
+    </languages>
+</extension>

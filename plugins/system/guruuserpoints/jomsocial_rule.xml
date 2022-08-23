@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE jomsocial>
+<jomsocial>
+     <component>com_guru</component>
+     <rules>
+          <rule>
+                <name>iJoomla GURU - create course</name>
+                <description>Give points when registered user created new course.</description>
+                <action_string>guru.create</action_string>
+                <publish>true</publish>
+                <points>1</points>
+                <access_level>1</access_level>
+          </rule>
+          <rule>
+                <name>iJoomla GURU - delete course</name>
+                <description>Deduct points when registered user deleted course.</description>
+                <action_string>guru.delete</action_string>
+                <publish>true</publish>
+                <points>-1</points>
+                <access_level>1</access_level>
+          </rule>
+          <rule>
+                <name>iJoomla GURU - purchase course</name>
+                <description>Give points when registered user purchased course.</description>
+                <action_string>guru.purchase</action_string>
+                <publish>true</publish>
+                <points>1</points>
+                <access_level>1</access_level>
+          </rule>
+     </rules>
+</jomsocial>

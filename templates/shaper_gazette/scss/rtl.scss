@@ -1,0 +1,397 @@
+/**
+ * @package Helix Ultimate Framework
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2021 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or Later
+*/
+
+@import 'bs4-rtl';
+
+body.rtl {
+	text-align: right;
+	
+	.sp-scroll-up {
+		right: auto;
+		left: 30px;
+	}
+	
+	.article-details {
+		.link-edit-article {
+			right: auto;
+			left: 0;
+		}
+	}
+	.sp-module-content .mod-languages form .chzn-container .chzn-single span{
+		direction: ltr;
+	}
+	// Menu
+	.sp-megamenu-parent {
+		float: right;
+		>li {
+			.sp-menu-badge {		
+				&.sp-menu-badge-right {
+					margin-right: 7px;
+				}
+				
+				&.sp-menu-badge-left {
+					margin-left: 7px;
+				}
+			}
+		}
+		
+		.sp-dropdown {
+			.sp-dropdown-items{		
+				.sp-has-child>a:after{
+					font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+					content: "\f104";
+					float: left;
+					margin-right: 7px;
+				}
+			}
+			
+			&.sp-menu-center{
+				margin-right: 45px;
+			}
+			
+			&.sp-dropdown-main {
+				&.sp-menu-right {
+					right: 0;
+				}
+				
+				&.sp-menu-full {
+					right: 0;
+					left: auto;
+				}
+				
+				&.sp-menu-left {
+					left: 0;
+				}
+			}
+			
+			&.sp-dropdown-sub {
+				right: 100%;
+			}
+		}
+	}
+	
+	#offcanvas-toggler {        
+		&.offcanvas-toggler-right {
+			float: left;
+			margin-right: 20px;
+		}
+		
+		&.offcanvas-toggler-left {
+			float: right;
+			margin-left: 20px;
+		}
+	}
+	
+	&.offcanvs-position-left{
+		.body-wrapper{
+			right: 0;
+		}
+		
+		.offcanvas-menu {
+			right: -$offcanvas_width;
+		}
+		
+		&.offcanvas-active {
+			.offcanvas-menu {
+				right: 0;
+			}
+			.body-wrapper{
+				right: $offcanvas_width;
+			}
+		}
+	}
+	
+	&.offcanvs-position-right{
+		.body-wrapper{
+			left: 0;
+		}
+		
+		.offcanvas-menu {
+			left: -$offcanvas_width;
+		}
+		
+		&.offcanvas-active {
+			.offcanvas-menu {
+				left: 0;
+			}
+			
+			.body-wrapper{
+				left: $offcanvas_width;
+			}
+		}
+	}
+	
+	.close-offcanvas {
+		left: 15px;
+	}
+	
+	.offcanvas-menu {
+		.offcanvas-inner {
+			.sp-module {
+				
+				ul {
+					> li {
+						&.menu-parent {
+							>a,
+							>.menu-separator {
+								>.menu-toggler {
+									left: 0;
+								}
+							}
+						}
+						
+						ul {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/**********************************************************************************************/
+	/**************************************  Shaper Gazette  ***************************************/
+	/********************************************************************************************/
+
+	
+	//Global
+	.pull-right {
+		float: left!important;
+	}
+	.pull-left {
+		float: right!important;
+	}
+	.sppb-text-left {
+		text-align: right;
+	}
+	.sppb-text-right {
+		text-align: left;
+	}
+	.sppb-media > .pull-left {
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	.form-links a {
+		margin-right: 0;
+		margin-left: 10px;
+	}
+	.sppb-slider-wrapper {
+		direction: ltr;
+	}
+	.fa-chevron-right:before {
+		content: "\f053";
+	}
+	.sppb-dropcap {
+		float: right;
+	}
+	.fa-angle-left:before {
+		content: "\f105";
+	}
+	.fa-angle-right:before {
+		content: "\f104";
+	}
+	.form-check {
+		padding-left: 0;
+		padding-right: 1.25rem;
+	}
+	.form-check-input {
+		margin-left: 0;
+		margin-right: -1.25rem;
+	}
+	.sppb-slider-fullwidth-wrapper,
+	.articles-slider,
+	.sppb-addon-stock-scroller {
+		direction: ltr;
+	}
+	//Global
+	
+
+	.main-megamenu .menu-toggler {
+		right: inherit;
+		left: 20px;
+	}
+	.main-megamenu .menu-toggler:after {
+		content: "\f104";
+	}
+	.main-megamenu .menu-child {
+		left: auto;
+		right: 100%;
+	}
+	.sp-megamenu-parent > li > a,
+	.sp-megamenu-parent > li > span {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+	.sp-megamenu-parent > li.sp-has-child > a:after,
+	.sp-megamenu-parent > li.sp-has-child > span:after {
+		font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+		content: "\f107";
+		float: left;
+		margin-right: 2px;
+	}
+	.sp-vertical-tabs .sp-tab-btns-wrap {
+		padding-right: 15px;
+		padding-left: 0;
+	}
+	#sp-menu-right {
+		border-left: 0;
+		border-right: 1px solid #ebebeb 
+	}
+	.sp-weather .sp-weather-current .sp-weather-current-temp {
+		text-align: right;
+	}
+	.sp-weather .sp-weather-current .sp-weather-icon-wrap .sp-weather-icon {
+		text-align: left;
+	}
+	.sppb-articles-ticker-controller {
+		left: 15px;
+		right: auto;
+	}
+	.sppb-articles-ticker-controller span.sppb-articles-ticker-left-control {
+		margin-right: 0;
+		margin-left: 5px;
+	}
+	.sppb-addon-articles-slider.bg_image .sppb-article-details {
+		position: absolute;
+		right: 0;
+	}
+	.sppb-addon-articles-slider.bg_image .owl-controls {
+		right: inherit;
+		left: 30px;
+	}
+	.sppb-addon-articles.horizontal .sppb-addon-article .sppb-addon-article-info-wrapper {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	.sppb-addon-articles.horizontal .sppb-addon-article .sppb-addon-article-info-wrapper .sppb-article-meta > span.sppb-meta-category:after {
+		padding-left: 0;
+		padding-right: 22px;
+	}
+	.sppb-nav-lines>li {
+		float: right;
+	}
+	.gazette-articles-tab .sppb-addon-content.sppb-tab ul.sppb-nav > li > a {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	.sppb-addon-articles-slider {
+		.owl-carousel .owl-item img {
+			width: 100%;
+		}
+	}
+	.sppb-addon-articles.article-border .intro-items .sppb-addon-article .sppb-addon-article-info-left {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+	.gazette-poll .mod-sppoll .form-sppoll .sppoll-info-wrap .radio label input {
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	.sp-tweet .sp-tweet-item .avater-wrap {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+	#sp-bottom4 {
+		border-left: 0 !important;
+	}
+	#sp-bottom2 {
+		border-right: solid 1px #ebebeb;
+	}
+	#sp-bottom .acymailing_module .acysubbuttons {
+		text-align: right;
+	}
+	#sp-footer #sp-footer2 {
+		text-align: left;
+	}
+	#sp-logo-right > div > .sp-module:not(:last-child) {
+		margin-right: 0;
+		margin-left: 25px;
+	}
+	.sp-custom-login .info-text .sppb-btn i.fa {
+		float: right;
+		margin-left: 5px;
+	}
+	.sppb-addon-articles-slider:hover .customNavigation > a {
+		right: inherit;
+		opacity: 1;
+	}
+	.sppb-addon-articles-slider .fa-angle-right:before {
+		content: "\f105";
+	}
+	.sppb-addon-articles-slider .fa-angle-left:before {
+		content: "\f104";
+	}
+	.blog .articles-more ul.list-group li.list-group-item .item-image {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+	.spauthorarchive-department-img-wrap,
+	.spauthorarchive-author-img-wrap {
+		margin-right: 0 !important;
+		margin-left: 20px;
+	}
+	.spauthorarchive-department-content,
+	.spauthorarchive-author-content {
+		text-align: right !important;
+	}
+	.spauthorarchive-content .spauthorarchive-addon-article .spauthorarchive-article-meta span {
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	#sp-bottom-top .sp-scroll-up {
+		float: left;
+	}
+	.sp-weather-icon-wrap{
+		padding-right: 0;
+		padding-left: 10px;
+		.collapse-icon{
+			left: -15px;
+			right: auto;
+		}
+	}
+	.sp-weather .sp-weather-forcasts{
+		right: inherit;
+		left: 15px;
+	}
+	.sp-custom-login .info-text .sppb-btn{
+		display: flex;
+	}
+	.top-search-wrapper .icon-close-wrap{
+		left: 15px;
+		right: auto;
+	}
+	.top-search-input-wrap{
+		left: -15px;
+	}
+	.gazette-socail-icons ul.sppb-icons-group-list li a .sppb-icons-label-text{
+		margin-right: 15px;
+	}
+	.blog .articles-leading .article .article-info-wrap .article-info span.createdby {
+		margin-right: 0;
+		margin-left: 25px;
+	}
+	.sppb-addon-articles.horizontal .sppb-addon-article .sppb-addon-article-info-wrapper .sppb-article-meta>span.sppb-meta-date {
+		float: left;
+	}
+	&.view-search {
+		.search {
+			.form-check-input {
+				float: right;
+			}
+		}
+	}
+	.flat-layout .media>.pull-left {
+		margin-right: 0;
+		margin-left: 10px;
+	}
+	.sp-custom-login-on .form-login-wrap {
+		right: inherit;
+		left: 12px;
+	}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" client="site" method="upgrade">
+  <name>mod_rssfactory_categories</name>
+  <description>Rss Factory Categories module for Rss Factory component from thePHPfactory.com</description>
+  <languages>
+    <language tag="en-GB">en-GB.mod_rssfactory_categories.sys.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_rssfactory_categories">mod_rssfactory_categories.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <version>4.3.6</version>
+  <author>thePHPfactory</author>
+  <copyright>SKEPSIS Consult SRL</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>contact@thephpfactory.com</authorEmail>
+  <authorUrl>http://www.thephpfactory.com</authorUrl>
+  <url>http://www.thephpfactory.com</url>
+  <creationDate>July 2009</creationDate>
+  <updateservers>
+    <server type="collection" name="The PHP Factory Extensions Update">http://thephpfactory.com/versions/update-c.xml</server>
+  </updateservers>
+</extension>

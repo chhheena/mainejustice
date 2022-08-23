@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_OSEMBEDPREVIEW</name>
+    <author>Joomlashack</author>
+    <creationDate>December 03 2018</creationDate>
+    <copyright>Copyright (C) 2016 Open Source Training, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <authorUrl>http://www.joomlashack.com</authorUrl>
+    <version>1.4.6</version>
+    <description>PLG_SYSTEM_OSEMBEDPREVIEW_DESCRIPTION</description>
+
+    <alledia>
+        <element publish="true">osembedpreview</element>
+        <namespace>OSEmbedPreview</namespace>
+        <license>pro</license>
+        <include>AllediaFreeDefaultFiles</include>
+        <obsolete>
+            <folder>/media/PLG_SYSTEM_OSEMBEDPREVIEW</folder>
+        </obsolete>
+    </alledia>
+
+    <files>
+        <folder>language</folder>
+        <filename plugin="osembedpreview">osembedpreview.php</filename>
+    </files>
+
+    <media destination="plg_system_osembedpreview" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>fonts</folder>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/plugins/content/osembed/form/fields">
+                <field
+                    name="preview_media"
+                    type="list"
+                    default="1"
+                    label="PLG_SYSTEM_OSEMBEDPREVIEW_FIELD_PREVIEW_MEDIA_LABEL"
+                    desc="PLG_SYSTEM_OSEMBEDPREVIEW_FIELD_PREVIEW_MEDIA_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="customfooter"
+                    type="customfooter"
+                    media="plg_content_osembed"
+                    showgoproad="0"
+                    jedurl="http://extensions.joomla.org/extensions/extension/social-web/social-media/osembed" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

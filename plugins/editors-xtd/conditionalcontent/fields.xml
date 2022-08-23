@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/libraries/regularlabs/fields">
+    <fieldset name="contentsx">
+        <field name="tag_type" type="radio" class="btn-group" default="show" label="COC_TAG_TYPE_DESC">
+            <option value="show">JSHOW</option>
+            <option value="hide">JHIDE</option>
+        </field>
+
+        <field name="content" type="rl_textareaplus" default="" hint="COC_CONTENT_TEXT" translate="true"
+               label="COC_CONTENT"
+               description="COC_CONTENT_DESC" />
+
+        <field name="use_content_else" type="radio" class="btn-group" default="0"
+               label="COC_USE_ALTERNATIVE_CONTENT"
+               description="COC_USE_ALTERNATIVE_CONTENT_DESC">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="content_else" type="rl_textareaplus" default="" hint="COC_ALTERNATIVE_CONTENT_TEXT" translate="true"
+               label="COC_ALTERNATIVE_CONTENT"
+               description="COC_ALTERNATIVE_CONTENT_DESC"
+               showon="use_content_else:1" />
+    </fieldset>
+
+    <fieldset name="content">
+        <field name="tag_type" type="radio" class="btn-group" default="show" label="COC_TAG_TYPE_DESC">
+            <option value="show">JSHOW</option>
+            <option value="hide">JHIDE</option>
+        </field>
+
+        <field name="content" type="rl_codeeditor" default=""
+               label="COC_CONTENT"
+               description="COC_CONTENT_DESC" />
+    </fieldset>
+
+    <fieldset name="content_editor">
+        <field name="tag_type" type="radio" class="btn-group" default="show" label="COC_TAG_TYPE_DESC">
+            <option value="show">JSHOW</option>
+            <option value="hide">JHIDE</option>
+        </field>
+
+        <field name="content" type="rl_editor" default="" height="200"
+               label="COC_CONTENT"
+               description="COC_CONTENT_DESC" />
+    </fieldset>
+
+    <fieldset name="alternative_content">
+        <field name="use_content_else" type="radio" class="btn-group" default="0"
+               label="COC_USE_ALTERNATIVE_CONTENT"
+               description="COC_USE_ALTERNATIVE_CONTENT_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="content_else" type="rl_codeeditor" default=""
+               label="COC_ALTERNATIVE_CONTENT"
+               description="COC_ALTERNATIVE_CONTENT_DESC"
+               showon="use_content_else:1" />
+    </fieldset>
+
+    <fieldset name="alternative_content_editor">
+        <field name="use_content_else" type="radio" class="btn-group" default="0"
+               label="COC_USE_ALTERNATIVE_CONTENT"
+               description="COC_USE_ALTERNATIVE_CONTENT_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="content_else" type="rl_editor" default="" height="200"
+               label="COC_ALTERNATIVE_CONTENT"
+               description="COC_ALTERNATIVE_CONTENT_DESC"
+               showon="use_content_else:1" />
+    </fieldset>
+
+    <fieldset name="conditions">
+        <field name="matching_method" type="radio" class="btn-group" default="all"
+               label="RL_MATCHING_METHOD"
+               description="COC_MATCHING_METHOD_DESC,RL_ALL,COC_ALL_DESC,RL_ANY,COC_ANY_DESC">
+            <option value="all">RL_ALL</option>
+            <option value="any">RL_ANY</option>
+        </field>
+        <field name="@note__and" type="note" class="alert alert-info"
+               description="COC_ALL_DESC"
+               showon="matching_method:all" />
+        <field name="@note__or" type="note" class="alert alert-info"
+               description="COC_ANY_DESC"
+               showon="matching_method:any" />
+
+        <!-- MENU ITEMS -->
+        <field name="menuitems" type="rl_conditionselection" use_main_switch="false" label="RL_MENU_ITEMS" />
+        <field name="menuitems_selection" type="rl_menuitems" multiple="true" default=""
+               label="RL_SELECTION"
+               description="RL_MENU_ITEMS_DESC" />
+        <field name="@menuitems" type="rl_conditionselection" use_main_switch="false" />
+
+        <!-- HOME PAGE -->
+        <field name="homepage" type="rl_conditionselection" use_main_switch="false" label="RL_HOME_PAGE" />
+        <field name="@note__homepage" type="note" description="RL_HOME_PAGE_DESC" />
+        <field name="@homepage" type="rl_conditionselection" use_main_switch="false" />
+
+        <!-- DATE -->
+        <field name="@block__group_date__a" type="rl_block" start="1" label="RL_DATE_TIME" />
+
+        <field name="date" type="rl_conditionselection" use_main_switch="false" label="RL_DATE" />
+        <field name="date_publish_up" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default=""
+               label="RL_START_PUBLISHING"
+               description="RL_START_PUBLISHING_DESC" />
+        <field name="date_publish_down" type="calendar" showtime="true" filter="user_utc" format="%Y-%m-%d %H:%M" default=""
+               label="RL_FINISH_PUBLISHING"
+               description="RL_FINISH_PUBLISHING_DESC" />
+        <field name="@note__date_1" type="note" description="RL_DATE_TIME_DESC" />
+        <field name="@note__date_2" type="rl_datetime" format="Y-m-d H:i" label="RL_CURRENT_DATE" />
+        <field name="@date" type="rl_conditionselection" use_main_switch="false" />
+
+
+        <field name="@block__group_date__b" type="rl_block" end="1" />
+
+        <!-- LANGUAGES -->
+        <field name="languages" type="rl_conditionselection" use_main_switch="false" label="RL_LANGUAGES" />
+        <field name="languages_selection" type="rl_languages" multiple="true" default=""
+               label="RL_SELECTION"
+               description="RL_LANGUAGES_DESC" />
+        <field name="@languages" type="rl_conditionselection" use_main_switch="false" />
+
+
+        
+
+        <!-- USERS -->
+        <field name="@block__group_users__a" type="rl_block" start="1" label="RL_USERS" />
+        <!-- ACCESS LEVELS -->
+        <field name="accesslevels" type="rl_conditionselection" use_main_switch="false" label="RL_ACCESS_LEVELS" />
+        <field name="accesslevels_selection" type="rl_accesslevel" multiple="true" use_names="true" notregistered="1" default=""
+               label="RL_SELECTION"
+               description="RL_ACCESS_LEVELS_DESC" />
+        <field name="@accesslevels" type="rl_conditionselection" use_main_switch="false" />
+
+        <!-- USER GROUPS -->
+        <field name="usergrouplevels" type="rl_conditionselection" use_main_switch="false" label="RL_USER_GROUP_LEVELS" />
+        <field name="usergrouplevels_selection" type="rl_grouplevel" multiple="true" use_names="true" notregistered="1" default=""
+               label="RL_SELECTION"
+               description="RL_USER_GROUPS_DESC" />
+        <field name="usergrouplevels_match_all" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="RL_MATCH_ALL"
+               description="RL_MATCH_ALL_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="@usergrouplevels" type="rl_conditionselection" use_main_switch="false" />
+
+
+        <field name="@block__group_users__b" type="rl_block" end="1" />
+
+
+        
+
+        
+
+        <!-- DEVICES -->
+        <field name="devices" type="rl_conditionselection" use_main_switch="false" label="RL_DEVICES" />
+        <field name="@note__devices" type="note" description="RL_DEVICES_DESC" />
+        <field name="devices_selection" type="rl_list" multiple="true" default=""
+               label="RL_SELECTION"
+               description="RL_DEVICES_DESC">
+            <option value="desktop">RL_DEVICE_DESKTOP</option>
+            <option value="tablet">RL_DEVICE_TABLET</option>
+            <option value="mobile">RL_DEVICE_MOBILE</option>
+        </field>
+        <field name="@devices" type="rl_conditionselection" use_main_switch="false" />
+
+
+        
+
+        
+
+        
+
+        
+    </fieldset>
+</config>

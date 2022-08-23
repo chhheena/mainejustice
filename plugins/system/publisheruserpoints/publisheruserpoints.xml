@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_PUBLISHERUSERPOINTS_TITLE</name>
+    <author>JomSocial Team</author>
+    <creationDate>June 11 2019</creationDate>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.8.1</version>
+    <description>PLG_PUBLISHERUSERPOINTS_XML_DESCRIPTION</description>
+    <files>
+        <file plugin="publisheruserpoints">publisheruserpoints.php</file>
+        <file plugin="publisheruserpoints">jomsocial_rule.xml</file>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_publisheruserpoints.ini</language>
+        <language tag="en-GB">en-GB.plg_system_publisheruserpoints.sys.ini</language>
+    </languages>
+</extension>

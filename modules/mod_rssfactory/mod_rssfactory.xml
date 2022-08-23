@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" client="site" method="upgrade">
+  <name>mod_rssfactory</name>
+  <description>Rss Factory module for Rss Factory component from thePHPfactory.com</description>
+  <languages>
+    <language tag="en-GB">en-GB.mod_rssfactory.ini</language>
+    <language tag="en-GB">en-GB.mod_rssfactory.sys.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_rssfactory">mod_rssfactory.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="wordfilter">
+        <fields name="wordfilter">
+          <field name="enabled" type="radio" default="0" class="btn-group" label="MOD_RSSFACTORY_WORDFILTER_ENABLED_LABEL" description="MOD_RSSFACTORY_WORDFILTER_ENABLED_DESC">
+            <option value="0">JDISABLED</option>
+            <option value="1">JENABLED</option>
+          </field>
+          <field name="any" type="textarea" showon="enabled:1" rows="5" label="MOD_RSSFACTORY_WORDFILTER_ANY_LABEL" description="MOD_RSSFACTORY_WORDFILTER_ANY_DESC"/>
+          <field name="exact" type="textarea" showon="enabled:1" rows="5" label="MOD_RSSFACTORY_WORDFILTER_EXACT_LABEL" description="MOD_RSSFACTORY_WORDFILTER_EXACT_DESC"/>
+          <field name="none" type="textarea" showon="enabled:1" rows="5" label="MOD_RSSFACTORY_WORDFILTER_NONE_LABEL" description="MOD_RSSFACTORY_WORDFILTER_NONE_DESC"/>
+        </fields>
+      </fieldset>
+      <fieldset name="basic">
+        <field name="sort_order" type="list" default="date" label="MOD_RSSFACTORY_FIELD_SORT_ORDER_LABEL" description="MOD_RSSFACTORY_FIELD_SORT_ORDER_DESC">
+          <option value="date">MOD_RSSFACTORY_FIELD_SORT_ORDER_OPTION_DATE</option>
+          <option value="votes">MOD_RSSFACTORY_FIELD_SORT_ORDER_OPTION_VOTES</option>
+          <option value="comments">MOD_RSSFACTORY_FIELD_SORT_ORDER_OPTION_COMMENTS</option>
+          <option value="random">MOD_RSSFACTORY_FIELD_SORT_ORDER_OPTION_RANDOM</option>
+          <option value="hits">MOD_RSSFACTORY_FIELD_SORT_ORDER_OPTION_HITS</option>
+        </field>
+        <field name="sort_dir" type="list" default="DESC" label="MOD_RSSFACTORY_FIELD_SORT_DIR_LABEL" description="MOD_RSSFACTORY_FIELD_SORT_DIR_DESC">
+          <option value="DESC">MOD_RSSFACTORY_FIELD_SORT_DIR_OPTION_DESC</option>
+          <option value="ASC">MOD_RSSFACTORY_FIELD_SORT_DIR_OPTION_ASC</option>
+        </field>
+        <field name="feeds_limit" type="text" default="3" filter="integer" label="MOD_RSSFACTORY_FIELD_FEEDS_LIMIT_LABEL" description="MOD_RSSFACTORY_FIELD_FEEDS_LIMIT_DESC"/>
+        <field name="stories_limit" type="text" default="3" filter="integer" label="MOD_RSSFACTORY_FIELD_STORIES_LIMIT_LABEL" description="MOD_RSSFACTORY_FIELD_STORIES_LIMIT_DESC"/>
+        <field name="story_title_trim" type="text" default="0" filter="integer" label="MOD_RSSFACTORY_FIELD_STORY_TITLE_TRIM_LABEL" description="MOD_RSSFACTORY_FIELD_STORY_TITLE_TRIM_DESC"/>
+        <field name="story_desc_trim" type="text" default="0" filter="integer" label="MOD_RSSFACTORY_FIELD_STORY_DESC_TRIM_LABEL" description="MOD_RSSFACTORY_FIELD_STORY_DESC_TRIM_DESC"/>
+        <field name="category" type="category" extension="com_rssfactory" multiple="true" label="MOD_RSSFACTORY_FIELD_CATEGORY_LABEL" description="MOD_RSSFACTORY_FIELD_CATEGORY_DESC"/>
+        <field name="display_mode" type="list" default="tiled" label="MOD_RSSFACTORY_FIELD_DISPLAY_MODE_LABEL" description="MOD_RSSFACTORY_FIELD_DISPLAY_MODE_DESC">
+          <option value="tiled">MOD_RSSFACTORY_FIELD_DISPLAY_MODE_OPTION_TILED</option>
+          <option value="list">MOD_RSSFACTORY_FIELD_DISPLAY_MODE_OPTION_LIST</option>
+          <option value="tabbed">MOD_RSSFACTORY_FIELD_DISPLAY_MODE_OPTION_TABBED</option>
+          <option value="slider">MOD_RSSFACTORY_FIELD_DISPLAY_MODE_OPTION_SLIDER</option>
+        </field>
+        <field name="description_display" type="list" default="tooltip" label="MOD_RSSFACTORY_FIELD_DESCRIPTION_DISPLAY_LABEL" description="MOD_RSSFACTORY_FIELD_DESCRIPTION_DISPLAY_DESC">
+          <option value="tooltip">MOD_RSSFACTORY_FIELD_DESCRIPTION_DISPLAY_OPTION_TOOLTIP</option>
+          <option value="table">MOD_RSSFACTORY_FIELD_DESCRIPTION_DISPLAY_OPTION_TABLE</option>
+          <option value="modal">MOD_RSSFACTORY_FIELD_DESCRIPTION_DISPLAY_OPTION_MODAL</option>
+        </field>
+        <field name="use_favicons" type="radio" default="1" class="btn-group" label="MOD_RSSFACTORY_FIELD_USE_FAVICONS_LABEL" description="MOD_RSSFACTORY_FIELD_USE_FAVICONS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="show_date" type="radio" default="1" class="btn-group" label="MOD_RSSFACTORY_FIELD_SHOW_DATE_LABEL" description="MOD_RSSFACTORY_FIELD_SHOW_DATE_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="show_rating" type="radio" default="1" class="btn-group" label="MOD_RSSFACTORY_FIELD_SHOW_VOTES_LABEL" description="MOD_RSSFACTORY_FIELD_SHOW_VOTES_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="show_comments" type="radio" default="1" class="btn-group" label="MOD_RSSFACTORY_FIELD_SHOW_COMMENTS_LABEL" description="MOD_RSSFACTORY_FIELD_SHOW_COMMENTS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="show_bookmarks" type="radio" default="1" class="btn-group" label="MOD_RSSFACTORY_FIELD_SHOW_BOOKMARKS_LABEL" description="MOD_RSSFACTORY_FIELD_SHOW_BOOKMARKS_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="show_relevant_stories" type="radio" default="0" class="btn-group" label="MOD_RSSFACTORY_FIELD_SHOW_RELEVANT_STORIES_LABEL" description="MOD_RSSFACTORY_FIELD_SHOW_RELEVANT_STORIES_DESC">
+          <option value="0">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="filter_interval" type="list" default="" label="MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_LABEL" description="MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_DESC">
+          <option value="">MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_ALL</option>
+          <option value="today">MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_TODAY</option>
+          <option value="week">MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_WEEK</option>
+          <option value="last7days">MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_LAST7DAYS</option>
+          <option value="month">MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_MONTH</option>
+          <option value="year">MOD_RSSFACTORY_FIELD_FILTER_INTERVAL_YEAR</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+      </fieldset>
+    </fields>
+  </config>
+  <version>4.3.6</version>
+  <author>thePHPfactory</author>
+  <copyright>SKEPSIS Consult SRL</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>contact@thephpfactory.com</authorEmail>
+  <authorUrl>http://www.thephpfactory.com</authorUrl>
+  <url>http://www.thephpfactory.com</url>
+  <creationDate>July 2009</creationDate>
+  <updateservers>
+    <server type="collection" name="The PHP Factory Extensions Update">http://thephpfactory.com/versions/update-c.xml</server>
+  </updateservers>
+</extension>

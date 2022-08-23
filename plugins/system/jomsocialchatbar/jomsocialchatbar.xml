@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>System - Jomsocial Chat Bar</name>
+    <author>JomSocial Team</author>
+    <creationDate>Oct 10 2017</creationDate>
+    <copyright>Copyright (C) 2008 - 2017 iJoomla. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.8.1</version>
+    <description>PLG_JOMSOCIALCHATBAT_XML_DESCRIPTION</description>
+    <files>
+        <file plugin="jomsocialchatbar">jomsocialchatbar.php</file>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_jomsocialchatbar.ini</language>
+        <language tag="en-GB">en-GB.plg_system_jomsocialchatbar.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params" >
+            <fieldset name="basic">
+                <field name="chat_bar_position" type="list" default="right" label="PLG_JOMSOCIALCHATBAR_POSITION_LABEL" description="PLG_JOMSOCIALCHATBAR_POSITION_DESC">
+                    <option value="right">PLG_JOMSOCIALCHATBAR_BOTTOM_RIGHT_OPTION</option>
+                    <option value="left">PLG_JOMSOCIALCHATBAR_BOTTOM_LEFT_OPTION</option>
+                </field>
+                <field name="remember_last_state" class="btn-group btn-group-yesno" type="radio" default="1" label="PLG_JOMSOCIALCHATBAR_STATE_LABEL" description="PLG_JOMSOCIALCHATBAR_STATE_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

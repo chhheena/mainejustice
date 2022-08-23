@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_COMPONENTSANYWHERE</name>
+	<description>PLG_SYSTEM_COMPONENTSANYWHERE_DESC</description>
+	<version>4.9.0</version>
+	<creationDate>February 2022</creationDate>
+	<author>Regular Labs (Peter van Westen)</author>
+	<authorEmail>info@regularlabs.com</authorEmail>
+	<authorUrl>https://regularlabs.com</authorUrl>
+	<copyright>Copyright © 2022 Regular Labs - All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<scriptfile>script.install.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Regular Labs - Components Anywhere">
+			https://download.regularlabs.com/updates.xml?e=componentsanywhere&amp;type=.xml
+		</server>
+	</updateservers>
+
+	<files>
+		<file plugin="componentsanywhere">componentsanywhere.php</file>
+		<file>script.install.helper.php</file>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>vendor</folder>
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/libraries/regularlabs/fields">
+			<fieldset name="basic">
+				<field name="@load_language_regularlabs" type="rl_loadlanguage" extension="plg_system_regularlabs" />
+				<field name="@load_language" type="rl_loadlanguage" extension="plg_system_componentsanywhere" />
+				<field name="@license" type="rl_license" extension="COMPONENTSANYWHERE" />
+				<field name="@version" type="rl_version" extension="COMPONENTSANYWHERE" />
+				<field name="@header" type="rl_header"
+					   label="COMPONENTSANYWHERE"
+					   description="COMPONENTSANYWHERE_DESC"
+					   url="https://regularlabs.com/componentsanywhere" />
+			</fieldset>
+
+			<fieldset name="RL_BEHAVIOUR">
+				<field name="caching" type="radio" class="btn-group" default="1"
+					   label="CA_CACHING"
+					   description="CA_CACHING_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="add_scripts_styles" type="radio" class="btn-group" default="1"
+					   label="CA_ADD_SCRIPTS_STYLES"
+					   description="CA_ADD_SCRIPTS_STYLES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@showon_add_scripts_styles_a" type="rl_showon" value="add_scripts_styles:1" />
+				<field name="@block_add_scripts_styles_a" type="rl_block" start="1" />
+				<field name="add_scripts" type="radio" class="btn-group" default="1"
+					   label="CA_ADD_SCRIPTS"
+					   description="CA_ADD_SCRIPTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="add_styles" type="radio" class="btn-group" default="1"
+					   label="CA_ADD_STYLES"
+					   description="CA_ADD_STYLES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="add_meta" type="radio" class="btn-group" default="1"
+					   label="CA_ADD_META"
+					   description="CA_ADD_META_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@block_add_scripts_styles_b" type="rl_block" end="1" />
+				<field name="@showon_add_scripts_styles_b" type="rl_showon" />
+			</fieldset>
+
+			<fieldset name="RL_SETTINGS_SECURITY">
+				<field name="@block_articles_a" type="rl_block" start="1"
+					   label="RL_ARTICLES"
+					   description="CA_ARTICLES_DESC" />
+				<field name="@notice_articles" type="rl_onlypro"
+					   label="CA_SECURITY_LEVEL"
+					   description="CA_SECURITY_LEVEL_DESC" />
+				<field name="@block_articles_b" type="rl_block" end="1" />
+
+				<field name="@block_components_a" type="rl_block" start="1"
+					   label="RL_COMPONENTS"
+					   description="CA_COMPONENTS_DESC" />
+				<field name="@notice_components" type="rl_onlypro"
+					   label="RL_DISABLE_ON_COMPONENTS"
+					   description="CA_DISABLE_ON_COMPONENTS_DESC" />
+				<field name="@block_components_b" type="rl_block" end="1" />
+
+				<field name="@block_otherareas_a" type="rl_block" start="1"
+					   label="RL_OTHER_AREAS"
+					   description="CA_OTHER_AREAS_DESC" />
+				<field name="@notice_otherareas" type="rl_onlypro"
+					   label="RL_ENABLE_OTHER_AREAS"
+					   description="CA_ENABLE_OTHER_AREAS_DESC" />
+				<field name="@block_otherareas_b" type="rl_block" end="1" />
+			</fieldset>
+
+			<fieldset name="RL_TAG_SYNTAX">
+				<field name="component_tag" type="text" default="component"
+					   label="CA_COMPONENT_TAG"
+					   description="CA_TAG_DESC" />
+				<field name="tag_characters" type="list" default="{.}" class="input-small"
+					   label="RL_TAG_CHARACTERS"
+					   description="RL_TAG_CHARACTERS_DESC">
+					<option value="{.}">{...}</option>
+					<option value="[.]">[...]</option>
+					<option value="«.»">«...»</option>
+					<option value="{{.}}">{{...}}</option>
+					<option value="[[.]]">[[...]]</option>
+					<option value="[:.:]">[:...:]</option>
+					<option value="[%.%]">[%...%]</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="ADVANCED">
+				<field name="tmpl" type="text" default="component"
+					   label="CA_SUB_TEMPLATE"
+					   description="CA_SUB_TEMPLATE_DESC" />
+				<field name="force_remove_tmpl" type="radio" class="btn-group" default="0"
+					   label="CA_FORCE_REMOVE_TMPL"
+					   description="CA_FORCE_REMOVE_TMPL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="force_itemid" type="radio" class="btn-group" default="0"
+					   label="CA_FORCE_ITEMID"
+					   description="CA_FORCE_ITEMID_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="keepurls" type="radio" class="btn-group" default="0"
+					   label="CA_KEEP_URLS"
+					   description="CA_KEEP_URLS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="pass_on_cookies" type="radio" class="btn-group" default="1"
+					   label="CA_PASS_ON_COOKIES"
+					   description="CA_PASS_ON_COOKIES_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="timeout" type="number" default="5" size="5" class="input-mini"
+					   label="CA_TIMEOUT"
+					   description="CA_TIMEOUT_DESC" />
+				<field name="force_curl" type="radio" class="btn-group" default="0"
+					   label="CA_FORCE_CURL"
+					   description="CA_FORCE_CURL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="use_negotiate_authentication" type="radio" class="btn-group" default="0"
+					   label="CA_USE_NEGOTIATE_AUTHENTICATION"
+					   description="CA_USE_NEGOTIATE_AUTHENTICATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@showon_use_negotiate_authentication_a" type="rl_showon" value="use_negotiate_authentication:1" />
+				<field name="negotiate_login" type="text" size="40" default=""
+					   label="CA_NEGOTIATE_LOGIN"
+					   description="CA_NEGOTIATE_LOGIN_DESC" />
+				<field name="negotiate_password" type="text" size="40" default=""
+					   label="CA_NEGOTIATE_PASSWORD"
+					   description="CA_NEGOTIATE_PASSWORD_DESC" />
+				<field name="@showon_use_negotiate_authentication_b" type="rl_showon" />
+				<field name="place_comments" type="radio" class="btn-group" default="1"
+					   label="RL_PLACE_HTML_COMMENTS"
+					   description="RL_PLACE_HTML_COMMENTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="installer" method="upgrade">
+    <name>Minitek Updates Authentication</name>
+	<author>Minitek.gr</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2011 - 2015 Minitek.gr. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<authorUrl>www.minitek.gr</authorUrl>
+	<version>3.0.1</version>
+	<description>A plugin that authenticates the update of Minitek commercial extensions via Extension Manager.</description>
+    
+	<files>
+        <filename plugin="minitekupdatesauth">minitekupdatesauth.php</filename>
+        <filename>index.html</filename>
+    </files>
+	
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_installer_minitekupdatesauth.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_installer_minitekupdatesauth.sys.ini</language>
+    </languages>
+	
+	<config>
+		
+		<fields name="params">
+		
+			<fieldset name="basic">
+								
+				<field 
+					name="minitek_download_id" 
+					type="text" 
+					default="" 
+					label="PLG_INSTALLER_MINITEK_UPDATES_AUTHENTICATION_DOWNLOAD_ID_LABEL" 
+					description="PLG_INSTALLER_MINITEK_UPDATES_AUTHENTICATION_DOWNLOAD_ID_DESC" 
+				/>
+				
+	    	</fieldset>
+			
+		</fields>
+		
+	</config>
+	
+</extension>

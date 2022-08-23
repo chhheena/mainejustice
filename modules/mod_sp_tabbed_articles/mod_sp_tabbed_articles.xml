@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>SP Tabbed Articles</name>
+	<author>Joomla! Project</author>
+	<creationDate>Nov 2015</creationDate>
+	<copyright>Copyright (C) 2010 - 2015 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>www.joomshaper.com</authorUrl>
+	<version>1.0</version>
+	<description>Module to display articles from subcategories in tab.</description>
+	<files>
+		<filename module="mod_sp_tabbed_articles">mod_sp_tabbed_articles.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_sp_tabbed_articles.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="catid" type="category" extension="com_content" label="MOD_SP_TABBED_ARTICLES_CATEGORY" description="MOD_SP_TABBED_ARTICLES_CATEGORY_DESC" />
+				<field name="limit" type="number" default="3" label="MOD_SP_TABBED_ARTICLES_LIMIT" description="MOD_SP_TABBED_ARTICLES_LIMIT_DESC" />
+				<field name="columns" type="number" default="3" label="MOD_SP_TABBED_ARTICLES_COLUMNS" description="MOD_SP_TABBED_ARTICLES_COLUMNS_DESC" />
+				<field name="ordering" type="list" default="latest" label="MOD_SP_TABBED_ARTICLES_ORDERING" description="MOD_SP_TABBED_ARTICLES_ORDERING_DESC">
+					<option value="latest">MOD_SP_TABBED_ARTICLES_ORDERING_LATEST</option>
+					<option value="popular">MOD_SP_TABBED_ARTICLES_ORDERING_POPULAR</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

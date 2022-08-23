@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE jomsocial>
+<jomsocial>
+     <component>com_publisher</component>
+     <rules>
+          <rule>
+                <name>iJoomla Publisher - create article</name>
+                <description>Give points when author created new article.</description>
+                <action_string>publisher.create</action_string>
+                <publish>true</publish>
+                <points>1</points>
+                <access_level>1</access_level>
+          </rule>
+     </rules>
+</jomsocial>

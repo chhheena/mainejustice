@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>JS Pages - Categories</name>
+	<author>iJoomla</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.8.1</version>
+	<description>Pages - categories module for JomSocial</description>
+	<files>
+		<filename module="mod_community_pages_categories">mod_community_pages_categories.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>style.css</filename>
+		<filename>mod_community_pages_categories.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_community_pages_categories.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="show_description"
+					type="radio"
+					label="MOD_COMMUNITY_PAGES_CATEGORIES_FIELD_SHOW_DESCRIPTION_LABEL"
+					description="MOD_COMMUNITY_PAGES_CATEGORIES_FIELD_SHOW_DESCRIPTION_TIPS"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="numitems"
+					type="radio"
+					label="MOD_COMMUNITY_PAGES_CATEGORIES_FIELD_NUMITEMS_LABEL"
+					description="MOD_COMMUNITY_PAGES_CATEGORIES_FIELD_NUMITEMS_TIPS"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="show_children"
+					type="radio"
+					label="MOD_COMMUNITY_PAGES_CATEGORIES_FIELD_SHOW_CHILDREN_LABEL"
+					description="MOD_COMMUNITY_PAGES_CATEGORIES_FIELD_SHOW_CHILDREN_TIPS"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="finder" method="upgrade">
+  <name>plg_finder_rssfactory</name>
+  <description>Rss Factory finder plugin for Rss Factory component from thePHPfactory.com</description>
+  <files>
+    <filename plugin="rssfactory">rssfactory.php</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.plg_finder_rssfactory.ini</language>
+    <language tag="en-GB">en-GB.plg_finder_rssfactory.sys.ini</language>
+  </languages>
+  <version>4.3.6</version>
+  <author>thePHPfactory</author>
+  <copyright>SKEPSIS Consult SRL</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>contact@thephpfactory.com</authorEmail>
+  <authorUrl>http://www.thephpfactory.com</authorUrl>
+  <url>http://www.thephpfactory.com</url>
+  <creationDate>July 2009</creationDate>
+  <updateservers>
+    <server type="collection" name="The PHP Factory Extensions Update">http://thephpfactory.com/versions/update-c.xml</server>
+  </updateservers>
+</extension>

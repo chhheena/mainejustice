@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" client="site" method="upgrade">
+	<name>JS Top Members - User Points Based</name>
+	<author>JomSocial Team</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2010 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>	
+	<version>4.8.1</version>
+	<description>Top Members module based on user points for JomSocial</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_community_topmembers_points.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_community_topmembers_points">mod_community_topmembers_points.php</filename>
+		<filename>mod_community_topmembers_points.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="count" type="text" default="10" label="MOD_TOPMEMBERS_COMMUNITY_COUNT_LABEL" description="MOD_TOPMEMBERS_COMMUNITY_COUNT_TIPS" />
+				
+				<field name="show_avatar" type="list" default="1" label="MOD_TOPMEMBERS_COMMUNITY_SHOWAVATAR_LABEL" description="MOD_TOPMEMBERS_COMMUNITY_SHOWAVATAR_TIPS">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="show_karma" type="list" default="2" label="MOD_TOPMEMBERS_COMMUNITY_SHOWKARMA_LABEL" description="MOD_TOPMEMBERS_COMMUNITY_SHOWLARMA_TIPS">
+					<option value="1">MOD_TOPMEMBERS_COMMUNITY_KARMA</option>
+					<option value="2">MOD_TOPMEMBERS_COMMUNITY_POINTS</option>
+					<option value="0">MOD_TOPMEMBERS_COMMUNITY_NONE</option>
+				</field>
+			</fieldset>
+        </fields>
+	</config>
+</extension>

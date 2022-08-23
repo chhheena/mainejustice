@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+	<name>Button - YouTubeR</name>
+	<author>Oleg Micriucov (ZyX)</author>
+	<creationDate>June 2016</creationDate>
+	<authorEmail>info@allforjoomla.com</authorEmail>
+	<authorUrl>https://allforjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2018 Oleg Micriucov</copyright>
+    <license>https://allforjoomla.com/license</license>
+	<version>3.0.6</version>
+	<description><![CDATA[<p>This plugin displays a button for uploading videos to YouTube</p>]]></description>
+	<files>
+		<filename plugin="youtuber_btn">youtuber_btn.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

@@ -1,0 +1,346 @@
+#joms-chatbar {
+    z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  #joms-chatbar {
+    display: none !important;
+    z-index: 0;
+  }
+}
+
+/* Sidebar */
+#joms-chatbar-sidebar {
+    background: white;
+    border-bottom: 0 none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    position: absolute;
+        right: 20px;
+        bottom: 0;
+    width: 220px;
+}
+
+#joms-chatbar-sidebar .joms-chat__conversations {
+    max-height: 370px;
+    overflow: auto;
+}
+
+#joms-chatbar-sidebar .joms-online a:after {
+    box-sizing: border-box;
+}
+
+#joms-chatbar-sidebar .joms-chat__item-body {
+    overflow: hidden;
+    > strong {
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 133px;
+        white-space: nowrap;
+    }
+}
+
+/* Chat windows */
+#joms-chatbar .joms-chat__windows .joms-chat__window {
+    border: 0 none;
+    height: 2px;
+    margin-left: 10px;
+    position: relative;
+    width: 240px;
+}
+
+#joms-chatbar .joms-chat__windows .joms-chat__window > div {
+    background: white;
+    bottom: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.joms-chatbar .joms-chat__window-body {
+    margin-bottom: 40px;
+    padding: 0;
+    border: none;
+}
+
+#joms-chatbar .joms-chat__message-body {
+    padding: 0;
+}
+
+#joms-chatbar .joms-chat__message-body > div {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#joms-chatbar .joms-chat__message-body--mine > div {
+    background-color: #6f8bfc;
+    color: white;
+}
+
+#joms-chatbar {
+    .joms-chat__message-body--mine {
+        .joms-chat__message-error {
+            background-color: #7f8c8d;
+        }
+
+        > div {
+            background-color: #6f8bfc;
+            color: white;
+        }
+    }
+}
+
+.joms-chat__messages-seen_status {
+    font-size: 11px;
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+.joms_chat__seen-tooltip:before {
+    display: none;
+}
+
+/**
+ * Left-side chatbar.
+ */
+#joms-chatbar.left .joms-chat__windows {
+    padding-left: 250px;
+    padding-right: 0;
+}
+
+#joms-chatbar.left .joms-chat__window {
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+#joms-chatbar.left #joms-chatbar-sidebar {
+    left: 20px;
+    right: auto;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.joms-chatbar {
+
+    // Chat window.
+    .joms-chat__window {
+        // Chat window title.
+        .joms-chat__window-title {
+            cursor: pointer;
+            
+            .fa {
+                color: rgba($color: #ffffff, $alpha: 0.8);
+                &:hover {
+                    color: rgba($color: #ffffff, $alpha: 1.0)
+                }
+            }
+            .joms-chat__title {
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 185px;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+
+        }
+
+        // Chat window search users.
+        .joms-chat__search {
+            background: #ffffff;
+            position: relative;
+            z-index: 1;
+
+            span.joms-input {
+                cursor: text;
+                display: block;
+
+                &.joms-input--shadow {
+                    position: absolute;
+                    height: auto;
+                    visibility: hidden;
+                    white-space: nowrap;
+                    width: auto;
+                }
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                &:after {
+                    clear: both;
+                    content: "";
+                    display: table;
+                }
+
+                li {
+                    background-color: #6f8bfc;
+                    border-radius: 3px;
+                    color: #ffffff;
+                    float: left;
+                    margin: 0 3px 3px 0;
+                    padding: 2px 4px;
+
+                    .fa {
+                        cursor: pointer;
+                    }
+
+                    &:last-child {
+                        background: none !important;
+                        border-radius: 0;
+                        margin-right: 0;
+                        padding: 2px 0;
+                        color: inherit;
+                    }
+
+                    input {
+                        border: 0 none;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        outline: none;
+                        line-height: 1em;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .joms-chat__item {
+                padding: 3px 10px;
+
+                &:first-child {
+                    border-top: 1px solid rgba(0, 0, 0, .035);
+                }
+
+                .joms-chat__item-body {
+                    padding-left: 0;
+                }
+
+                .joms-avatar img {
+                    width: 24px;
+                }
+
+                .joms-online a:after {
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+    }
+
+    .joms-chat__window.unread {
+        .joms-chat__status {
+            height: 10px;
+            width: 10px;
+            background-color: #ce341e;
+            position: absolute;
+            left: 0px;            
+            top: -5px;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+
+    .joms-chat__input-wrapper {
+        textarea {
+            border: none;
+            overflow: auto;
+            outline: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            resize: none;
+            width: 100%;
+            max-width: 195px;
+            line-height: 18px;
+            height: 28px;
+            padding: 4px;
+            max-height: 100px;
+        }
+    }
+
+    .joms-chat__window.inactive {
+        .joms-chat__window-title {
+            background-color: rgba(0, 0, 0, .02);
+            color: #7f8c8d;
+            border-bottom: 1px solid #e8e8d4;
+            
+            .fa {
+                color: rgba($color: #7f8c8d, $alpha: 0.8);
+                &:hover {
+                    color: rgba($color: #7f8c8d, $alpha: 1.0)
+                }
+            }
+        }
+    }
+
+    .joms-chat__message-body {
+        display: block;
+        .joms-chat__message-content {
+            display: block;
+            max-width: 165px;
+            word-wrap: break-word;
+        }
+    }
+
+    .joms-chat__message-item b {
+        display: block;
+        max-width: 175px;
+        word-wrap: break-word;
+    }
+
+    .joms-chat__input-container {
+        width: 240px;
+        position: absolute; 
+        bottom: 0; 
+        background: #fff;
+        border-top: 1px solid #eee;
+        padding-top: 5px;
+    }
+
+    .joms-chat__input-preview {
+        background: white;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 8px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+
+        .fa {
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            opacity: .7;
+            position: absolute;
+                top: 10px;
+                right: 12px;
+        }
+    }
+
+    .joms-chat__input-actions {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+
+        a {
+            color: #95a5a6;
+            height: 1em;
+            line-height: 1em;
+            padding-left: 2px;
+            vertical-align: middle;
+        }
+    }
+
+    .joms-chat__attachment-file {
+        word-break: break-all;
+    }
+
+    .badgeNameImage {
+        width: 12px;
+    }
+}

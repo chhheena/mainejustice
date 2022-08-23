@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>System - YouTubeR</name>
+    <author>Oleg Micriucov (ZyX)</author>
+    <creationDate>June 2016</creationDate>
+    <authorEmail>info@allforjoomla.com</authorEmail>
+    <authorUrl>https://allforjoomla.com</authorUrl>
+    <copyright>Copyright (c) 2020 Oleg Micriucov</copyright>
+    <license>https://allforjoomla.com/license</license>
+    <version>3.0.6</version>
+    <description>PLG_SYSTEM_YOUTUBER_DESCR</description>
+    <files>
+        <filename plugin="youtuber">youtuber.php</filename>
+        <filename>index.html</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    <media folder="media" destination="plg_system_youtuber">
+        <folder>assets</folder>
+        <folder>themes</folder>
+        <filename>index.html</filename>
+    </media>
+    <languages folder="languages">
+        <language tag="en-GB">en-GB.plg_system_youtuber.ini</language>
+        <language tag="en-GB">en-GB.plg_system_youtuber.sys.ini</language>
+        <language tag="ru-RU">ru-RU.plg_system_youtuber.ini</language>
+        <language tag="ru-RU">ru-RU.plg_system_youtuber.sys.ini</language>
+        <language tag="pl-PL">pl-PL.plg_system_youtuber.ini</language>
+        <language tag="pl-PL">pl-PL.plg_system_youtuber.sys.ini</language>
+        <language tag="sk-SK">sk-SK.plg_system_youtuber.ini</language>
+        <language tag="sk-SK">sk-SK.plg_system_youtuber.sys.ini</language>
+        <language tag="cs-CZ">cs-CZ.plg_system_youtuber.ini</language>
+        <language tag="cs-CZ">cs-CZ.plg_system_youtuber.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="PLG_SYSTEM_YOUTUBER_BASIC">
+                <field name="purchase_code" type="text" default="" label="PLG_SYSTEM_YOUTUBER_PURCHASE_CODE_LABEL" description="PLG_SYSTEM_YOUTUBER_PURCHASE_CODE_DESCR" />
+                <field name="googleBrowserKey" type="text" default="" label="PLG_SYSTEM_YOUTUBER_BROWSER_KEY_LABEL" description="PLG_SYSTEM_YOUTUBER_BROWSER_KEY_DESCR" />
+
+            </fieldset>
+            <fieldset name="shortcodes" label="PLG_SYSTEM_YOUTUBER_SHORTCODE_ATTRIBS">
+                <field name="theme" type="text" default="default" label="PLG_SYSTEM_YOUTUBER_THEME" description="PLG_SYSTEM_YOUTUBER_THEME_DESCR" />
+                <field name="mode" type="list" label="PLG_SYSTEM_YOUTUBER_MODE" default="lightbox">
+                        <option value="lightbox">PLG_SYSTEM_YOUTUBER_LIGHTBOX</option>
+                        <option value="embed">PLG_SYSTEM_YOUTUBER_EMBED</option>
+                        <option value="link">PLG_SYSTEM_YOUTUBER_LINK</option>
+                </field>
+                <field name="cols" type="number" default="3" label="PLG_SYSTEM_YOUTUBER_PLAYLIST_COLS" />
+                <field name="rows" type="number" default="4" label="PLG_SYSTEM_YOUTUBER_PLAYLIST_ROWS" />
+                <field name="responsive_limit" type="list" default="sm" label="PLG_SYSTEM_YOUTUBER_COLS_LIMIT" description="PLG_SYSTEM_YOUTUBER_COLS_LIMIT_DESCR">
+                        <option value="lg">PLG_SYSTEM_YOUTUBER_COLS_LIMIT_LG</option>
+                        <option value="md">PLG_SYSTEM_YOUTUBER_COLS_LIMIT_MD</option>
+                        <option value="sm">PLG_SYSTEM_YOUTUBER_COLS_LIMIT_SM</option>
+                        <option value="xs">PLG_SYSTEM_YOUTUBER_COLS_LIMIT_XS</option>
+                </field>
+                <field name="max_words" type="number" default="20" label="PLG_SYSTEM_YOUTUBER_WORDS_LIMIT" description="PLG_SYSTEM_YOUTUBER_WORDS_LIMIT_DESCR" />
+                <field name="date_format" type="text" default="d.m.Y" label="PLG_SYSTEM_YOUTUBER_DATE_FORMAT" description="PLG_SYSTEM_YOUTUBER_DATE_FORMAT_DESCR" />
+
+            </fieldset>
+            <fieldset name="uploading" label="PLG_SYSTEM_YOUTUBER_UPLOADING" description="PLG_SYSTEM_YOUTUBER_UPLOADING_DESCR">
+                <field name="uploading_enable" type="list" label="PLG_SYSTEM_YOUTUBER_UPLOADING_ENABLE" description="PLG_SYSTEM_YOUTUBER_UPLOADING_ENABLE_DESCR" default="0" class="chzn-color-state">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="googleOAuthKey" type="text" default="" label="PLG_SYSTEM_YOUTUBER_GOAUTH_ID_LABEL" description="PLG_SYSTEM_YOUTUBER_GOAUTH_ID_DESCR" />
+            </fieldset>
+            <fieldset name="advanced" label="PLG_SYSTEM_YOUTUBER_ADV_CONFIG">
+                <field name="gdpr" type="list" label="PLG_SYSTEM_YOUTUBER_GDPR" default="1" class="chzn-color-state">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_gfont" type="list" label="PLG_SYSTEM_YOUTUBER_LOAD_GFONT" default="1" class="chzn-color-state">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="load_fancybox" type="list" label="PLG_SYSTEM_YOUTUBER_LOAD_FANCYBOX" default="1" class="chzn-color-state">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="ajax_url_mode" type="list" default="router" label="PLG_SYSTEM_YOUTUBER_AJAX_URL_MODE">
+                    <option value="absolute">PLG_SYSTEM_YOUTUBER_ABSOLUTE</option>
+                    <option value="relative">PLG_SYSTEM_YOUTUBER_RELATIVE</option>
+                    <option value="router">PLG_SYSTEM_YOUTUBER_ROUTER</option>
+		</field>
+                <field name="scripts_load_mode" type="list" default="all" label="PLG_SYSTEM_YOUTUBER_SCRIPTS_LOAD_MODE" description="PLG_SYSTEM_YOUTUBER_SCRIPTS_LOAD_MODE_DESCR">
+                    <option value="all">PLG_SYSTEM_YOUTUBER_ALL_PAGES</option>
+                    <option value="certain">PLG_SYSTEM_YOUTUBER_CERTAIN_PAGES</option>
+                </field>
+                <field name="fancybox_params" type="textarea" default="{&quot;type&quot;:&quot;iframe&quot;,&quot;iframe&quot;:{&quot;allowfullscreen&quot;:true}}" label="PLG_SYSTEM_YOUTUBER_FANCYBOX_PARAMS_LABEL" description="PLG_SYSTEM_YOUTUBER_FANCYBOX_PARAMS_DESCR" />
+        
+                <field name="caching" type="list" label="PLG_SYSTEM_YOUTUBER_CACHING" default="1" class="chzn-color-state">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="cache_lifetime" type="number" default="3600" label="PLG_SYSTEM_YOUTUBER_CACHE_LIFETIME" description="PLG_SYSTEM_YOUTUBER_CACHE_LIFETIME_DESCR" />
+
+                <field name="debug" type="list" label="PLG_SYSTEM_YOUTUBER_DEBUG" default="0" class="chzn-color-state">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
