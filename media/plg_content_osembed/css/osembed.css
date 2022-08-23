@@ -1,0 +1,97 @@
+/**
+ * @package   OSEmbed
+ * @contact   www.joomlashack.com, help@joomlashack.com
+ * @copyright 2016-2018 Joomlashack, All rights reserved
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
+
+body .ose-dailymotion,
+body .ose-kickstarter,
+body .ose-rutube,
+body .ose-ted,
+body .ose-vimeo,
+body .ose-youtube,
+body .ose-ustream,
+body .ose-google-docs,
+body .ose-animatron,
+body .ose-amcharts,
+body .ose-on-aol-com,
+body .ose-animoto,
+body .ose-videojug {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+}
+
+body .ose-dailymotion iframe,
+body .ose-kickstarter iframe,
+body .ose-rutube iframe,
+body .ose-ted iframe,
+body .ose-vimeo iframe,
+body .ose-vine iframe,
+body .ose-youtube iframe,
+body .ose-ustream iframe,
+body .ose-google-docs iframe,
+body .ose-animatron iframe,
+body .ose-amcharts iframe,
+body .ose-on-aol-com iframe,
+body .ose-animoto iframe,
+body .ose-videojug iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+}
+
+/* 16:9 aspect ratio */
+body .ose-dailymotion,
+body .ose-kickstarter,
+body .ose-rutube,
+body .ose-ted,
+body .ose-vimeo,
+body .ose-youtube,
+body .ose-animatron,
+body .ose-amcharts,
+body .ose-on-aol-com,
+body .ose-animoto,
+body .ose-videojug {
+    padding-bottom: 56.25%;
+}
+
+/* 1:1 aspect ratio */
+body .ose-vine {
+    padding-bottom: 100%;
+}
+
+/* Mixed aspect ratio */
+body .ose-ustream {
+    padding-bottom: 63.3%;
+}
+
+body .ose-google-docs {
+    padding-bottom: 62.6%;
+}
+
+body .ose-google-docs.ose-google-docs-drawings {
+    padding-bottom: 74.5%;
+}
+
+body .ose-google-docs.ose-google-docs-document,
+body .ose-google-docs.ose-google-docs-forms,
+body .ose-google-docs.ose-google-docs-spreadsheets {
+    padding-bottom: 142%;
+}
+
+/* Dynamic aspect ratio */
+body .ose-flickr .flickr-embed-frame {
+    max-width: 1024px !important;
+    width: 100% !important;
+}
+
+/* Fix scrolling on iOS devices */
+body .ose-google-docs {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+}

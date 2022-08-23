@@ -1,0 +1,101 @@
+/**
+ * sh404SEF importer plugin
+ *
+ * @author       Yannick Gaultier
+ * @copyright    (c) Yannick Gaultier - Weeblr llc - 2017
+ * @package      sh404SEF Importer
+ * @license      http://www.gnu.org/copyleft/gpl.html GNU/GPL
+ * @version      1.0.1.47
+ * @date        2017-06-21
+ */
+
+@phone: ~"only screen and (max-width: 479px)";
+@tablet: ~"only screen and (max-width: 767px)";
+
+.wbamp-hide-on-settings-page {
+  display: none;
+}
+
+.wbamp-description {
+  display: inline-block;
+  line-height: 40px;
+  height: 34px;
+  vertical-align: middle;
+}
+
+/** Spacer parameter */
+.wbspacer {
+  margin-left: -180px;
+  border-bottom: 1px solid #DDD;
+  @media @phone {
+    margin-left: 0;
+  }
+}
+
+.wbspacerborder {
+  @media @phone {
+    margin-left: 0;
+  }
+}
+
+/** Text area width **/
+.wb_text_area_wide,
+.wb_text_wide {
+  width: inherit;
+  @media @phone {
+    width: 100%;
+  }
+}
+
+/** Spacer parameter */
+.wbspacer {
+  margin-left: -180px;
+  border-bottom: 1px solid #DDD;
+  @media @phone {
+    margin-left: 0;
+  }
+}
+
+.wbspacerborder {
+  @media @phone {
+    margin-left: 0;
+  }
+}
+
+/** Start button **/
+button.wb-button {
+  display: inline-block;
+  position: relative;
+  background: #6E97CC;
+  color: #FFFFFF;
+  padding: 0.5em 1.5em;
+  border: none;
+}
+
+button.wb-button-cancel {
+  display: inline-block;
+  background: #FFAC2F;
+  color: #000000;
+}
+
+.wb-message-area {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  padding: 0.5em 0 0.5em 1em;
+}
+
+.wb-success {
+  color: green;
+  font-weight: bold;
+}
+
+.wb-error {
+  color: red;
+  font-weight: bold;
+}
+
+.wb-warning {
+  color: red;
+  font-weight: bold;
+}
