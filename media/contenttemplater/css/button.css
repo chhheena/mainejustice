@@ -1,0 +1,18 @@
+/**
+ * @package         Content Templater
+ * @version         10.2.0
+ * 
+ * @author          Peter van Westen <info@regularlabs.com>
+ * @link            http://regularlabs.com
+ * @copyright       Copyright © 2022 Regular Labs All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+.contenttemplater-list {
+  position: absolute;
+}
+.contenttemplater-list ul.dropdown-menu {
+  display: block;
+}
+.contenttemplater-list ul.dropdown-menu span strong {
+  padding-left: 15px;
+}
