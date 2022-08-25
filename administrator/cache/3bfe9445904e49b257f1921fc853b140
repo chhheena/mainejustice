@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<version_info>
+
+<!--Latest Release Notes -->
+	<latestversion>4.3.6</latestversion>
+	<versionhistory>
+		<![CDATA[
+			A complete version history can be found on each product page, in our <a href="http://thephpfactory.com/joomla-components-and-modules" target="_blank">Online Shop</a>, under the <b>Version Info</b> tab. 
+		]]>
+	</versionhistory>
+	
+<!--Support and Updates -->	
+	<downloadlink>
+		<![CDATA[
+			Support and Updates are distributed according to our <a href="http://thephpfactory.com/terms-and-conditions" target="_blank">Terms&Conditions!</a> 
+		<br/>
+			Check also our <a href="http://thephpfactory.com/customer-faq" target="_blank"><b>Customer FAQ's</b></a> for support related proceedings.
+		<br/><br/>
+			<a href="http://wiki.thephpfactory.com/" target="_blank">
+			<img src="http://wiki.thephpfactory.com/lib/tpl/default/images/logo_wiki.png" alt="thePHPfactory WIKI" border="0" > </a>
+		<br/>
+			If still any support issues after checking the product documentation, <br/>please use ONLY our <a href="http://thephpfactory.com/forum" target="_blank">Forum</a> or the correspondent submit form available on the <a href="http://thephpfactory.com/contact-us" target="_blank">Contact Us</a> page.
+		<br/>
+		]]>
+	</downloadlink>
+
+<!--Other Products -->	
+	<otherproducts> 
+		<![CDATA[
+		<div align='left' style='font-weight:normal'>
+			We contribute to the Joomla! community by providing Free and Commercial <b>A+ Extensions</b>, which are continuously improved and developed. 
+			<br/>
+			Don't forget to check the complete list of <a href="http://thephpfactory.com/joomla-components-and-modules" target="_blank"><b>thePHPfactory components</b></a> - a small selection here:<br/><br/>
+		</div>
+		<div align='left'>
+			
+			<a href="http://thephpfactory.com/auction-factory-for-joomla" target="_blank">
+			<img src="http://thephpfactory.com/components/com_mijoshop/opencart/image/data/joomla-products/thephpfactory_auction.png" alt="Auction Factory" width="160px" border="0"> </a>
+			
+			<a href="http://thephpfactory.com/social-factory-for-joomla" target="_blank">
+			<img src="http://thephpfactory.com/components/com_mijoshop/opencart/image/data/joomla-products/thephpfactory_social.png" alt="Social Factory" width="160px" border="0" > </a>
+			
+			<a href="http://thephpfactory.com/ads-factory-for-joomla" target="_blank">
+			<img src="http://thephpfactory.com/components/com_mijoshop/opencart/image/data/joomla-products/thephpfactory_ads.png" alt="Ads Factory" width="160px" border="0" > </a>
+			
+			<a href="http://thephpfactory.com/love-factory-for-joomla" target="_blank">
+			<img src="http://thephpfactory.com/components/com_mijoshop/opencart/image/data/joomla-products/thephpfactory_love.png" alt="Love Factory" width="160px" border="0"> </a>
+			
+		</div>
+		]]>
+	</otherproducts>
+	
+<!--About theFactory -->	
+	<aboutfactory>
+		<![CDATA[
+			<b>thePHPfactory</b> is a leading Joomla! Extension developer. <a href="http://thephpfactory.com/about-us" target="_blank">Read more...</a>
+		<br/><br/>
+			For major and mid-sized Web Projects, Extension development or any component customizations 
+		<br/>
+			<a href="http://www.thephpfactory.com/get-free-quote" target="_blank"><b>send us </b></a>
+			a detailed project description in order to obtain a FREE quote.
+		<br/>	
+		]]>
+	</aboutfactory>
+
+</version_info>
