@@ -116,25 +116,29 @@ $isExpired         = $this->item->publish_down < $currentDate && $this->item->pu
 		<?php
 		$params  = $this->item->params;
 		$videoName = $params->get('helix_ultimate_video');
+		if ($videoName) {
 		$plugin = JPluginHelper::getPlugin('content', 'jw_allvideos');
 		if ($plugin) {
-		$pluginParams = new JRegistry($plugin->params);
-		$param1 = $pluginParams->get('vfolder');
+			$pluginParams = new JRegistry($plugin->params);
+			$param1 = $pluginParams->get('vfolder');
 		}
-		?>
+        ?>
 		<div class="article-list articles-leading<?php echo $this->params->get('blog_class_leading'); ?>">
 			<div class="avPlayerWrapper avVideo">
 				<div class="avPlayerContainer text-center">
-					<div id="" class="avPlayerBlock"><video class="avPlayer" style="width:600px;height:450px;" src="<?php echo JURI::base() .
-						$param1; ?>/<?php echo $videoName?>.mp4" preload="metadata" controls="" controlslist=""></video>
+					<div id="" class="avPlayerBlock"><video class="avPlayer" style="width:100%;height:auto;" src="<?php echo JURI::base() .
+                    $param1; ?>/<?php echo $videoName?>.mp4" preload="metadata" controls="" controlslist=""></video>
 					</div>
 					<div class="avDownloadLink">
 						<a target="_blank" href="<?php echo JURI::base() .
-						$param1; ?>/<?php echo $videoName?>.mp4" download="">Download</a>
+                    $param1; ?>/<?php echo $videoName?>.mp4" download="">Download</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php
+        }
+		?>
 		<?php
 		echo $this->item->text; ?>
 		</div>
