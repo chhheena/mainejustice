@@ -44,6 +44,33 @@ if ($plugin) {
 ?>
 
 <div class="blog<?php echo $this->pageclass_sfx; ?>">
+<?php
+if (is_dir($param1)) {
+    if ($dh = opendir($param1)) {
+        while (($file = readdir($dh)) !== false) {
+            // echo "filename: .".$file."<br />";
+            if (preg_match('/^.*\.(mp4|mov)$/i', $file)) {
+                //echo $file; ?>
+                <div class="article-list articles-leading<?php echo $this->params->get('blog_class_leading'); ?>">
+                <div class="avPlayerWrapper avVideo">
+                    <div class="avPlayerContainer text-center">
+                        <div id="" class="avPlayerBlock"><video class="avPlayer" style="width:600px;height:450px;" src="<?php echo JURI::base() .
+                            $param1; ?>/<?php echo $file?>" preload="metadata" controls="" controlslist=""></video>
+                        </div>
+                        <div class="avDownloadLink">
+                            <a target="_blank" href="<?php echo JURI::base(); ?>/<?php echo $param1; ?>/<?php echo $file?>" download="">Download</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <?php
+            }
+        }
+        closedir($dh);
+    }
+}
+?>
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
 			<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
@@ -152,31 +179,4 @@ if ($plugin) {
 			<?php endif; ?>
 		</nav>
 	<?php endif; ?>
-    <?php
-if (is_dir($param1)) {
-    if ($dh = opendir($param1)) {
-        while (($file = readdir($dh)) !== false) {
-            // echo "filename: .".$file."<br />";
-            if (preg_match('/^.*\.(mp4|mov)$/i', $file)) {
-                //echo $file; ?>
-                <div class="article-list articles-leading<?php echo $this->params->get('blog_class_leading'); ?>">
-                <div class="avPlayerWrapper avVideo">
-                    <div class="avPlayerContainer text-center">
-                        <div id="" class="avPlayerBlock"><video class="avPlayer" style="width:600px;height:450px;" src="<?php echo JURI::base() .
-                            $param1; ?>/<?php echo $file?>" preload="metadata" controls="" controlslist=""></video>
-                        </div>
-                        <div class="avDownloadLink">
-                            <a target="_blank" href="<?php echo JURI::base(); ?>/<?php echo $param1; ?>/<?php echo $file?>" download="">Download</a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                
-                <?php
-            }
-        }
-        closedir($dh);
-    }
-}
-?>
 </div>
