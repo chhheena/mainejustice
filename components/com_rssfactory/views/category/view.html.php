@@ -1,5 +1,6 @@
 <?php
 
+
 /**
 -------------------------------------------------------------------------
 rssfactory - Rss Factory 4.3.6
@@ -35,18 +36,21 @@ class RssFactoryFrontendViewCategory extends FactoryViewRss
     protected function addPathway()
     {
         $pathway = JFactory::getApplication()->getPathway();
-
+        
         if ($this->category && 'root' != $this->category->id) {
             $path[] = array('title' => $this->category->title, 'link' => FactoryRouteRss::view('category&category_id=' . $this->category->id));
             $category = $this->category->getParent();
-
-            while ($category->id > 1) {
-                $path[] = array('title' => $category->title, 'link' => FactoryRouteRss::view('category&category_id=' . $category->id));
-                $category = $category->getParent();
-            }
-
-            krsort($path);
-
+            
+            // while ($category->id > 1) {
+                //     $path[] = array('title' => $category->title, 'link' => FactoryRouteRss::view('category&category_id=' . $category->id));
+                //     $category = $category->getParent();
+                // }
+                
+                krsort($path);
+                
+                // echo'<pre>';
+                // print_r($path);
+                // die;
             foreach ($path as $item) {
                 $pathway->addItem($item['title'], $item['link']);
             }

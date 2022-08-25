@@ -114,13 +114,15 @@ $isExpired         = $this->item->publish_down < $currentDate && $this->item->pu
 	<div itemprop="articleBody">
 
 		<?php
+		// echo '<pre>';
+		// print_r($this->item);
 		$params  = $this->item->params;
 		$videoName = $params->get('helix_ultimate_video');
 		if ($videoName) {
 		$plugin = JPluginHelper::getPlugin('content', 'jw_allvideos');
 		if ($plugin) {
 			$pluginParams = new JRegistry($plugin->params);
-			$param1 = $pluginParams->get('vfolder');
+		    $param1 = $pluginParams->get('vfolder');
 		}
         ?>
 		<div class="article-list articles-leading<?php echo $this->params->get('blog_class_leading'); ?>">
